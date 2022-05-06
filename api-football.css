@@ -102,6 +102,7 @@ td > span {
     background: var(--background-color-header);
     color: var(--color-text-header);
     text-align: center;
+    white-space: nowrap;
 }
 
 .api_football_header > span {
@@ -147,6 +148,7 @@ td > span {
 .api_football_flag {
     width: var(--flags-size);
     vertical-align: middle;
+    display: inline-block;
 }
 
 .api_football_no_border {
