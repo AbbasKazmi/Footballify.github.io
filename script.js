@@ -1,2 +1,1 @@
-document.querySelector('div#wg-api-football-fixtures').setAttribute('data-key', apiKeyy);
-
+document.querySelector('#wg-api-football-fixtures').setAttribute('data-key', apiKey);
