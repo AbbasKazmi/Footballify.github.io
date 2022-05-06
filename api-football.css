@@ -95,6 +95,7 @@ td > span {
     font-weight: 600;
     background: var(--background-color-header);
     color: var(--color-text-header);
+    text-align: center;
 }
 
 .api_football_header > span {
