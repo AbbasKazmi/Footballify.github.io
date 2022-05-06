@@ -1,3 +1,2 @@
-var token = config.MY_API_TOKEN;
-var mirror = document.querySelector(data-key); 
-mirror.setAttribute(data-key, token)
+document.querySelector('div#wg-api-football-fixtures').setAttribute('data-key', apiKey);
+
