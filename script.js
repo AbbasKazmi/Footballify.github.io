@@ -1,2 +1,3 @@
 var token = config.MY_API_TOKEN;
-document.getElementById('data-key') = token;
+var mirror = document.querySelector(data-key); 
+mirror.setAttribute(data-key, token)
