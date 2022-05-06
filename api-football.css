@@ -1,57 +1,46 @@
 /*
 Version : 1.1.8
  */
-:root {
+ :root {
     --font: "Raleway", sans-serif;
-
-    --background-color: #fff;
-    --background-color-header: #e9ecef;
-    --color-text: #000;
-    --color-text-header: #000;
-    --color-green: #01d099;
-    --color-red: #f64e60;
+    --background-color: #000;
+    --background-color-header: #112c16;
+    --color-text: #fff;
+    --color-text-header: #fff;
+    --color-green: #60ab65;
+    --color-red: #ff596a;
     --color-yellow: #ffa800;
-
-    --primary-font-size: 11px;
-    --secondary-font-size: 10px;
-    --header-font-size: 11px;
-    --svg-font-size: 8px; /* Only for icon-svg */
-
-    --border-bottom: 0.5px solid var(--background-color-header); /* 0px for no border */
-    --primary-padding: 3px 3px;
-    --primary-line-height: 13px;
-    --secondary-padding: .3rem; /* For Headers Only */
-
-    --button-info-font-size: 9px ;/* Only for info button */
-    --button-info-line-height: 16px ; /* Only for info button */
-
-    /* LIVESCORE, FIXTURES & FIXTURE WIDGETS ONLY */
-    --modale-background-overlay: rgba(0,0,0,0.4); /* Only for modale */
-    --modale-close-size: 28px; /* Only for the close button in the modale */
-    --modale-elapsed-time: 12px; /* Only for elapsed time in the modale or FIXTURE widget */
-    --modale-teams-name: 18px; /* Only for Teams Name in the modale or FIXTURE widget */
-    --modale-teams-name-small: 12px; /* Only for Teams Name in the modale or FIXTURE widget <480px */
-    --modale-teams-name-line-height: 20px; /* Only for Teams Name in the modale or FIXTURE widget */
-    --modale-score: 32px; /* Only for Score in the modale or FIXTURE widget >480px */
-    --modale-score-small: 20px; /* Only for Score in the modale or FIXTURE widget <480px */
-    --modale-players-grid-line-height: 20px; /* Only for players on the lineups grid in the modale or FIXTURE widget */
-    --modale-players-grid-line-height-small: 15px; /* Only for players on the lineups grid in the modale or FIXTURE widget <480px */
-    --modale-players-grid-line-height-large: 25px; /* Only for players on the lineups grid in the modale or FIXTURE widget >1024px */
-
-    /* STANDINGS WIDGET ONLY */
-    --standings-team-form-font-size: 9px; /* Only for team form and info button */
+    --primary-font-size: 20px;
+    --secondary-font-size: 15px;
+    --header-font-size: 15px;
+    --svg-font-size: 8px;
+    --border-bottom: 2px solid var(--background-color-header);
+    --primary-padding: 6px 6px;
+    --primary-line-height: 15px;
+    --secondary-padding: .5rem;
+    --button-info-font-size: 9px;
+    --button-info-line-height: 16px;
+    --modale-background-overlay: rgba(0,0,0,0.4);
+    --modale-close-size: 28px;
+    --modale-elapsed-time: 12px;
+    --modale-teams-name: 18px;
+    --modale-teams-name-small: 12px;
+    --modale-teams-name-line-height: 20px;
+    --modale-score: 32px;
+    --modale-score-small: 20px;
+    --modale-players-grid-line-height: 20px;
+    --modale-players-grid-line-height-small: 15px;
+    --modale-players-grid-line-height-large: 25px;
+    --standings-team-form-font-size: 9px;
     --standings-team-form-line-height: 16px;
-
-    /* LOGOS / FLAGS / PHOTOS */
-    --flags-size: 18px;
-    --teams-logo-size: 18px;
-    --teams-logo-size-large: 100px; /* Only in the modale or FIXTURE widget */
-    --teams-logo-size-medium: 50px; /* Only in the modale or FIXTURE widget <480px */
-    --teams-logo-border: 1px solid var(--background-color-header); /* 0px for no border, Only in the modale or FIXTURE widget */
-    --player-photo: 15px;  /* Only in the modale or FIXTURE widget */
-    --player-photo-large: 30px;  /* Only in the modale or FIXTURE widget <480px */
-}
-
+    --flags-size: 20px;
+    --teams-logo-size: 60px;
+    --teams-logo-size-large: 100px;
+    --teams-logo-size-medium: 60px;
+    --teams-logo-border: 1px solid var(--background-color-header);
+    --player-photo: 15px;
+    --player-photo-large: 30px;
+ }
 #wg-api-football-livescore, #wg-api-football-standings, #wg-api-football-fixtures, #wg-api-football-fixture, #wg-api-football-fixture-modal {
     width:100%;
 }
