@@ -99,7 +99,7 @@ td > span {
     padding: var(--secondary-padding);
     font-size: var(--header-font-size);
     font-weight: 600;
-    background: var(--background-color-header);
+    background: #5fbd56;
     color: var(--color-text-header);
     text-align: center;
     white-space: nowrap;
