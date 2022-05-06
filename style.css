@@ -125,6 +125,7 @@ body {
 .wg-api-football-fixtures{
     align-items: center;
     margin: 0 auto;
+    padding-top: 10px;
 }
  .banner__header{
     white-space: nowrap;
