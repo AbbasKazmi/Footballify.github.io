@@ -43,6 +43,7 @@ Version : 1.1.8
  }
 #wg-api-football-livescore, #wg-api-football-standings, #wg-api-football-fixtures, #wg-api-football-fixture, #wg-api-football-fixture-modal {
     width:50%;
+    margin: auto;
 }
 
 #livescore, #standings, #fixtures, #fixture, #fixture-modal, #fixture_events, #fixture_statistics, #fixture_lineups, #fixture_players {
