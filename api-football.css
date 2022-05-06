@@ -10,7 +10,7 @@ Version : 1.1.8
     --color-green: #60ab65;
     --color-red: #ff596a;
     --color-yellow: #ffa800;
-    --primary-font-size: 20px;
+    --primary-font-size: 15px;
     --secondary-font-size: 15px;
     --header-font-size: 15px;
     --svg-font-size: 8px;
@@ -42,7 +42,7 @@ Version : 1.1.8
     --player-photo-large: 30px;
  }
 #wg-api-football-livescore, #wg-api-football-standings, #wg-api-football-fixtures, #wg-api-football-fixture, #wg-api-football-fixture-modal {
-    width:100%;
+    width:50%;
 }
 
 #livescore, #standings, #fixtures, #fixture, #fixture-modal, #fixture_events, #fixture_statistics, #fixture_lineups, #fixture_players {
