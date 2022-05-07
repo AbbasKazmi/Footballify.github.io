@@ -124,8 +124,7 @@ input[type="checkbox"]{
   margin: auto;
 }
 
-h2, h2:hover, h2:focus, h2:active {
+.gamelinks {
     text-decoration: none;
-    color: #0000;
-    transition: all 0.3s ease;
+    color: black;
 }
