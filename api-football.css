@@ -48,7 +48,8 @@ Version : 1.1.8
 
  }
 #wg-api-football-livescore, #wg-api-football-standings, #wg-api-football-fixtures, #wg-api-football-fixture, #wg-api-football-fixture-modal {
-    margin: 0 0;
+    margin-left: 0;
+    margin-right: 0;
     width: 40%;
 
     

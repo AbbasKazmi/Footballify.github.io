@@ -141,7 +141,10 @@ body {
     background-color: black;
     display: inline-block;
 }
-.scoreaxis-widget-eac96 {
+#scoreaxis-widget-eac96 {
   display: inline-block;
 }
- 
+
+.livescore {
+  width: 50%;
+}
