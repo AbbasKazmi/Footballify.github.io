@@ -127,6 +127,7 @@ body {
     align-items: center;
     margin: 0 auto;
     padding-top: 10px;
+    white-space: nowrap;
 }
  .banner__header{
     white-space: nowrap;
@@ -139,5 +140,8 @@ body {
 .cs{
     background-color: black;
     display: inline-block;
+}
+.scoreaxis-widget-eac96 {
+  display: inline-block;
 }
  
