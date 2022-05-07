@@ -140,11 +140,23 @@ body {
 .cs{
     background-color: black;
     display: inline-block;
-}
+  }
 #scoreaxis-widget-eac96 {
   display: inline-block;
-}
+  }
 
 .livescore {
-  width: 50%;
+  border-width:1px;
+  border-color:rgba(0, 0, 0, 0.15);
+  border-style:solid;
+  border-radius:1px;
+  padding:0px;
+  background:rgb(255, 255, 255);
+  width:35%;
+  background-color:#76e56b
+}
+
+.left{
+  float:left; 
+  width:33%;
 }
