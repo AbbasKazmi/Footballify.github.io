@@ -126,7 +126,7 @@ input[type="checkbox"]{
   transition: all 0.3s ease;
 }
 
-.games {
+.games, .games:hover, .games:focus, .games:active {
   text-decoration: none;
   color: black;
 }
