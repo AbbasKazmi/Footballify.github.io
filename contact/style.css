@@ -114,3 +114,12 @@ input[type="checkbox"]{
   font-size: 40px;
   font-weight: 700;
 }
+
+.contactpage {
+    text-align: center;
+  }
+  
+.contacttext {
+    text-align: center;
+    margin: auto;
+  }
