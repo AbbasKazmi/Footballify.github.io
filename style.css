@@ -145,7 +145,8 @@ body {
   display: inline-block;
   }
 
-  .webname, .webname:hover, .webname:focus, .webname:active {
+.webname, .webname:hover, .webname:focus, .webname:active {
     text-decoration: none;
     color: #f2f2f2;
     transition: all 0.3s ease;
+  }
