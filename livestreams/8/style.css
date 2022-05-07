@@ -126,6 +126,6 @@ input[type="checkbox"]{
 
 h2, h2:hover, h2:focus, h2:active {
   text-decoration: none;
-  color: #000000;
+  color: black;
   transition: all 0.3s ease;
 }
