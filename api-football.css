@@ -48,9 +48,8 @@ Version : 1.1.8
 
  }
 #wg-api-football-fixtures {
-    margin-left: 0;
-    margin-right: 0;
-    width: 30%;
+    margin: 0 auto;
+    width: 50%;
 
     
 }
