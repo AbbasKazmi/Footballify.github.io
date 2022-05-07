@@ -47,13 +47,17 @@ Version : 1.1.8
     --player-photo-large: 30px;  /* Only in the modale or FIXTURE widget <480px */
 
  }
-#wg-api-football-livescore, #wg-api-football-standings, #wg-api-football-fixtures, #wg-api-football-fixture, #wg-api-football-fixture-modal {
+#wg-api-football-fixtures {
     margin-left: 0;
     margin-right: 0;
     width: 40%;
 
     
 }
+#wg-api-football-livescore, #wg-api-football-standings, #wg-api-football-fixture, #wg-api-football-fixture-modal {
+    width:100%;
+}
+
 
 #livescore, #standings, #fixtures, #fixture, #fixture-modal, #fixture_events, #fixture_statistics, #fixture_lineups, #fixture_players {
     font-family: var(--font);
