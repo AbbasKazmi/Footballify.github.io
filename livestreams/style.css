@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
+
+.live{
+  color: rgb(255, 59, 59);
+}
+
 nav{
   display: flex;
   height: 60px;
@@ -130,3 +135,4 @@ input[type="checkbox"]{
   text-decoration: none;
   color: black;
 }
+
