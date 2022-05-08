@@ -132,7 +132,7 @@ h2, h2:hover, h2:focus, h2:active {
 .webname, .webname:hover, .webname:focus, .webname:active {
   text-decoration: none;
   color: #f2f2f2;
-  transition: all 0.3s ease;
+  transition: all 0.30s ease;
 }
 
 .gamelinks {
