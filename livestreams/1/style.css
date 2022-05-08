@@ -125,7 +125,7 @@ input[type="checkbox"]{
 }
 
 .gamelinks {
-    color: greenyellow;
+  color: #3de327;
 }
 
 .webname, .webname:hover, .webname:focus, .webname:active {
