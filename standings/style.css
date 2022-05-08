@@ -7,7 +7,7 @@
 } 
 .standings{
   display: flex;
-  height: 60px;
+  height: 60.0px;
   width: 100%;
   background: #76e56b;
   align-items: center;
