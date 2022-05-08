@@ -141,3 +141,6 @@ input[type="checkbox"]{
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
+
+.hidden {display: none;}
+
