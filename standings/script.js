@@ -62,10 +62,10 @@ lig.classList.add("hidden")
 u.classList.remove("hidden")
 }
 // ON CLICK SHOW TABLES
-premierLeague.addEventListener('click', premFunc())
-laLiga.addEventListener('click', laligaFunc())
-bundesliga.addEventListener('click', bundFunc())
-serieA.addEventListener('click', serieaFunc())
-ligue1.addEventListener('click', ligFunc())
-championsLeague.addEventListener('click', uclFunc())
+premierLeague.addEventListener('click', premFunc)
+laLiga.addEventListener('click', laligaFunc)
+bundesliga.addEventListener('click', bundFunc)
+serieA.addEventListener('click', serieaFunc)
+ligue1.addEventListener('click', ligFunc)
+championsLeague.addEventListener('click', uclFunc)
 
