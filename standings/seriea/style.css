@@ -8,19 +8,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.flex-container {
-  display: flex;
-}
-
-.flex-child {
-  flex: 1;
-  border: 1px solid rgb(185, 185, 185);
-}  
-
-.flex-child:first-child {
-  margin-right: 20px;
-} 
-
 .standings{
   display: flex;
   height: 60.0px;
