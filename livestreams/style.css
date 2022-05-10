@@ -104,6 +104,10 @@ input[type="checkbox"]{
     color: cyan;
   }
 }
+.gamelinks {
+  color: #3de327;
+  text-decoration: underline;
+}
 .content{
   position: absolute;
   top: 50%;

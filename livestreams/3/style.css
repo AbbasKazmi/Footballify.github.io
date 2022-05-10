@@ -137,4 +137,5 @@ h2, h2:hover, h2:focus, h2:active {
 
 .gamelinks {
   color: #3de327;
+  text-decoration: underline;
 }

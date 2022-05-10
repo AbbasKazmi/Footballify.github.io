@@ -141,3 +141,7 @@ h2, h2:hover, h2:focus, h2:active {
   transition: all 0.30s ease;
 }
 
+.gamelinks {
+  color: #3de327;
+  text-decoration: underline;
+}
