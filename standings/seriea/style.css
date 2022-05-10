@@ -7,13 +7,6 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-.api_football_flag {
-  display: none;
-}
-
-.api_football_header>span {
-  display: none;
-}
 
 .standings{
   display: flex;
