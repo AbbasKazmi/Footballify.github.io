@@ -166,6 +166,7 @@ body {
 
 /* Style the links inside the navigation bar */
 .bnavbar a {
+  float:left;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -179,5 +180,6 @@ body {
   background-color: #000000;
   color: rgb(255, 255, 255);
   position: relative;
-  top: -10px;
+  top: -12px;
+  width: 33.33333333333333%
 } 
