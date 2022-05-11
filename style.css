@@ -176,8 +176,8 @@ body {
 
 /* Add a color to the active/current link */
 .bnavbar a.active {
-  background-color: #96f0a2;
-  color: black;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   position: relative;
   top: -10px;
 }
