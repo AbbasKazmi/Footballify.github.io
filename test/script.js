@@ -20,8 +20,8 @@ const arrWant = [1, 2, 3, 4, 5, 6, 7, 9, 10, 29, 30, 31, 32, 33,
 
 $.ajax(settings).done(function (data) {
 const newArr = data.response.filter(el => arrWant.includes(el.league.id));
-newArr.sort(function(a, b){  
-	return arrWant.indexOf(a) - arrWant.indexOf(b);
+newArr.sort(function(newArr, arrWant){  
+	return newArr.indexOf(a) - arrWant.indexOf(b);
   });
   console.log(newArr)
 });
