@@ -3,7 +3,7 @@ console.log('test')
 const settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://v3.football.api-sports.io/widgets/livescore?date=2021-04-07",
+	"url": "https://v3.football.api-sports.io/v3/fixtures?date=2021-04-07",
 	"method": "GET",
 	"headers": {
 		"X-RapidAPI-Host": "v3.football.api-sports.io",
