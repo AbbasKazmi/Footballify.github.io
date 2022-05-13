@@ -15,8 +15,6 @@ const arrWant = [395, 344, 349]
 
 $.ajax(settings).done(function (response) {
 // console.log(response) // Logs API Data, Need to Filter This
-const values = Object.values(response)
-console.log(values)
 const newArr = values.filter(el => arrWant.includes(el.league.id));
 console.log(newArr)
 });
