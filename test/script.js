@@ -12,10 +12,26 @@ const settings = {
 };
 
 $.ajax(settings).done(function (response) {
-	console.log(response);
+	console.log('made it');
+
+    const filterById = function() {
+		if (response[i].league.id == 395) {
+			console.log('league found')
+		} else {
+			console.log('league not found')
+		}
+	}
+
+
 	for(let i=0; i<response.length; i++) {
+
+		const myLeaguesArr=response.filter(filterById)
+
 		if (response[i].league.id==395) {
 		console.log("boom")
 		}
 	}
 });
+
+
+console.log(myLeaguesArr)
