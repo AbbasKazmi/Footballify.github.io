@@ -11,29 +11,22 @@ const settings = {
 	}
 };
 
-$.ajax(settings).done(function (response) {
-	console.log('made it');
-
-	response.forEach(element => console.log(element));
-
-    const filterById = function() {
-		if (response[i].league.id == 395) {
-			console.log('league found')
-		} else {
-			console.log('league not found')
-		}
+const filterById = function() {
+	if (response[i].league.id == 395) {
+		console.log('league wanted')
+	} else {
+		console.log('league not wanted')
 	}
+}
+const myLeaguesArr=response.filter(filterById)
+
+// $.ajax(settings).done(function (response) {
+// 	//Program reaches this part of the code but does not go into the for loop for whatever reason 
+// 	for(let i=0; i<response.length; i++) {
+// 		console.log('test')
+// 		const myLeaguesArr=response.filter(filterById)
+// 	}
+// });
 
 
-	for(let i=0; i<response.length; i++) {
-
-		const myLeaguesArr=response.filter(filterById)
-
-		if (response[i].league.id==395) {
-		console.log("boom")
-		}
-	}
-});
-
-
-console.log(myLeaguesArr)
+console.log(myLeaguesArr) //Prints nothing
