@@ -150,4 +150,5 @@ input[type="checkbox"]{
 .parentDiv {
   width: 450px;
 text-align: center;
+margin: auto;
 }
