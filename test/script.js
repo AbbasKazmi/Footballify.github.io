@@ -24,7 +24,7 @@ const settings = {
 function pullLeagues() {
     $.ajax({
       url: settings.url,  
-      success: function(data) {
+      success: function(response) {
 		for(let i=0; i<response.length; i++) {
 			console.log(i)
 			if (response.i.league.id=40) {
