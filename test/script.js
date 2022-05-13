@@ -12,5 +12,8 @@ const settings = {
 };
 
 $.ajax(settings).done(function (response) {
-	console.log(response);
+	for(let i=0; i<response.length; i++)
+	
+	if (response.i.league.id=40) {
+	console.log("boom")}
 });
