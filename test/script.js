@@ -52,3 +52,7 @@ const run = async () => {
 };
 
 run();
+
+for (i = 0; i < filtered.length-1; i++) {
+	$('<div class="results" />').text(arrayVariable[i]).appendTo('body');
+  }
