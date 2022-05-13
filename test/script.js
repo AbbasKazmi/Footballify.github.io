@@ -3,7 +3,7 @@ console.log('test')
 const settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://v3.football.api-sports.io/fixtures?date=2021-04-07",
+	"url": "https://v3.football.api-sports.io/fixtures?date=2022-05-13",
 	"method": "GET",
 	"headers": {
 		"X-RapidAPI-Host": "v3.football.api-sports.io",
@@ -12,7 +12,7 @@ const settings = {
 };
 
 $.ajax(settings).done(function (response) {
-	console.log(response)
+	console.log(response);
 	// for(let i=0; i<response.length; i++) {
 	// 	console.log(i)
 	// 	if (response.i.league.id=40) {
