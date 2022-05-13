@@ -14,6 +14,8 @@ const settings = {
 $.ajax(settings).done(function (response) {
 	console.log('made it');
 
+	response.forEach(element => console.log(element));
+
     const filterById = function() {
 		if (response[i].league.id == 395) {
 			console.log('league found')
