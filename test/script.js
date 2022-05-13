@@ -11,23 +11,9 @@ const settings = {
 	}
 };
 
-const filterById = function() {
-	if (response[i].league.id == 395) {
-		console.log('league wanted')
-	} else {
-		console.log('league not wanted')
-	}
-}
-
 
 $.ajax(settings).done(function (response) {
-	const myLeaguesArr=response.filter(filterById)
-	//Program reaches this part of the code but does not go into the for loop for whatever reason 
-	// for(let i=0; i<response.length; i++) {
-	// 	console.log('test')
-	// 	const myLeaguesArr=response.filter(filterById)
-	// }
+console.log(response) // Logs API Data, Need to Filter This
 });
 
 
-console.log(myLeaguesArr) //Prints nothing
