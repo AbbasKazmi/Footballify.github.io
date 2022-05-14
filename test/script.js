@@ -23,12 +23,12 @@ const run = async () => {
 
     console.log(filtered);
 
-    filtered.forEach(function(count) {
-        container.append('<div>' + filtered[i].league.name + '</div>');
-        container.append('<div>' + filtered[i].teams.home.name + '</div>');
-        container.append('<div>' + filtered[i].goals.home + '</div>');
-        container.append('<div>' + filtered[i].teams.away.name + '</div>');
-        container.append('<div>' + filtered[i].goals.away + '</div>');
+    filtered.forEach(function(element) {
+        container.append('<div>' + element.league.name + '</div>');
+        container.append('<div>' + element.teams.home.name + '</div>');
+        container.append('<div>' + element.goals.home + '</div>');
+        container.append('<div>' + element.teams.away.name + '</div>');
+        container.append('<div>' + element.goals.away + '</div>');
 
     });
 
