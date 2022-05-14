@@ -53,6 +53,12 @@ const run = async () => {
 
 run();
 
-for (i = 0; i < filtered.length-1; i++) {
-	$('<div class="results" />').text(arrayVariable[i]).appendTo('body');
-  }
+filtered.forEach(element => {
+	let divMade = document.createElement('div')
+	Object.values(element.teams).forEach(team => {
+		let teamName = document.createElement('h1')
+		let teamNode = document.createTextNode(team)
+		teamName.appendChild(teamNode)
+		divMade.appendChild(teamName)
+	})
+});
