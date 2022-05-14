@@ -50,9 +50,9 @@ const run = async () => {
 
     console.log(filtered);
 
-	for (i = 0; i < filtered.length-1; i++) {
-		$('<div class="results" />').text(arrayVariable[i]).appendTo('body');
-	  }
+	// for (i = 0; i < filtered.length-1; i++) {
+	// 	$('<div class="results" />').text(arrayVariable[i]).appendTo('body');
+	//   }
 
 	  filtered.forEach(element => {
 		let divMade = document.createElement('div')
