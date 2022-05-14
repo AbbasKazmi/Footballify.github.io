@@ -49,16 +49,20 @@ const run = async () => {
     const filtered = [...new Set(ordered)].filter(item => item !== undefined)
 
     console.log(filtered);
+
+	for (i = 0; i < filtered.length-1; i++) {
+		$('<div class="results" />').text(arrayVariable[i]).appendTo('body');
+	  }
+
+	  filtered.forEach(element => {
+		let divMade = document.createElement('div')
+		Object.values(element.teams).forEach(team => {
+			let teamName = document.createElement('h1')
+			let teamNode = document.createTextNode(team)
+			teamName.appendChild(teamNode)
+			divMade.appendChild(teamName)
+		})
+	});
 };
 
 run();
-
-filtered.forEach(element => {
-	let divMade = document.createElement('div')
-	Object.values(element.teams).forEach(team => {
-		let teamName = document.createElement('h1')
-		let teamNode = document.createTextNode(team)
-		teamName.appendChild(teamNode)
-		divMade.appendChild(teamName)
-	})
-});
