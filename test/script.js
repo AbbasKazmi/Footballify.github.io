@@ -23,6 +23,7 @@ const run = async () => {
 
     console.log(filtered);
 
+    $(document).ready(
     filtered.forEach(function(element) {
         container.append('<div>' + element.league.name + '</div>');
         container.append('<div>' + element.teams.home.name + '</div>');
@@ -30,7 +31,7 @@ const run = async () => {
         container.append('<div>' + element.teams.away.name + '</div>');
         container.append('<div>' + element.goals.away + '</div>');
 
-    });
+    }));
 
 	// for (i = 0; i < filtered.length-1; i++) {
 
