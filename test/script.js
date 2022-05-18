@@ -22,20 +22,20 @@ const run = async () => {
 
     console.log(filtered);
 
-    $(document).ready(
-    filtered.forEach(function(element) {
-        container.append('<div>' + element.league.name + '</div>');
-        container.append('<div>' + element.teams.home.name + '</div>');
-        container.append('<div>' + element.goals.home + '</div>');
-        container.append('<div>' + element.teams.away.name + '</div>');
-        container.append('<div>' + element.goals.away + '</div>');
+    // $(document).ready(
+    // filtered.forEach(function(element) {
+    //     container.append('<div>' + element.league.name + '</div>');
+    //     container.append('<div>' + element.teams.home.name + '</div>');
+    //     container.append('<div>' + element.goals.home + '</div>');
+    //     container.append('<div>' + element.teams.away.name + '</div>');
+    //     container.append('<div>' + element.goals.away + '</div>');
 
-        console.log('For Each Calls')
-        console.log(filtered[i].league.name)
-		console.log(filtered[i].teams.home.name, filtered[i].goals.home)
-		console.log(filtered[i].teams.away.name, filtered[i].goals.away)
+    //     console.log('For Each Calls')
+    //     console.log(filtered[i].league.name)
+	// 	console.log(filtered[i].teams.home.name, filtered[i].goals.home)
+	// 	console.log(filtered[i].teams.away.name, filtered[i].goals.away)
 
-    }));
+    // }));
 
 	for (i = 0; i < filtered.length-1; i++) {
         
