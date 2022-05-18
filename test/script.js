@@ -1,7 +1,6 @@
-var container = document.querySelector('.parentDiv');
+var container = document.querySelector('.parentDiv')
 
-
-const desiredOrder = [
+var desiredOrder = [
     1, 2, 3, 4, 5, 6, 7, 9, 10, 29, 30, 31, 32, 33, 34, 39, 45, 48, 140, 142, 135, 137, 78, 81, 61, 65, 66, 88, 94, 96, 253, 203, 262, 179, 185,
     144, 188, 169, 40, 41, 42, 43, 235, 207, 218, 141, 136, 333, 307, 197, 62, 79, 80, 128, 130, 292, 98, 101, 103, 106, 113, 119, 283, 71, 73,
     265, 239, 211, 89,
