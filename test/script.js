@@ -78,13 +78,14 @@ var run = async () => {
             awayTeamScore.classList.add('winner')
             homeTeamScore.classList.add('loser')
 	  } else {
+          //Draw
             homeTeamName.classList.add('loser')
             awayTeamName.classList.add('loser')
             homeTeamScore.classList.add('loser')
             awayTeamScore.classList.add('loser')
  }
 
-        
+}     
 };
 
 run();
