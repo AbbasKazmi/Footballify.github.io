@@ -165,20 +165,21 @@ background-color: #f4f4f4;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: baseline;
+  margin-left: 10px;
 }
 
 .score1 {
-  margin-left: 439px;
+  margin-left: 424px;
 }
 
 .team2 {
   float: left;
-  
+  margin-left: 10px;
 }
 
 
 .score2 {
-  margin-left: 439px; 
+  margin-left: 424px; 
 }
 
 .winner {
