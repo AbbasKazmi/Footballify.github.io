@@ -48,6 +48,7 @@ var run = async () => {
         awayTeamScore.innerHTML = filtered[i].teams.home.name
         parent.appendChild(awayTeamScore)
 
+        document.body.appendChild(parent);
       
 	  }
 };
