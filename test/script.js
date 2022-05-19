@@ -65,17 +65,24 @@ var run = async () => {
 
 
         //If Home Wins
-        if (filtered[i].teams.home.winner == true)
+        if (filtered[i].teams.home.winner == true) {
             homeTeamName.classList.add('winner')
-	  }
-        //If Away Wins
-        if (filtered[i].teams.away.winner == true) {
+            awayTeamName.classList.add('loser')
+            homeTeamScore.classList.add('winner')
+            awayTeamScore.classList.add('loser')
+
+	  } else if (filtered[i].teams.away.winner == true) {
+          //If Away Wins
             awayTeamName.classList.add('winner')
-	  }
-        //Draw
-      if (filtered[i].teams.home.winner && filtered[i].teams.away.winner == false) {
-            homeTeamName.classList.add('winner')
-	  }
+            homeTeamName.classList.add('loser')
+            awayTeamScore.classList.add('winner')
+            homeTeamScore.classList.add('loser')
+	  } else {
+            homeTeamName.classList.add('loser')
+            awayTeamName.classList.add('loser')
+            homeTeamScore.classList.add('loser')
+            awayTeamScore.classList.add('loser')
+ }
 
         
 };

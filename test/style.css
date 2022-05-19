@@ -160,7 +160,6 @@ display: block;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: baseline;
-  color:#333;
 }
 
 .score1 {
@@ -169,7 +168,6 @@ display: block;
 
 .team2 {
   float: left;
-  color:#333;
   
 }
 
@@ -179,8 +177,12 @@ display: block;
 }
 
 .winner {
-  font-weight: 700;
-  color: black;
+  font-weight: 500;
+  color: rgb(34, 33, 33);
 }
 
+.loser{
+  font-weight: 300;
+  opacity: 80%;
+}
              
