@@ -28,24 +28,29 @@ var run = async () => {
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
       
+        let league = document.createElement("div")
+        league.className = 'league'
+        league.innerHTML = filtered[i].league.name
+        parent.appendChild(league)
+
         let homeTeamName = document.createElement("div")
         homeTeamName.className = 'league'
-        homeTeamName.innerHTML = filtered[i].league.name
+        homeTeamName.innerHTML = filtered[i].teams.home.name
         parent.appendChild(homeTeamName)
       
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'team1'
-        homeTeamScore.innerHTML = filtered[i].teams.home.name
+        homeTeamScore.innerHTML = filtered[i].goals.home
         parent.appendChild(homeTeamScore)
 
         let awayTeamName = document.createElement("div")
         awayTeamName.className = 'score1'
-        awayTeamName.innerHTML = filtered[i].teams.home.name
+        awayTeamName.innerHTML = filtered[i].teams.away.name
         parent.appendChild(awayTeamName)
 
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'team2'
-        awayTeamScore.innerHTML = filtered[i].teams.home.name
+        awayTeamScore.innerHTML = filtered[i].goals.away
         parent.appendChild(awayTeamScore)
 
         document.body.appendChild(parent);
