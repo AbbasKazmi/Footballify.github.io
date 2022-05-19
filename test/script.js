@@ -20,7 +20,7 @@ var run = async () => {
 
     const filtered = ordered.filter(item => item !== undefined)
 
-    console.log(filtered);
+    console.log(filtered); 
 
 	for (i = 0; i < filtered.length-1; i++) {
 
