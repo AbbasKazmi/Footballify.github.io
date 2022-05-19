@@ -61,7 +61,23 @@ var run = async () => {
 
         document.body.appendChild(parent);
       
+
+
+
+        //If Home Wins
+        if (filtered[i].team.home.winner == true)
+            homeTeamName.classList.add('winner')
 	  }
+        //If Away Wins
+        if (filtered[i].team.away.winner == true) {
+            awayTeamName.classList.add('winner')
+	  }
+        //Draw
+      if (filtered[i].team.home.winner && filtered[i].team.away.winner == false)
+            homeTeamName.classList.add('winner')
+	  }
+
+        
 };
 
 run();
