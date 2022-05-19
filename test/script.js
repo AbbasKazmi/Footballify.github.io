@@ -73,7 +73,7 @@ var run = async () => {
             awayTeamName.classList.add('winner')
 	  }
         //Draw
-      if (filtered[i].team.home.winner && filtered[i].team.away.winner == false)
+      if (filtered[i].team.home.winner && filtered[i].team.away.winner == false) {
             homeTeamName.classList.add('winner')
 	  }
 
