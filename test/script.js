@@ -29,11 +29,30 @@ var run = async () => {
 		console.log(filtered[i].teams.away.name, filtered[i].goals.away)
 
 
-    // container.append('<div>' + element.league.name + '</div>');
-    // container.append('<div>' + element.teams.home.name + '</div>');
-    // container.append('<div>' + element.goals.home + '</div>');
-    // container.append('<div>' + element.teams.away.name + '</div>');
-    // container.append('<div>' + element.goals.away + '</div>');
+        let parent = document.createElement("div")
+        parent.className = 'parentDiv'
+      
+        let homeTeamName = document.createElement("div")
+        homeTeamName.className = 'league'
+        homeTeamName.innerHTML = filtered[i].league.name
+        parent.appendChild(homeTeamName)
+      
+        let homeTeamScore = document.createElement("div")
+        homeTeamScore.className = 'team1'
+        homeTeamScore.innerHTML = filtered[i].teams.home.name
+        parent.appendChild(homeTeamScore)
+
+        let awayTeamName = document.createElement("div")
+        awayTeamName.className = 'score1'
+        awayTeamName.innerHTML = filtered[i].teams.home.name
+        parent.appendChild(awayTeamName)
+
+        let awayTeamScore = document.createElement("div")
+        awayTeamScore.className = 'team2'
+        awayTeamScore.innerHTML = filtered[i].teams.home.name
+        parent.appendChild(awayTeamScore)
+
+      
 	  }
 };
 
