@@ -23,10 +23,6 @@ var run = async () => {
     console.log(filtered);
 
 	for (i = 0; i < filtered.length-1; i++) {
-        
-		console.log(filtered[i].league.name)
-		console.log(filtered[i].teams.home.name, filtered[i].goals.home)
-		console.log(filtered[i].teams.away.name, filtered[i].goals.away)
 
 
         let parent = document.createElement("div")
