@@ -25,13 +25,13 @@ var run = async () => {
 	for (i = 0; i < filtered.length-1; i++) {
 
 
-        let parent = document.createElement("div")
-        parent.className = 'parentDiv'
-      
         let league = document.createElement("div")
         league.className = 'league'
         league.innerHTML = filtered[i].league.name
         parent.appendChild(league)
+
+        let parent = document.createElement("div")
+        parent.className = 'parentDiv'
 
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
@@ -59,6 +59,7 @@ var run = async () => {
         awayTeamScore.innerHTML = filtered[i].goals.away
         parent.appendChild(awayTeamScore)
 
+        document.body.appendChild(league);
         document.body.appendChild(parent);
       
 	  }
