@@ -151,21 +151,29 @@ input[type="checkbox"]{
 width: 450px;
 text-align: center;
 margin: auto;
+display: block;
 }
 
 .team1 {
-  display: inline;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
 }
 
 .score1 {
   display: inline;
+  margin-left: 439px;
 }
 
 .team2 {
-  display: inline;
+  display: inline-block;
+  float: left;
 }
 
 .score2 {
   display: inline;
+  margin-left: 439px;
 }
 
