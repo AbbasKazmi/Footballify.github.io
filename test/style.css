@@ -152,3 +152,19 @@ input[type="checkbox"]{
 text-align: center;
 margin: auto;
 }
+
+.team1 {
+  display: inline;
+}
+
+.score1 {
+  display: inline;
+}
+
+.team2 {
+  display: inline;
+}
+
+.score2 {
+  display: inline;
+}
