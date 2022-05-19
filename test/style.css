@@ -152,6 +152,11 @@ width: 450px;
 text-align: center;
 margin: auto;
 display: block;
+background-color: #f4f4f4;
+}
+.league{
+  font-size: large;
+  font-weight: 900;
 }
 
 .team1 {
@@ -183,6 +188,6 @@ display: block;
 
 .loser{
   font-weight: 300;
-  opacity: 80%;
+  opacity: 70%;
 }
              
