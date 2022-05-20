@@ -29,21 +29,21 @@ var run = async () => {
 
 	for (i = 0; i < filtered.length-1; i++) {
 
-       for (x=0; x<filtered[i].length-1;x++){
-
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
-        
+
         let arrLeagues = []
-        if (arrLeagues.includes(filtered[i][x].league.name)) {
-         console.log(filtered[i][x].teams.home.name)
+        if (arrLeagues.includes(filtered[i].league.name)) {
+         console.log(filtered[i].teams.home.name)
         } else {
-        arrLeagues.push(filtered[i][x].league.name)
+        arrLeagues.push(filtered[i].league.name)
         let league = document.createElement("div")
         league.className = 'league'
         league.innerHTML = filtered[i][x].league.name
         parent.appendChild(league)
         }
+        
+       for (x=0; x<filtered[i].length-1;x++){
 
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
