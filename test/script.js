@@ -45,14 +45,6 @@ var run = async () => {
         league.className = 'league'
         league.innerHTML = filtered[i][x].league.name
         parent.appendChild(league)
-
-        var logo = document.createElement("img");
-        logo.setAttribute("src", filtered[i][x].league.logo);
-        league.appendChild("logo")
-        //League Logo
-        // let leagueLogo = document.createElement("img")
-        // leagueLogo.src= filtered[i][x].league.logo
-        // parent.appendChild(leagueLogo)
         }
 
         let child1 = document.createElement("div")
