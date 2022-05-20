@@ -166,7 +166,8 @@ border-right: 1px groove;
   background-color: #e8e8e8;
   border-bottom: 1px groove;
   box-sizing: border-box;
-  padding-left: 10px;
+  text-align: left;
+  padding-left: 7px;
 }
 .status{
   float: left;
