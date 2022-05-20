@@ -149,7 +149,9 @@ input[type="checkbox"]{
   } 
 
 
-
+.parentDiv:hover{
+  background-color: #585858;
+}
 .parentDiv {
 width: 450px;
 text-align: center;
