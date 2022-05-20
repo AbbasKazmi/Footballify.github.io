@@ -18,7 +18,10 @@ var run = async () => {
 
     const ordered = desiredOrder.map((id) => json.filter(({ league }) => league?.id === id));
 
-    const filtered = ordered.filter(item => item !== [])
+    const filtered = ordered.filter(e => e.length);
+
+    
+    // ordered.filter(item => item !== [])
     
     console.log(json)
     console.log(ordered)
