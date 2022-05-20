@@ -170,6 +170,11 @@ border-right: 1px groove;
   padding-left: 10px;
   font-size: 15px;
 }
+.logo{
+  height: 19px;
+  padding-top: 2px;
+  padding-left: 297px;
+}
 .status{
   float: left;
   margin-left: 10px;
