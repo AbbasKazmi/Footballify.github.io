@@ -50,6 +50,11 @@ var run = async () => {
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
 
+        let gameStatus = document.createElement("div")
+        gameStatus.className = 'status'
+        gameStatus.innerHTML = filtered[i][x].fixture.status.short
+        parent.appendChild(gameStatus)
+
         let homeTeamName = document.createElement("div")
         homeTeamName.className = 'team1'
         homeTeamName.innerHTML = filtered[i][x].teams.home.name
