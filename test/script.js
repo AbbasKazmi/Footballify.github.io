@@ -35,7 +35,6 @@ var run = async () => {
         parent.className = 'parentDiv'
         
 
-        arrLeagues.push(filtered[i][x].league.name)
         let league = document.createElement("div")
         league.className = 'league'
         league.innerHTML = filtered[i][x].league.name
