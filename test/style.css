@@ -150,7 +150,7 @@ input[type="checkbox"]{
 
 
 .parentDiv:hover{
-  background-color: #585858;
+  background-color: #e8e8e8;
 }
 .parentDiv {
 width: 450px;
@@ -199,7 +199,7 @@ border-right: 1px groove;
 }
 
 .score1 {
-  margin-left: 424px;
+  margin-left: 419px;
 }
 
 .team2 {
@@ -209,7 +209,7 @@ border-right: 1px groove;
 
 
 .score2 {
-  margin-left: 424px; 
+  margin-left: 419px; 
 }
 
 .winner {
