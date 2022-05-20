@@ -39,10 +39,17 @@ var run = async () => {
          console.log(`${filtered[i][x].league.name} skipped`)
         } else {
         arrLeagues.push(filtered[i][x].league.name)
+
+        //League Name + Round
         let league = document.createElement("div")
         league.className = 'league'
-        league.innerHTML = filtered[i][x].league.name
+        league.innerHTML = filtered[i][x].league.name + " - " + filtered[i][x].league.name
         parent.appendChild(league)
+
+        //League Logo
+        let leagueLogo = document.createElement("img")
+        leagueLogo.src= filtered[i][x].league.logo
+        parent.appendChild(leagueLogo)
         }
 
         let child1 = document.createElement("div")
