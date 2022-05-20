@@ -169,11 +169,16 @@ border-right: 1px groove;
   text-align: left;
   padding-left: 10px;
   font-size: 15px;
+  display: flex;
 }
 .flag{
+  border: 1px solid #585858;
+  border-radius: 9px;
   height: 19px;
-  padding-top: 2px;
-  padding-left: 297px;
+  float: right;
+  position: absolute;
+  right: 538px;
+  margin-top: 2px;
 }
 .status{
   float: left;
