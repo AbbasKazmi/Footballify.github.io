@@ -34,27 +34,13 @@ var run = async () => {
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
         
-    if (filtered[i][x]!=filtered[i].length-1) { 
-        console.log(filtered[i])
-        console.log(filtered[i].length)
-        console.log(filtered[i][x])
 
-        if (filtered[i][x].league.name===filtered[i][x+1].league.name) {
-             console.log('duplicate')
-        } else {
         arrLeagues.push(filtered[i][x].league.name)
         let league = document.createElement("div")
         league.className = 'league'
         league.innerHTML = filtered[i][x].league.name
         parent.appendChild(league)
-        }
-    } else {
-        arrLeagues.push(filtered[i][x].league.name)
-        let league = document.createElement("div")
-        league.className = 'league'
-        league.innerHTML = filtered[i][x].league.name
-        parent.appendChild(league)
-    }
+
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
 
