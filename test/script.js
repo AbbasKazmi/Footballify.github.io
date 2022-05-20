@@ -35,10 +35,15 @@ var run = async () => {
         parent.className = 'parentDiv'
         
 
+        if (arrLeagues.includes(filtered[i][x].league.name)) {
+         console.log(`${filtered[i][x].league.name} skipped`)
+        } else {
+        arrLeagues.push(filtered[i][x].league.name)
         let league = document.createElement("div")
         league.className = 'league'
         league.innerHTML = filtered[i][x].league.name
         parent.appendChild(league)
+        }
 
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
