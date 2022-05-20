@@ -19,7 +19,9 @@ var run = async () => {
     const ordered = desiredOrder.map((id) => json.find(({ league }) => league?.id === id));
 
     const filtered = ordered.filter(item => item !== undefined)
-
+    
+    console.log(json)
+    console.log(ordered)
     console.log(filtered); 
 
 	for (i = 0; i < filtered.length-1; i++) {
