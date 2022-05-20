@@ -29,6 +29,7 @@ var run = async () => {
 
 	for (i = 0; i < filtered.length-1; i++) {
 
+       for (x=0; x<filtered[i].length-1;x++){
 
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
@@ -88,9 +89,9 @@ var run = async () => {
             awayTeamName.classList.add('loser')
             homeTeamScore.classList.add('loser')
             awayTeamScore.classList.add('loser')
- }
-
-}     
+        }
+    }
+  }     
 };
 
 run();
