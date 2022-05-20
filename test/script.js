@@ -43,14 +43,13 @@ var run = async () => {
         //League Name + Round
         let league = document.createElement("div")
         league.className = 'league'
-        league.innerHTML = filtered[i][x].league.name
-        league.src=filtered[i][x].league.logo
+        league.innerHTML = filtered[i][x].league.name + `<img src="${filtered[i][x].league.logo}"/>`
         parent.appendChild(league)
 
         //League Logo
-        // let leagueLogo = document.createElement("img")
-        // leagueLogo.src= filtered[i][x].league.logo
-        // parent.appendChild(leagueLogo)
+        let leagueLogo = document.createElement("img")
+        leagueLogo.src= filtered[i][x].league.logo
+        parent.appendChild(leagueLogo)
         }
 
         let child1 = document.createElement("div")
