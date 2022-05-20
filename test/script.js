@@ -34,7 +34,10 @@ var run = async () => {
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
         
-    if (filtered[i][x]!=filtered[i].length) {
+    if (filtered[i][x]!=filtered[i].length) { 
+        console.log(filtered[i].length)
+        console.log(filtered[i][x])
+
         if (filtered[i][x].league.name===filtered[i][x+1].league.name) {
              console.log('duplicate')
         } else {
