@@ -33,11 +33,17 @@ var run = async () => {
 
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
-      
+        
+        let arrLeagues = []
+        if (arrLeagues.contains(filtered[i][x].league.name)) {
+
+        } else {
+        arrLeagues.push(filtered[i][x].league.name)
         let league = document.createElement("div")
         league.className = 'league'
         league.innerHTML = filtered[i][x].league.name
         parent.appendChild(league)
+        }
 
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
