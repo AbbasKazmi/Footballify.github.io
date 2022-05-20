@@ -34,7 +34,7 @@ var run = async () => {
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
         
-        if (arrLeagues.includes(filtered[i][x].league.name===filtered[i][x+1].league.name)) {
+        if (filtered[i][x].league.name===filtered[i][x+1].league.name) {
         console.log('duplicate')
         } else {
         arrLeagues.push(filtered[i][x].league.name)
