@@ -36,7 +36,7 @@ var run = async () => {
         
         let arrLeagues = []
         if (arrLeagues.includes(filtered[i][x].league.name)) {
-         
+         console.log(filtered[i][x].teams.home.name)
         } else {
         arrLeagues.push(filtered[i][x].league.name)
         let league = document.createElement("div")
