@@ -34,7 +34,7 @@ var run = async () => {
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
         
-    if (filtered[i][x]!=filtered[i].length) { 
+    if (filtered[i][x]!=filtered[i].length-1) { 
         console.log(filtered[i].length)
         console.log(filtered[i][x])
 
