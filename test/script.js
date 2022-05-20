@@ -26,7 +26,7 @@ var run = async () => {
     console.log(json)
     console.log(ordered)
     console.log(filtered); 
-
+    let arrLeagues = [];
 	for (i = 0; i < filtered.length-1; i++) {
 
        for (x=0; x<filtered[i].length;x++){
