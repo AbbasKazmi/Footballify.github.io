@@ -35,6 +35,7 @@ var run = async () => {
         parent.className = 'parentDiv'
         
     if (filtered[i][x]!=filtered[i].length-1) { 
+        console.log(filtered[i])
         console.log(filtered[i].length)
         console.log(filtered[i][x])
 
