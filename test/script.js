@@ -34,9 +34,8 @@ var run = async () => {
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
         
-        let arrLeagues = []
-        if (arrLeagues.includes(filtered[i][x].league.name)) {
-         
+        if (arrLeagues.includes(filtered[i][x].league.name===filtered[i][x+1].league.name)) {
+        console.log('duplicate')
         } else {
         arrLeagues.push(filtered[i][x].league.name)
         let league = document.createElement("div")
@@ -96,9 +95,11 @@ var run = async () => {
             homeTeamScore.classList.add('loser')
             awayTeamScore.classList.add('loser')
         }
+
+
+
     }
   }     
 };
 
 run();
-console.log(arrLeagues)
