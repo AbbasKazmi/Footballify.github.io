@@ -165,6 +165,8 @@ border-right: 1px groove;
   font-weight: 700;
   background-color: #e8e8e8;
   border-bottom: 1px groove;
+  box-sizing: border-box;
+  padding-left: 10px;
 }
 
 .team1 {
