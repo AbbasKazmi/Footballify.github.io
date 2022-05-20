@@ -35,8 +35,8 @@ var run = async () => {
         parent.className = 'parentDiv'
         
         let arrLeagues = []
-        if (arrLeagues.contains(filtered[i][x].league.name)) {
-
+        if (arrLeagues.includes(filtered[i][x].league.name)) {
+         
         } else {
         arrLeagues.push(filtered[i][x].league.name)
         let league = document.createElement("div")
