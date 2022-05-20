@@ -16,7 +16,7 @@ var run = async () => {
 
     const json = (await res.json())?.response;
 
-    const ordered = desiredOrder.map((id) => json.find(({ league }) => league?.id === id));
+    const ordered = desiredOrder.forEach((id) => json.find(({ league }) => league?.id === id));
 
     const filtered = ordered.filter(item => item !== undefined)
 
