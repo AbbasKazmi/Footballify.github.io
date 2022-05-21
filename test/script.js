@@ -63,7 +63,8 @@ var run = async () => {
       
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        homeTeamScore.innerHTML = filtered[i][x].goals.home
+        // homeTeamScore.innerHTML = filtered[i][x].goals.home
+        homeTeamScore.innerHTML = 1
         parent.appendChild(homeTeamScore)
 
         let child2 = document.createElement("div")
@@ -76,7 +77,8 @@ var run = async () => {
 
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-        awayTeamScore.innerHTML = filtered[i][x].goals.away
+        // awayTeamScore.innerHTML = filtered[i][x].goals.away
+        awayTeamScore.innerHTML = 1
         parent.appendChild(awayTeamScore)
 
         document.body.appendChild(parent);
