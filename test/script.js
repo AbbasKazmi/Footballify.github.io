@@ -92,7 +92,7 @@ var run = async () => {
       
 
 
-        if (String(filtered[i][x].fixture.status.short) === 'NS' || 'CANC') {
+        if (String(filtered[i][x].fixture.status.short) === 'NS') {
             homeTeamScore.innerHTML = 0
             homeTeamScore.classList.add('hide')
             awayTeamScore.innerHTML = 0
@@ -144,9 +144,9 @@ var run = async () => {
 
     }
   }     
-  setInterval(function(){
-    $('.parentDiv').load(script.js + ".parentDiv");
-}, 5000);
+//   setInterval(function(){
+//     $('.parentDiv').load(script.js + ".parentDiv");
+// }, 5000);
 };
 
 //Run Json
