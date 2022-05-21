@@ -67,7 +67,7 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        if (filtered[i][x].fixture.status.short === 'NS' || 'CANC' || 'TBD' || 'SUSP') {
+        if (filtered[i][x].fixture.status.short === 'NS' || 'CANC') {
         homeTeamScore.innerHTML = undefined
         homeTeamScore.classList.add('hide')
         }
@@ -91,7 +91,7 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC' || 'TBD' || 'SUSP') {
+        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
         console.log(filtered[i][x].fixture.status.short)
         awayTeamScore.innerHTML = undefined
         awayTeamScore.classList.add('hide')
