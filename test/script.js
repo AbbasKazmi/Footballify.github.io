@@ -97,8 +97,8 @@ var run = async () => {
         parent.appendChild(awayTeamScore)
 
         //Push all Data to DOM
-        var cont = document.querySelector('.parentContainer')
-        document.body.cont.appendChild(parent);
+        
+        document.querySelector('.parentContainer').appendChild(parent);
       
 
 
