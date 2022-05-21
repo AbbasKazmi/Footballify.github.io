@@ -70,7 +70,7 @@ var run = async () => {
         if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
         homeTeamScore.innerHTML = 0
         homeTeamScore.classList.add('hide')
-        } else {
+        } else  if (filtered[i][x].fixture.status.short == 'FT') {
         homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
@@ -92,7 +92,7 @@ var run = async () => {
         if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
         awayTeamScore.innerHTML = 0
         awayTeamScore.classList.add('hide')
-        } else {
+        } else if (filtered[i][x].fixture.status.short == 'FT') {
         awayTeamScore.classList.remove('hide')
         awayTeamScore.innerHTML = filtered[i][x].goals.away
         }
