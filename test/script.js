@@ -67,12 +67,12 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        if (filtered[i][x].fixture.status.short === 'NS' || 'CANC') {
-        homeTeamScore.innerHTML = undefined
+        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
+        homeTeamScore.innerHTML = 0
         homeTeamScore.classList.add('hide')
         }
         
-        if (filtered[i][x].fixture.status.short === 'FT' || 'HT') {
+        if (filtered[i][x].fixture.status.short == 'FT' || 'HT') {
         homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
@@ -93,7 +93,7 @@ var run = async () => {
         awayTeamScore.className = 'score2'
         if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
         console.log(filtered[i][x].fixture.status.short)
-        awayTeamScore.innerHTML = undefined
+        awayTeamScore.innerHTML = 0
         awayTeamScore.classList.add('hide')
         }
 
