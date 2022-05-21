@@ -88,11 +88,10 @@ var run = async () => {
         awayTeamScore.className = 'score2'
 
         parent.appendChild(awayTeamScore)
-        setInterval(async function() {
         //Push all Data to DOM
-        console.log('yo')
-        document.querySelector('.parentContainer').empty().appendChild(parent);
-    }, 10000)
+
+        document.querySelector('.parentContainer').appendChild(parent);
+
 
 
         if (String(filtered[i][x].fixture.status.short) === 'NS') {
@@ -186,15 +185,4 @@ var run = async () => {
 };
 
 run();
-
-// const interval = setInterval(function() {
-//     _ => $('.parentDiv').remove().then(run());
-//   }, 10000);
-
-
-
-
-
-
-
 
