@@ -93,9 +93,9 @@ var run = async () => {
 
 
         if (String(filtered[i][x].fixture.status.short) === 'NS' || 'CANC') {
-            homeTeamScore.innerHTML = undefined
+            homeTeamScore.innerHTML = 0
             homeTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = undefined
+            awayTeamScore.innerHTML = 0
             awayTeamScore.classList.add('hide')
 
         }
@@ -110,6 +110,7 @@ var run = async () => {
                 homeTeamScore.innerHTML = filtered[i][x].goals.away
                 awayTeamScore.classList.remove('hide')
                 awayTeamScore.innerHTML = filtered[i][x].goals.away
+                console.log(homeTeamName)
                 gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
         }
 
