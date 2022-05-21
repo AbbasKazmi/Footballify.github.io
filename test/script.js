@@ -125,7 +125,8 @@ var run = async () => {
             awayTeamScore.classList.add('live')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
             gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
+            ticker()
+            // gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
         } else if (String(filtered[i][x].fixture.status.short) == '2H') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.classList.add('live')
@@ -134,7 +135,8 @@ var run = async () => {
             awayTeamScore.classList.add('live')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
             gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
+            ticker()
+            // gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
         
         } else {}
 
@@ -175,5 +177,22 @@ var run = async () => {
 // }, 5000);
 };
 
+const ticker =function() {
+    if ($('.status').includes('live')) {
+    setInterval(function(){ 
+        // toggle the apostraphe
+        gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
+        setTimeout(function(){
+          // toggle back after 1 second
+          gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
+        },1000);
+     
+     },2000);
+}}
+
 //Run Json
-run();
+
+const interval = setInterval(function() {
+    run();
+}, 5000);
+
