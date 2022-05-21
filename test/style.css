@@ -201,3 +201,7 @@ border-right: 1px groove;
   border: 1px solid black;
   background-color: white;
 }
+
+.live {
+  color: #f75959;
+}
