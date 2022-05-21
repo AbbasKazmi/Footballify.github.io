@@ -177,9 +177,11 @@ run();
 
 //Run Json
 const interval = setInterval(function() {
+    clearInterval(interval)
     run();
     console.log('refresh')
   }, 10000);
+clearInterval(interval)
 
 
 
