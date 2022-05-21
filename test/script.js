@@ -109,7 +109,17 @@ var run = async () => {
             homeTeamScore.innerHTML = filtered[i][x].goals.home
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'HT') {
+        } else if (String(filtered[i][x].fixture.status.short) === 'PEN') {
+            homeTeamScore.classList.remove('hide')
+            homeTeamScore.innerHTML = filtered[i][x].goals.home
+            awayTeamScore.classList.remove('hide')
+            awayTeamScore.innerHTML = filtered[i][x].goals.away
+        } else if (String(filtered[i][x].fixture.status.short) === 'FT') {
+            homeTeamScore.classList.remove('hide')
+            homeTeamScore.innerHTML = filtered[i][x].goals.home
+            awayTeamScore.classList.remove('hide')
+            awayTeamScore.innerHTML = filtered[i][x].goals.away
+        } else if (String(filtered[i][x].fixture.status.short) === 'INT') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.classList.add('live')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
