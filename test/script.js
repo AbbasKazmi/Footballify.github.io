@@ -67,10 +67,10 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
+        if (filtered[i][x].fixture.status.short === 'NS' || 'CANC') {
         homeTeamScore.innerHTML = undefined
         homeTeamScore.classList.add('hide')
-        } else  if (filtered[i][x].fixture.status.short == 'FT') {
+        } else  if (filtered[i][x].fixture.status.short === 'FT') {
         homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
