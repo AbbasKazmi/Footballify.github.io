@@ -67,15 +67,29 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
+
         if (filtered[i][x].fixture.status.short === 'NS' || 'CANC') {
-        homeTeamScore.innerHTML = undefined
-        homeTeamScore.classList.add('hide')
+            homeTeamScore.innerHTML = undefined
+            homeTeamScore.classList.add('hide')
+            awayTeamScore.innerHTML = undefined
+            awayTeamScore.classList.add('hide')
+            if (filtered[i][x].fixture.status.short === '1H') {
+            homeTeamScore.classList.remove('hide')
+            homeTeamScore.innerHTML = filtered[i][x].goals.home
+            awayTeamScore.classList.remove('hide')
+            awayTeamScore.innerHTML = filtered[i][x].goals.away
+            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
+            }
         }
         
         if (filtered[i][x].fixture.status.short === 'FT') {
         homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
+        awayTeamScore.classList.remove('hide')
+        awayTeamScore.innerHTML = filtered[i][x].goals.away
         }
+
+        
         parent.appendChild(homeTeamScore)
 
         //Away Container
@@ -100,6 +114,10 @@ var run = async () => {
         awayTeamScore.classList.remove('hide')
         awayTeamScore.innerHTML = filtered[i][x].goals.away
         }
+        if (filtered[i][x].fixture.status.short == '1H') {
+            awayTeamScore.classList.remove('hide')
+            awayTeamScore.innerHTML = filtered[i][x].goals.away
+            }
         parent.appendChild(awayTeamScore)
 
         //Push all Data to DOM
