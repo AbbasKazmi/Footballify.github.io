@@ -1,12 +1,14 @@
-var container = document.querySelector('.parentDiv')
-
+//Order of Leagues
 var desiredOrder = [
     1, 2, 3, 4, 5, 6, 7, 9, 10, 29, 30, 31, 32, 33, 34, 39, 45, 48, 140, 142, 135, 137, 78, 81, 61, 65, 66, 88, 94, 96, 253, 203, 262, 179, 185,
     144, 188, 169, 40, 41, 42, 43, 235, 207, 218, 141, 136, 333, 307, 197, 62, 79, 80, 128, 130, 292, 98, 101, 103, 106, 113, 119, 283, 71, 73,
     265, 239, 211, 89,
 ];
+
+//Derive day based on UTC 
 const isoStr = new Date().toISOString().slice(0,10);
 
+//Pull API Data for UTC
 var run = async () => {
     const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=${isoStr}`, {
         headers: {
@@ -15,27 +17,25 @@ var run = async () => {
         },
     });
 
+    //Parse JSON
     const json = (await res.json())?.response;
-
+    //Map desiredOrder onto API Call
     const ordered = desiredOrder.map((id) => json.filter(({ league }) => league?.id === id));
-
+    //Remove any Null Values
     const filtered = ordered.filter(e => e.length);
 
-    
-    // ordered.filter(item => item !== [])
-    
-    console.log(json)
-    console.log(ordered)
-    console.log(filtered); 
+    //arrLeagues created to avoid duplicate leagues
     let arrLeagues = [];
+
+    //Loop through leagues
 	for (i = 0; i < filtered.length-1; i++) {
-
+        //Loop through games of Leagues
        for (x=0; x<filtered[i].length;x++){
-
+        //Create Parent Div For Data
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
         
-
+        //League Duplication not allowed
         if (arrLeagues.includes(filtered[i][x].league.name)) {
          console.log(`${filtered[i][x].league.name} skipped`)
         } else {
@@ -48,19 +48,23 @@ var run = async () => {
         parent.appendChild(league)
         }
 
+        //Home Container
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
 
+        //Game Status
         let gameStatus = document.createElement("div")
         gameStatus.className = 'status'
         gameStatus.innerHTML = filtered[i][x].fixture.status.short
         parent.appendChild(gameStatus)
 
+        //Home Name
         let homeTeamName = document.createElement("div")
         homeTeamName.className = 'team1'
         homeTeamName.innerHTML = filtered[i][x].teams.home.name
         parent.appendChild(homeTeamName)
       
+        //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
         if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
@@ -71,14 +75,17 @@ var run = async () => {
         }
         parent.appendChild(homeTeamScore)
 
+        //Away Container
         let child2 = document.createElement("div")
         child2.className = 'childDiv'
 
+        //Away Name
         let awayTeamName = document.createElement("div")
         awayTeamName.className = 'team2'
         awayTeamName.innerHTML = filtered[i][x].teams.away.name
         parent.appendChild(awayTeamName)
 
+        //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
         if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
@@ -89,7 +96,9 @@ var run = async () => {
         }
         parent.appendChild(awayTeamScore)
 
-        document.body.appendChild(parent);
+        //Push all Data to DOM
+        var cont = document.querySelector('.parentContainer')
+        document.body.cont.appendChild(parent);
       
 
 
@@ -107,7 +116,7 @@ var run = async () => {
             homeTeamName.classList.add('loser')
             awayTeamScore.classList.add('winner')
             homeTeamScore.classList.add('loser')
-          //Match Not Started
+          //Match Not Started or  Cancelled
 	  } else if (filtered[i][x].fixture.status.short == 'NS' || 'CANC'){
         homeTeamName.classList.add('winner')
         homeTeamScore.classList.add('winner')
@@ -128,4 +137,5 @@ var run = async () => {
   }     
 };
 
+//Run Json
 run();
