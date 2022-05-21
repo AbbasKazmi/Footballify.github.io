@@ -67,9 +67,12 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        homeTeamScore.innerHTML = 0
+        if (filtered[i][x].fixture.status.short === 'NS' || 'CANC') {
+        homeTeamScore.innerHTML = undefined
         homeTeamScore.classList.add('hide')
-        if (gameStatus.innerHTML == 'FT' || 'HT') {
+        }
+        
+        if (filtered[i][x].fixture.status.short === 'FT') {
         homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
@@ -88,9 +91,11 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-        awayTeamScore.innerHTML = 0
+        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
+        console.log(filtered[i][x].fixture.status.short)
+        awayTeamScore.innerHTML = undefined
         awayTeamScore.classList.add('hide')
-        if (gameStatus.innerHTML == 'FT' || 'HT') {
+        if (filtered[i][x].fixture.status.short == 'FT') {
         awayTeamScore.classList.remove('hide')
         awayTeamScore.innerHTML = filtered[i][x].goals.away
         }
@@ -134,9 +139,9 @@ var run = async () => {
 
     }
   }     
-//   setInterval(function(){
-//     $('.parentDiv').load('script.js' + ".parentDiv");
-// }, 5000);
+  setInterval(function(){
+    $('.parentDiv').load(script.js + ".parentDiv");
+}, 5000);
 };
 
 //Run Json
