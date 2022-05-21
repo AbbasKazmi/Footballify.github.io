@@ -178,7 +178,7 @@ var run = async () => {
 };
 
 const ticker =function() {
-    if ($('.status').includes('live')) {
+    if ($('.status').classList.includes('live')) {
     setInterval(function(){ 
         // toggle the apostraphe
         gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
