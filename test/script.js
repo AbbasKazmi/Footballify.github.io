@@ -90,6 +90,7 @@ var run = async () => {
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
         if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
+        console.log(filtered[i][x].teams.away.name + ' ns')
         awayTeamScore.innerHTML = undefined
         awayTeamScore.classList.add('hide')
         } else if (filtered[i][x].fixture.status.short == 'FT') {
