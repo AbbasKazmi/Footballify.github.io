@@ -67,7 +67,7 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        if (gameStatus.innerHTML == 'NS' || 'CANC') {
+        if (gameStatus.innerHTML == 'NS') {
         homeTeamScore.innerHTML = 0
         homeTeamScore.classList.add('hide')
         }
