@@ -70,7 +70,9 @@ var run = async () => {
         if (filtered[i][x].fixture.status.short === 'NS' || 'CANC') {
         homeTeamScore.innerHTML = undefined
         homeTeamScore.classList.add('hide')
-        } else  if (filtered[i][x].fixture.status.short === 'FT') {
+        }
+        
+        if (filtered[i][x].fixture.status.short === 'FT') {
         homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
