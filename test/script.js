@@ -26,7 +26,7 @@ var run = async () => {
 
     //arrLeagues created to avoid duplicate leagues
     let arrLeagues = [];
-
+    console.log(filtered)
     //Loop through leagues
 	for (i = 0; i < filtered.length-1; i++) {
        //Loop through games of Leagues
@@ -41,7 +41,7 @@ var run = async () => {
         } else {
         arrLeagues.push(filtered[i][x].league.name)
 
-        //League Name + Round
+        //League Name
         let league = document.createElement("div")
         league.className = 'league'
         league.innerHTML = filtered[i][x].league.name + `<img class='flag' src=${filtered[i][x].league.flag}>`
