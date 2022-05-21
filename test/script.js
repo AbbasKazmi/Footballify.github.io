@@ -176,11 +176,10 @@ var run = async () => {
 run();
 
 //Run Json
-const interval = setInterval(function() {
-    run();
-    console.log('refresh')
-  }, 10000);
-// clearInterval(interval)
+run();
+
+// clearInterval(interv
+
 
 
 

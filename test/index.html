@@ -54,7 +54,14 @@
 </div>
 
 <div class="parentContainer">
-
+<script>
+    $(document).ready(function(){
+        $(".parentContainer").load(script.js + ".parentContainer")       
+        setInterval(function() {
+             $(".parentContainer").load(script.js + ".parentContainer")       
+             }, 1000); 
+    });
+</script>
 </div>
 
 
