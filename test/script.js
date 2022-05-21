@@ -29,7 +29,7 @@ var run = async () => {
 
     //Loop through leagues
 	for (i = 0; i < filtered.length-1; i++) {
-        //Loop through games of Leagues
+       //Loop through games of Leagues
        for (x=0; x<filtered[i].length;x++){
         //Create Parent Div For Data
         let parent = document.createElement("div")
@@ -97,8 +97,7 @@ var run = async () => {
         parent.appendChild(awayTeamScore)
 
         //Push all Data to DOM
-        
-        document.querySelector('.parentContainer').appendChild(parent);
+        document.querySelector('.middleCont').appendChild(parent);
       
 
 
