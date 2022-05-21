@@ -67,8 +67,8 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-            homeTeamScore.innerHTML = undefined
-            homeTeamScore.classList.add('hide')
+        homeTeamScore.innerHTML = '0'
+        homeTeamScore.classList.add('hide')
 
         
             if (String(filtered[i][x].fixture.status.short) === 'FT' || 'HT') {
@@ -96,8 +96,8 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-            awayTeamScore.innerHTML = undefined
-            awayTeamScore.classList.add('hide')
+        awayTeamScore.innerHTML = '0'
+        awayTeamScore.classList.add('hide')
     
             if (String(filtered[i][x].fixture.status.short) == 'FT' || 'HT') {
             awayTeamScore.classList.remove('hide')
