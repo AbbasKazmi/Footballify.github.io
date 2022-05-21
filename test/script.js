@@ -174,11 +174,15 @@ var run = async () => {
 };
 
 run();
+const del = document.querySelectorAll('.parentDiv')
+const interval = setInterval(function() {
+    del.remove();
+    run();
+    console.log('refresh')
+  }, 10000);
 
-//Run Json
-run();
 
-// clearInterval(interv
+
 
 
 
