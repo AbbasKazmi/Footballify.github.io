@@ -6,9 +6,9 @@ var desiredOrder = [
     265, 239, 211, 89,
 ];
 const isoStr = new Date().toISOString().slice(0,10);
-console.log(isoStr)
+
 var run = async () => {
-    const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=2022-05-19`, {
+    const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=${isoStr}`, {
         headers: {
             'X-RapidAPI-Host': "v3.football.api-sports.io",
 			"X-RapidAPI-Key": "e54f3d3972ca8251c1259694b49948de"
