@@ -195,15 +195,9 @@ border-right: 1px groove;
   opacity: 0;
 }
 
-.middleCont {
-width: 33.333333333333333333333333333333%
-}
-
-.leftCont {
-width: 33.333333333333333333333333333333%
-
-}
-
-.rightCont {
-width: 33.333333333333333333333333333333%
+.parentContainer {
+  width: 95%;
+  margin:auto;
+  border: 1px solid black;
+  background-color: white;
 }

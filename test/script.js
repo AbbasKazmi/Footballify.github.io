@@ -37,7 +37,7 @@ var run = async () => {
         
         //League Duplication not allowed
         if (arrLeagues.includes(filtered[i][x].league.name)) {
-         console.log(`${filtered[i][x].league.name} skipped`)
+
         } else {
         arrLeagues.push(filtered[i][x].league.name)
 
@@ -97,7 +97,7 @@ var run = async () => {
         parent.appendChild(awayTeamScore)
 
         //Push all Data to DOM
-        document.querySelector('.middleCont').appendChild(parent);
+        document.querySelector('.parentContainer').appendChild(parent);
       
 
 
