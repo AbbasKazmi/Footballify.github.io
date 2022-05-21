@@ -141,9 +141,9 @@ var run = async () => {
 
     }
   }     
-  setInterval(function(){
-    $('.parentDiv').load(script.js + ".parentDiv");
-}, 5000);
+//   setInterval(function(){
+//     $('.parentDiv').load('script.js' + ".parentDiv");
+// }, 5000);
 };
 
 //Run Json
