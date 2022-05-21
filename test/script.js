@@ -31,8 +31,6 @@ var run = async () => {
 	for (i = 0; i < filtered.length-1; i++) {
        //Loop through games of Leagues
        for (x=0; x<filtered[i].length;x++){
-        //remove old data
-        $('.parentDiv').remove();
         //Create Parent Div For Data
         let parent = document.createElement("div")
         parent.className = 'parentDiv'
