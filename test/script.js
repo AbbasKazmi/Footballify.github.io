@@ -63,8 +63,12 @@ var run = async () => {
       
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        // homeTeamScore.innerHTML = filtered[i][x].goals.home
-        homeTeamScore.innerHTML = 1
+        if (filtered[i][x].fixture.status.short == 'NS') {
+        homeTeamScore.innerHTML = 0
+        homeTeamScore.classList.add('hide')
+        } else {
+        homeTeamScore.innerHTML = filtered[i][x].goals.home
+        }
         parent.appendChild(homeTeamScore)
 
         let child2 = document.createElement("div")
@@ -77,8 +81,12 @@ var run = async () => {
 
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-        // awayTeamScore.innerHTML = filtered[i][x].goals.away
-        awayTeamScore.innerHTML = 1
+        if (filtered[i][x].fixture.status.short == 'NS') {
+        awayTeamScore.innerHTML = 0
+        awayTeamScore.classList.add('hide')
+        } else {
+        awayTeamScore.innerHTML = filtered[i][x].goals.away
+        }
         parent.appendChild(awayTeamScore)
 
         document.body.appendChild(parent);
@@ -99,7 +107,14 @@ var run = async () => {
             homeTeamName.classList.add('loser')
             awayTeamScore.classList.add('winner')
             homeTeamScore.classList.add('loser')
-	  } else {
+          //Match Not Started
+	  } else if (filtered[i][x].fixture.status.short == 'NS'){
+        homeTeamName.classList.add('winner')
+        homeTeamScore.classList.add('winner')
+        awayTeamScore.classList.add('winner')
+        awayTeamName.classList.add('winner')
+
+      } else {
           //Draw
             homeTeamName.classList.add('loser')
             awayTeamName.classList.add('loser')

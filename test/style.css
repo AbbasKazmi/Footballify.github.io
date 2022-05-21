@@ -221,4 +221,8 @@ border-right: 1px groove;
   font-weight: 300;
   opacity: 70%;
 }
+
+.hide{
+  opacity: 0;
+}
              
