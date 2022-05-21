@@ -98,21 +98,19 @@ var run = async () => {
             awayTeamScore.innerHTML = 0
             awayTeamScore.classList.add('hide')
 
-        }
-        if (String(filtered[i][x].fixture.status.short) === 'FT' || 'HT') {
+        } else if (String(filtered[i][x].fixture.status.short) === 'FT' || 'HT') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
-        }
-        if (String(filtered[i][x].fixture.status.short) == '1H' || '2H') {
+        } else if (String(filtered[i][x].fixture.status.short) == '1H' || '2H') {
                 homeTeamScore.classList.remove('hide')
                 homeTeamScore.innerHTML = filtered[i][x].goals.away
                 awayTeamScore.classList.remove('hide')
                 awayTeamScore.innerHTML = filtered[i][x].goals.away
                 console.log(homeTeamName)
                 gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
-        }
+        } else {}
 
         //If Home Wins
         if (filtered[i][x].teams.home.winner == true) {
