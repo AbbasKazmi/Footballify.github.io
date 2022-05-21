@@ -71,6 +71,7 @@ var run = async () => {
         homeTeamScore.innerHTML = 0
         homeTeamScore.classList.add('hide')
         } else {
+        homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
         parent.appendChild(homeTeamScore)
@@ -92,6 +93,7 @@ var run = async () => {
         awayTeamScore.innerHTML = 0
         awayTeamScore.classList.add('hide')
         } else {
+        awayTeamScore.classList.remove('hide')
         awayTeamScore.innerHTML = filtered[i][x].goals.away
         }
         parent.appendChild(awayTeamScore)
