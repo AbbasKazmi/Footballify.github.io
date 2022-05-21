@@ -5,9 +5,10 @@ var desiredOrder = [
     144, 188, 169, 40, 41, 42, 43, 235, 207, 218, 141, 136, 333, 307, 197, 62, 79, 80, 128, 130, 292, 98, 101, 103, 106, 113, 119, 283, 71, 73,
     265, 239, 211, 89,
 ];
-
+const isoStr = new Date().toISOString().slice(0,10);
+console.log(isoStr)
 var run = async () => {
-    const res = await fetch('https://v3.football.api-sports.io/fixtures?date=2022-05-19', {
+    const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=2022-05-19`, {
         headers: {
             'X-RapidAPI-Host': "v3.football.api-sports.io",
 			"X-RapidAPI-Key": "e54f3d3972ca8251c1259694b49948de"
