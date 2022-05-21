@@ -73,11 +73,10 @@ var run = async () => {
             homeTeamScore.classList.add('hide')
 
         }
-        
             if (filtered[i][x].fixture.status.short === 'FT' || 'HT') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
-
+        }
             if (filtered[i][x].fixture.status.short == '1H' || '2H') {
                 homeTeamScore.classList.remove('hide')
                 homeTeamScore.innerHTML = filtered[i][x].goals.away
