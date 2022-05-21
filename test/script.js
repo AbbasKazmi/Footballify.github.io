@@ -67,18 +67,6 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        homeTeamScore.innerHTML = '0'
-        homeTeamScore.classList.add('hide')
-
-        
-            if (String(filtered[i][x].fixture.status.short) === 'FT' || 'HT') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-        }
-            if (String(filtered[i][x].fixture.status.short) == '1H' || '2H') {
-                homeTeamScore.classList.remove('hide')
-                homeTeamScore.innerHTML = filtered[i][x].goals.away
-        }
 
         
         parent.appendChild(homeTeamScore)
@@ -96,19 +84,7 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-        awayTeamScore.innerHTML = '0'
-        awayTeamScore.classList.add('hide')
-    
-            if (String(filtered[i][x].fixture.status.short) == 'FT' || 'HT') {
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        }
-            if (String(filtered[i][x].fixture.status.short) == '1H' || '2H') {
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
-                
-            }
+
         parent.appendChild(awayTeamScore)
 
         //Push all Data to DOM
@@ -116,6 +92,26 @@ var run = async () => {
       
 
 
+        if (String(filtered[i][x].fixture.status.short) === 'NS' || 'CANC') {
+            homeTeamScore.innerHTML = undefined
+            homeTeamScore.classList.add('hide')
+            awayTeamScore.innerHTML = undefined
+            awayTeamScore.classList.add('hide')
+
+        }
+        if (String(filtered[i][x].fixture.status.short) === 'FT' || 'HT') {
+            homeTeamScore.classList.remove('hide')
+            homeTeamScore.innerHTML = filtered[i][x].goals.home
+            awayTeamScore.classList.remove('hide')
+            awayTeamScore.innerHTML = filtered[i][x].goals.away
+        }
+        if (String(filtered[i][x].fixture.status.short) == '1H' || '2H') {
+                homeTeamScore.classList.remove('hide')
+                homeTeamScore.innerHTML = filtered[i][x].goals.away
+                awayTeamScore.classList.remove('hide')
+                awayTeamScore.innerHTML = filtered[i][x].goals.away
+                gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
+        }
 
         //If Home Wins
         if (filtered[i][x].teams.home.winner == true) {
