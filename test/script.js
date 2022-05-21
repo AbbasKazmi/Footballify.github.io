@@ -86,7 +86,8 @@ var run = async () => {
         awayTeamScore.className = 'score2'
 
         parent.appendChild(awayTeamScore)
-
+        //remove old data
+        $('.parentDiv').remove();
         //Push all Data to DOM
         document.querySelector('.parentContainer').appendChild(parent);
       
@@ -182,7 +183,7 @@ var run = async () => {
 
 };
 
-
+run();
 
 // const interval = setInterval(function() {
 //     _ => $('.parentDiv').remove().then(run());
