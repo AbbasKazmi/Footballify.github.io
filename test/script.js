@@ -95,6 +95,7 @@ var run = async () => {
         console.log(filtered[i][x].fixture.status.short)
         awayTeamScore.innerHTML = undefined
         awayTeamScore.classList.add('hide')
+    }
         if (filtered[i][x].fixture.status.short == 'FT') {
         awayTeamScore.classList.remove('hide')
         awayTeamScore.innerHTML = filtered[i][x].goals.away
