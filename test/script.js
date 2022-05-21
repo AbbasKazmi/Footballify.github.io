@@ -185,7 +185,7 @@ var run = async () => {
 
 
 const interval = setInterval(function() {
-    run().then(_ => $('.parentDiv').remove());
+    _ => $('.parentDiv').remove().then(run());
   }, 10000);
 
 
