@@ -28,6 +28,7 @@ var run = async () => {
     let arrLeagues = [];
     console.log(filtered)
     //Loop through leagues
+    $('.parentDiv').remove();
 	for (i = 0; i < filtered.length-1; i++) {
        //Loop through games of Leagues
        for (x=0; x<filtered[i].length;x++){
