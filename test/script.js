@@ -72,7 +72,7 @@ var run = async () => {
         homeTeamScore.classList.add('hide')
         }
         
-        if (filtered[i][x].fixture.status.short === 'FT' || '1H' || 'HT' || '2H' || 'ET' || 'P' || 'AET' || 'PEN' || 'BT' || 'INT' || 'AWD' || 'LIVE') {
+        if (filtered[i][x].fixture.status.short === 'FT' || 'HT') {
         homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
@@ -97,7 +97,7 @@ var run = async () => {
         awayTeamScore.classList.add('hide')
         }
 
-        if (filtered[i][x].fixture.status.short == 'FT' || '1H' || 'HT' || '2H' || 'ET' || 'P' || 'AET' || 'PEN' || 'BT' || 'INT' || 'AWD' || 'LIVE') {
+        if (filtered[i][x].fixture.status.short == 'FT' || 'HT') {
         awayTeamScore.classList.remove('hide')
         awayTeamScore.innerHTML = filtered[i][x].goals.away
         }
