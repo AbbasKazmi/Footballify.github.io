@@ -177,13 +177,10 @@ run();
 
 //Run Json
 const interval = setInterval(function() {
-    $('.parentDiv').forEach(element => {
-        element.remove();
-      });
     run();
     console.log('refresh')
   }, 10000);
-clearInterval(interval)
+// clearInterval(interval)
 
 
 
