@@ -138,6 +138,9 @@ var run = async () => {
 
     }
   }     
+  setInterval(function(){
+    $('.parentDiv').load(script.js + ".parentDiv");
+}, 30 * 1000);
 };
 
 //Run Json
