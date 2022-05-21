@@ -70,7 +70,7 @@ var run = async () => {
             homeTeamScore.innerHTML = undefined
             homeTeamScore.classList.add('hide')
 
-        }
+        
             if (String(filtered[i][x].fixture.status.short) === 'FT' || 'HT') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
@@ -98,7 +98,7 @@ var run = async () => {
         awayTeamScore.className = 'score2'
             awayTeamScore.innerHTML = undefined
             awayTeamScore.classList.add('hide')
-    }
+    
             if (String(filtered[i][x].fixture.status.short) == 'FT' || 'HT') {
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
