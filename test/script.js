@@ -126,6 +126,15 @@ var run = async () => {
             awayTeamScore.innerHTML = filtered[i][x].goals.away
             gameStatus.classList.add('live')
             gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
+        } else if (String(filtered[i][x].fixture.status.short) == 'ET') {
+            homeTeamScore.classList.remove('hide')
+            homeTeamScore.classList.add('live')
+            homeTeamScore.innerHTML = filtered[i][x].goals.home
+            awayTeamScore.classList.remove('hide')
+            awayTeamScore.classList.add('live')
+            awayTeamScore.innerHTML = filtered[i][x].goals.away
+            gameStatus.classList.add('live')
+            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
         } else if (String(filtered[i][x].fixture.status.short) == '2H') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.classList.add('live')
