@@ -36,10 +36,10 @@ var run = async () => {
         parent.className = 'parentDiv'
         
         //League Duplication not allowed
-        if (arrLeagues.includes(filtered[i][x].league.name)) {
+        if (arrLeagues.includes(filtered[i][x].league.id)) {
 
         } else {
-        arrLeagues.push(filtered[i][x].league.name)
+        arrLeagues.push(filtered[i][x].league.id)
 
         //League Name
         let league = document.createElement("div")
