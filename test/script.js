@@ -184,10 +184,16 @@ var run = async () => {
 
 
 
-const interval = setInterval(function() {
-    _ => $('.parentDiv').remove().then(run());
-  }, 10000);
+// const interval = setInterval(function() {
+//     _ => $('.parentDiv').remove().then(run());
+//   }, 10000);
 
+  const interval = setInterval(async function() {
+    if ($('.parentDiv').length) { // Check if the parent div exists
+        $('.parentDiv').remove() // Remove the div
+    }
+    await run() // Fire the run function to create a new div with new data
+}, 10000)
 
 
 
