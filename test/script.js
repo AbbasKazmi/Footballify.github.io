@@ -68,16 +68,16 @@ var run = async () => {
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
 
-            if (filtered[i][x].fixture.status.short === 'NS' || 'CANC') {
+            if (String(filtered[i][x].fixture.status.short) === 'NS' || 'CANC') {
             homeTeamScore.innerHTML = undefined
             homeTeamScore.classList.add('hide')
 
         }
-            if (filtered[i][x].fixture.status.short === 'FT' || 'HT') {
+            if (String(filtered[i][x].fixture.status.short) === 'FT' || 'HT') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
-            if (filtered[i][x].fixture.status.short == '1H' || '2H') {
+            if (String(filtered[i][x].fixture.status.short) == '1H' || '2H') {
                 homeTeamScore.classList.remove('hide')
                 homeTeamScore.innerHTML = filtered[i][x].goals.away
         }
@@ -98,16 +98,16 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-            if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
+            if (String(filtered[i][x].fixture.status.short) == 'NS' || 'CANC') {
             console.log(filtered[i][x].fixture.status.short)
             awayTeamScore.innerHTML = undefined
             awayTeamScore.classList.add('hide')
     }
-            if (filtered[i][x].fixture.status.short == 'FT' || 'HT') {
+            if (String(filtered[i][x].fixture.status.short) == 'FT' || 'HT') {
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
         }
-            if (filtered[i][x].fixture.status.short == '1H' || '2H') {
+            if (String(filtered[i][x].fixture.status.short) == '1H' || '2H') {
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
             gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
