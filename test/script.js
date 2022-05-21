@@ -63,7 +63,7 @@ var run = async () => {
       
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        if (filtered[i][x].fixture.status.short == 'NS') {
+        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
         homeTeamScore.innerHTML = 0
         homeTeamScore.classList.add('hide')
         } else {
@@ -81,7 +81,7 @@ var run = async () => {
 
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-        if (filtered[i][x].fixture.status.short == 'NS') {
+        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
         awayTeamScore.innerHTML = 0
         awayTeamScore.classList.add('hide')
         } else {
@@ -108,7 +108,7 @@ var run = async () => {
             awayTeamScore.classList.add('winner')
             homeTeamScore.classList.add('loser')
           //Match Not Started
-	  } else if (filtered[i][x].fixture.status.short == 'NS'){
+	  } else if (filtered[i][x].fixture.status.short == 'NS' || 'CANC'){
         homeTeamName.classList.add('winner')
         homeTeamScore.classList.add('winner')
         awayTeamScore.classList.add('winner')
