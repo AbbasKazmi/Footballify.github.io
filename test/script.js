@@ -170,15 +170,16 @@ var run = async () => {
 
     }
   }     
-//   setInterval(function(){
-//     $('.parentDiv').load(script.js + ".parentDiv");
-// }, 5000);
+
 };
 
 
 
 //Run Json
+const interval = setInterval(function() {
+    run();
+    console.log('refresh')
+  }, 10000);
 
-run();
 
 
