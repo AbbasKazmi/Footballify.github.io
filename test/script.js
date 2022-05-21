@@ -67,12 +67,12 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        if (filtered[i][x].fixture.status.short === 'NS' || 'CANC') {
+        if (filtered[i][x].fixture.status.short === 'NS' || 'CANC' || 'TBD' || 'SUSP') {
         homeTeamScore.innerHTML = undefined
         homeTeamScore.classList.add('hide')
         }
         
-        if (filtered[i][x].fixture.status.short === 'FT') {
+        if (filtered[i][x].fixture.status.short === 'FT' || '1H' || 'HT' || '2H' || 'ET' || 'P' || 'AET' || 'PEN' || 'BT' || 'INT' || 'AWD' || 'LIVE') {
         homeTeamScore.classList.remove('hide')
         homeTeamScore.innerHTML = filtered[i][x].goals.home
         }
@@ -91,12 +91,13 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC') {
+        if (filtered[i][x].fixture.status.short == 'NS' || 'CANC' || 'TBD' || 'SUSP') {
         console.log(filtered[i][x].fixture.status.short)
-        console.log(filtered[i][x].teams.away.name + ' ns')
         awayTeamScore.innerHTML = undefined
         awayTeamScore.classList.add('hide')
-        } else if (filtered[i][x].fixture.status.short == 'FT') {
+        }
+
+        if (filtered[i][x].fixture.status.short == 'FT' || '1H' || 'HT' || '2H' || 'ET' || 'P' || 'AET' || 'PEN' || 'BT' || 'INT' || 'AWD' || 'LIVE') {
         awayTeamScore.classList.remove('hide')
         awayTeamScore.innerHTML = filtered[i][x].goals.away
         }
