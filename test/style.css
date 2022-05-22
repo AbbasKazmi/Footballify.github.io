@@ -231,6 +231,7 @@ border-right: 1px groove;
   margin-right: 2px;
   border: 2px solid black;
   border-radius: 106px;
+  margin-bottom: 8px;
 }
 
 .addborder {
@@ -265,4 +266,8 @@ border-right: 1px groove;
     object-fit: cover;
     width:120px;
     height:120px;
+}
+
+.imgcont {
+  height: 132px;
 }
