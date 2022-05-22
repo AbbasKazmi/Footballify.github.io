@@ -171,6 +171,13 @@ input[type="checkbox"]{
     float: left;
     width: 75%;
   }
+
+  .imgMain {
+    width: 900px;
+    margin-left: 140px;
+    border: 1px solid black;
+    border-radius: 9px;
+  }
   
   /* Right column */
   .rightcolumn {
