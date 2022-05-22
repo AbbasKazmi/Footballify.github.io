@@ -206,10 +206,10 @@ border-right: 1px groove;
   background-color: #bada55;
     width: 475px;
     float: left;
-    margin-left: 30px;
+    margin-left: 57px;
+    margin-top: auto;
 }
 .parentContainer {
-  width:33.333333%;
   float:left;
 }
 #right {
@@ -218,3 +218,5 @@ border-right: 1px groove;
   float: left;
   margin-right: 30px;
 }
+
+body { min-height: 100vh; }
