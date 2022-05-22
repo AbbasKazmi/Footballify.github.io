@@ -237,6 +237,6 @@ run();
 
 const interval = setInterval(function() {
     run();
-  }, 10000);
+  }, 18000);
 
   
