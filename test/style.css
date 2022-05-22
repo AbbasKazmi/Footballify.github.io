@@ -231,3 +231,8 @@ border-right: 1px groove;
     border: 2px solid black;
     border-radius: 7px;
 }
+
+.addborder {
+  border-top: 1px groove;
+  border-left: 1px groove;
+}
