@@ -204,7 +204,7 @@ border-right: 1px groove;
   height: 100%;
 }
 #left {
-  background-color: #bada55;
+  background-color: #ffffff;
     width: 475px;
     float: left;
     margin-left: 57px;
@@ -214,9 +214,10 @@ border-right: 1px groove;
   float:left;
 }
 #right {
-  background-color: #bada55;
+  background-color: #ffffff;
   width: 475px;
   float: left;
   margin-right: 30px;
+  height: 100%;
 }
 
