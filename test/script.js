@@ -105,7 +105,7 @@ var run = async () => {
             awayTeamScore.classList.add('hide')
             awayTeamScore.innerHTML = 0
             gameStatus.innerHTML = 'NA'
-        } else if (String(filtered[i][x].fixture.status.short) === 'FT') {
+        } else if (String(filtered[i][x].fixture.status.short) === 'HT') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
             awayTeamScore.classList.remove('hide')
