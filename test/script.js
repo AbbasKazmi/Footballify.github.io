@@ -159,7 +159,11 @@ var run = async () => {
             awayTeamScore.classList.add('live')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
             gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
+            if (gameStatus.innerHTML.includes("′")){
+                gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
+            } else {            
+                gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
+            }
         
         } else {}
 
@@ -214,4 +218,4 @@ run();
 const interval = setInterval(function() {
     run();
     console.log('refresh')
-  }, 5000);
+  }, 1000);
