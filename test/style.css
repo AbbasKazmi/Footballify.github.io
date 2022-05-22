@@ -202,7 +202,7 @@ border-right: 1px groove;
   width:100%;
   clear:both;
 }
-#first {
+#left {
   background-color:red;
   width:33.333333%;
   float:left;
@@ -211,7 +211,7 @@ border-right: 1px groove;
   width:33.333333%;
   float:left;
 }
-#third {
+#right {
   background-color:#bada55;
   width:33.333333%;
   float:left;
