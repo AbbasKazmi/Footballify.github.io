@@ -260,3 +260,9 @@ border-right: 1px groove;
   width: 90%;
   margin-left: 22px;
 }
+
+.square {
+    object-fit: cover;
+    width:120px;
+    height:120px;
+}
