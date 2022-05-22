@@ -201,13 +201,14 @@ border-right: 1px groove;
 
 #wrapper {
   clear:both;
+  height: 100%;
 }
 #left {
   background-color: #bada55;
     width: 475px;
     float: left;
     margin-left: 57px;
-    margin-top: auto;
+    height: 100%;
 }
 .parentContainer {
   float:left;
@@ -219,4 +220,3 @@ border-right: 1px groove;
   margin-right: 30px;
 }
 
-body { min-height: 100vh; }

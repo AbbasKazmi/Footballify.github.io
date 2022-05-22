@@ -235,5 +235,3 @@ const interval = setInterval(function() {
   }, 10000);
 
   
-left.clientHeight=middle.clientHeight
-right.clientHeight=middle.clientHeight
