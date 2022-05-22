@@ -205,3 +205,22 @@ border-right: 1px groove;
 .live {
   color: #f75959;
 }
+
+#wrapper {
+  width:100%;
+  clear:both;
+}
+#first {
+  background-color:red;
+  width:33.333333%;
+  float:left;
+}
+.parentContainer {
+  width:33.333333%;
+  float:left;
+}
+#third {
+  background-color:#bada55;
+  width:33.333333%;
+  float:left;
+}
