@@ -243,11 +243,13 @@ border-right: 1px groove;
   padding-top: 17px;
 }
 
-.imgCont {
+
+
+.newsel {
+  height: 181px;
   background-color: white;
 }
 
-.imgCont:hover {
+.newsel:hover {
   background-color: #e8e8e8;
 }
-
