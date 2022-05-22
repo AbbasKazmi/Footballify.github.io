@@ -189,6 +189,11 @@ var run = async () => {
         awayTeamScore.classList.add('winner')
         awayTeamName.classList.add('winner')
         
+      } else if (homeTeamScore.classList.includes('live')){
+        homeTeamName.classList.add('winner')
+        homeTeamScore.classList.add('winner')
+        awayTeamScore.classList.add('winner')
+        awayTeamName.classList.add('winner')
       } else {
           //Draw
             homeTeamName.classList.add('loser')
