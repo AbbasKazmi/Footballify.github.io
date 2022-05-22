@@ -222,17 +222,32 @@ border-right: 1px groove;
 }
 
 .newsimg {
-    max-width: 30%;
-    height: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    float: left;
-    margin-right: 10px;
-    border: 2px solid black;
-    border-radius: 7px;
+  width: auto;
+  max-width: 30%;
+  height: auto;
+  margin-left: 10px;
+  margin-top: 7px;
+  float: left;
+  margin-right: 2px;
+  border: 2px solid black;
+  border-radius: 106px;
 }
 
 .addborder {
   border-top: 1px groove;
   border-left: 1px groove;
 }
+
+.innerText{
+  text-align: center;
+  padding-top: 17px;
+}
+
+.imgCont {
+  background-color: white;
+}
+
+.imgCont:hover {
+  background-color: #e8e8e8;
+}
+
