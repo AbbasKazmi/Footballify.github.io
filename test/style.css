@@ -246,7 +246,7 @@ border-right: 1px groove;
 
 
 .newsel {
-  height: 181px;
+  height: 163px;
   background-color: white;
 }
 
@@ -254,7 +254,9 @@ border-right: 1px groove;
   background-color: #e8e8e8;
 }
 
-.rounded {
-  border-top: 8px solid #bbb;
-  border-radius: 5px;
+.roundedBar {
+  border-top: 3px solid #e3e3e3;
+  border-radius: 217px;
+  width: 90%;
+  margin-left: 22px;
 }
