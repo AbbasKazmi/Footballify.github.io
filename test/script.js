@@ -1,3 +1,9 @@
+var left = document.querySelector('#left')
+var right = document.querySelector('#right')
+var middle = document.querySelector('.parentContaine')
+
+left.clientHeight=middle.clientHeight
+right.clientHeight=middle.clientHeight
 //Order of Leagues
 var desiredOrder = [
     1, 2, 3, 4, 5, 6, 7, 9, 10, 29, 30, 31, 32, 33, 34, 39, 45, 48, 140, 142, 135, 137, 78, 81, 61, 65, 66, 88, 94, 96, 253, 203, 262, 179, 185,

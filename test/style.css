@@ -197,20 +197,21 @@ border-right: 1px groove;
 }
 
 #wrapper {
-  width:95%;
   clear:both;
 }
 #left {
-  background-color:red;
-  width:33.333333%;
-  float:left;
+  background-color: #bada55;
+    width: 475px;
+    float: left;
+    margin-left: 30px;
 }
 .parentContainer {
   width:33.333333%;
   float:left;
 }
 #right {
-  background-color:#bada55;
-  width:33.333333%;
-  float:left;
+  background-color: #bada55;
+  width: 475px;
+  float: left;
+  margin-right: 30px;
 }
