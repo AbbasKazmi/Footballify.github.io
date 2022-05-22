@@ -159,12 +159,8 @@ var run = async () => {
             awayTeamScore.classList.add('live')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
             gameStatus.classList.add('live')
-            if (gameStatus.innerHTML.includes("′")){
-                gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed
-            } else {            
-                gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
-            }
-        
+            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
+
         } else {}
 
         //If Home Wins
@@ -217,5 +213,4 @@ run();
 
 const interval = setInterval(function() {
     run();
-    console.log('refresh')
   }, 1000);
