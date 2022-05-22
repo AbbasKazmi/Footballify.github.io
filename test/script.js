@@ -183,12 +183,32 @@ var run = async () => {
         awayTeamScore.classList.add('winner')
         awayTeamName.classList.add('winner')
 
-      } else if (filtered[i][x].fixture.status.short == 'CANC'){
+      } else if (filtered[i][x].fixture.status.short == '1H'){
         homeTeamName.classList.add('winner')
         homeTeamScore.classList.add('winner')
         awayTeamScore.classList.add('winner')
         awayTeamName.classList.add('winner')
         
+      } else if (filtered[i][x].fixture.status.short == '2H'){
+        homeTeamName.classList.add('winner')
+        homeTeamScore.classList.add('winner')
+        awayTeamScore.classList.add('winner')
+        awayTeamName.classList.add('winner')
+      } else if (filtered[i][x].fixture.status.short == 'ET'){
+        homeTeamName.classList.add('winner')
+        homeTeamScore.classList.add('winner')
+        awayTeamScore.classList.add('winner')
+        awayTeamName.classList.add('winner')
+      } else if (filtered[i][x].fixture.status.short == 'INT'){
+        homeTeamName.classList.add('winner')
+        homeTeamScore.classList.add('winner')
+        awayTeamScore.classList.add('winner')
+        awayTeamName.classList.add('winner')
+      } else if (filtered[i][x].fixture.status.short == 'HT'){
+        homeTeamName.classList.add('winner')
+        homeTeamScore.classList.add('winner')
+        awayTeamScore.classList.add('winner')
+        awayTeamName.classList.add('winner')
       } else {
           //Draw
             homeTeamName.classList.add('loser')
