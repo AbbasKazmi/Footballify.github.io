@@ -256,11 +256,14 @@ var run = async () => {
             homeTeamScore.classList.add('loser')
             awayTeamScore.classList.add('loser')
         }
+        parent.addEventListener("click", function(){
 
         let homeTeamScoreRightDiv = document.createElement("div")
             homeTeamScoreRightDiv.className = 'fixture'
             homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
             sideScore.appendChild(homeTeamScoreRightDiv)
+        });
+
         document.querySelector('.parentContainer').appendChild(parent);
 
     }
