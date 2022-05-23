@@ -94,12 +94,13 @@ var run = async () => {
 
         parent.appendChild(awayTeamScore)
         //Push all Data to DOM
+
+        let sideScore = document.createElement("div")
+        sideScore.className = 'rightDiv'
+        
         parent.addEventListener("click", function(){
 
             $('.rightDiv').remove();
-
-            let sideScore = document.createElement("div")
-            sideScore.className = 'rightDiv'
 
             let homeTeamNameRightDiv = document.createElement("div")
             homeTeamNameRightDiv.className = 'fixture'
