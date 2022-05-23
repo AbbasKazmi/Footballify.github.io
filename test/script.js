@@ -229,18 +229,21 @@ var run = async () => {
         parent.addEventListener("click", function(){
             $('.rightDiv').remove();
 
-            let sideScore = document.createElement("div")
+            let teamNames = document.createElement("div")
             sideScore.className = 'rightDiv'
 
             let homeTeamNameRightDiv = document.createElement("div")
             homeTeamNameRightDiv.className = 'fixturel'
             homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + "-" 
-            sideScore.appendChild(homeTeamNameRightDiv)
+            teamNames.appendChild(homeTeamNameRightDiv)
 
             let awayTeamNameRightDiv = document.createElement("div")
             awayTeamNameRightDiv.className = 'fixturer'
             awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
-            sideScore.appendChild(awayTeamNameRightDiv)
+            teamNames.appendChild(awayTeamNameRightDiv)
+
+            let sideScore = document.createElement("div")
+            sideScore.className = 'rightDiv'
 
             let homeTeamLogoRightDiv = document.createElement("img")
             homeTeamLogoRightDiv.className = 'logo1'
