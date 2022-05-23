@@ -91,9 +91,9 @@ var run = async () => {
         parent.appendChild(awayTeamScore)
         //Push all Data to DOM
         parent.addEventListener("click", function(){
-            console.log(`${filtered[i][x].teams.away.name} Has Been Clicked`)
+            console.log(`${awayTeamName} Has Been Clicked`)
         })
-        
+
         document.querySelector('.parentContainer').appendChild(parent);
 
 
