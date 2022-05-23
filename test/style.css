@@ -314,3 +314,7 @@ border-right: 1px groove;
   justify-content: space-between;
   border-top: 1px groove;
 }
+
+.logo1 {
+  height: 100px;
+}
