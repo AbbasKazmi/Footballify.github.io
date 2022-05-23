@@ -238,7 +238,7 @@ var run = async () => {
             sideScore.appendChild(homeTeamNameRightDiv)
 
             let awayTeamNameRightDiv = document.createElement("div")
-            awayTeamNameRightDiv.className = 'fixture'
+            awayTeamNameRightDiv.className = 'fixture-r'
             awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
             sideScore.appendChild(awayTeamNameRightDiv)
 
@@ -246,9 +246,9 @@ var run = async () => {
             homeTeamLogoRightDiv.className = 'logo1'
             homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
             sideScore.appendChild(homeTeamLogoRightDiv)
-            
+
             let homeTeamScoreRightDiv = document.createElement("div")
-            homeTeamScoreRightDiv.className = 'fixture'
+            homeTeamScoreRightDiv.className = 'fixture-l'
             homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
             sideScore.appendChild(homeTeamScoreRightDiv)
 
