@@ -317,6 +317,7 @@ border-right: 1px groove;
 
 .logo1 {
   height: 100px;
+  display: inline-block;
 }
 
 .fixtures-l {
