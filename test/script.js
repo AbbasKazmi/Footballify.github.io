@@ -258,7 +258,9 @@ var run = async () => {
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
 
+            document.querySelector('.sideScoreDiv').appendChild(teamNames);
             document.querySelector('.sideScoreDiv').appendChild(sideScore);
+
         });
 
         document.querySelector('.parentContainer').appendChild(parent);
