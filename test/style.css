@@ -321,9 +321,11 @@ border-right: 1px groove;
 }
 
 .fixtures-l {
+  display: inline-block;
   margin-left: 91px;
 }
 
 .fixtures-r { 
-  margin-right: 80px;
+  display: inline-block;
+  margin-right: 100px;
 }
