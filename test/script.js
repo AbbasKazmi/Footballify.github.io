@@ -230,7 +230,7 @@ var run = async () => {
             $('.rightDiv').remove();
 
             let teamNames = document.createElement("div")
-            sideScore.className = 'rightDiv'
+            teamNames.className = 'rightDiv'
 
             let homeTeamNameRightDiv = document.createElement("div")
             homeTeamNameRightDiv.className = 'fixturel'
