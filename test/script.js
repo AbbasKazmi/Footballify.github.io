@@ -97,11 +97,15 @@ var run = async () => {
         let sideScore = document.createElement("div")
         sideScore.className = 'rightDiv'
 
-        let fixture = document.createElement("div")
-        fixture.className = 'fixture'
-        fixture.innerHTML = homeTeamName.innerHTML + " - " + awayTeamName.innerHTML
-        sideScore.appendChild(fixture)
+        let homeTeamNameRightDiv = document.createElement("div")
+        homeTeamNameRightDiv.className = 'team1'
+        homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + " - " 
+        sideScore.appendChild(homeTeamNameRightDiv)
 
+        let awayTeamNameRightDiv = document.createElement("div")
+        awayTeamNameRightDiv.className = 'team1'
+        awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
+        sideScore.appendChild(awayTeamNameRightDiv)
       
         console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
