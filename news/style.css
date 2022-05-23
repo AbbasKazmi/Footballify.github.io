@@ -220,9 +220,11 @@ input[type="checkbox"]{
     position: relative;
     width: 1000px;
     height: 530px;
-   
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    margin-left: 84px;
+    border: 1px solid black;
+    border-radius: 6px;
   }
   #slider ul {
     position: relative;
@@ -237,8 +239,8 @@ input[type="checkbox"]{
   #slider ul li {
     position: relative;
     height: 100%;
-   
     float: left;
+
   }
   #slider ul li img{
     width: 1000px;
