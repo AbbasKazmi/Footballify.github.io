@@ -56,3 +56,4 @@ var responsiveSlider = function() {
     responsiveSlider();  
     }
     
+    $('#hiddenMain').delay(3000).fadeIn();
