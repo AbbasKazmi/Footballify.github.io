@@ -242,5 +242,5 @@ $( document ).ready(function() {
     console.log('page loaded')
     setTimeout(function () {
         document.querySelector(".hideThis").style.visibility = "visible"
-    }, 2000);
+    }, 1000);
 });
