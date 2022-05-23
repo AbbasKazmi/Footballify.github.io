@@ -94,35 +94,6 @@ var run = async () => {
 
         parent.appendChild(awayTeamScore)
         //Push all Data to DOM
-        $('.rightDiv').remove();
-        let sideScore = document.createElement("div")
-        sideScore.className = 'rightDiv'
-
-        parent.addEventListener("click", function(){
-
-            let homeTeamNameRightDiv = document.createElement("div")
-            homeTeamNameRightDiv.className = 'fixture'
-            homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + "-" 
-            sideScore.appendChild(homeTeamNameRightDiv)
-
-            let awayTeamNameRightDiv = document.createElement("div")
-            awayTeamNameRightDiv.className = 'fixture'
-            awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
-            sideScore.appendChild(awayTeamNameRightDiv)
-
-            let homeTeamLogoRightDiv = document.createElement("img")
-            homeTeamLogoRightDiv.className = 'logo1'
-            homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
-            sideScore.appendChild(homeTeamLogoRightDiv)
-
-
-            console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
-
-
-            document.querySelector('.sideScoreDiv').appendChild(sideScore);
-
-            })
-
 
         if (String(filtered[i][x].fixture.status.short) === 'NS') {
             homeTeamScore.innerHTML = 0
@@ -256,11 +227,35 @@ var run = async () => {
             awayTeamScore.classList.add('loser')
         }
         parent.addEventListener("click", function(){
+            $('.rightDiv').remove();
 
-        let homeTeamScoreRightDiv = document.createElement("div")
+            let sideScore = document.createElement("div")
+            sideScore.className = 'rightDiv'
+
+            let homeTeamNameRightDiv = document.createElement("div")
+            homeTeamNameRightDiv.className = 'fixture'
+            homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + "-" 
+            sideScore.appendChild(homeTeamNameRightDiv)
+
+            let awayTeamNameRightDiv = document.createElement("div")
+            awayTeamNameRightDiv.className = 'fixture'
+            awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
+            sideScore.appendChild(awayTeamNameRightDiv)
+
+            let homeTeamLogoRightDiv = document.createElement("img")
+            homeTeamLogoRightDiv.className = 'logo1'
+            homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
+            sideScore.appendChild(homeTeamLogoRightDiv)
+            
+            let homeTeamScoreRightDiv = document.createElement("div")
             homeTeamScoreRightDiv.className = 'fixture'
             homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
             sideScore.appendChild(homeTeamScoreRightDiv)
+
+            console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
+
+
+            document.querySelector('.sideScoreDiv').appendChild(sideScore);
         });
 
         document.querySelector('.parentContainer').appendChild(parent);
