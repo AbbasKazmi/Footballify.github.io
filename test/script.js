@@ -240,5 +240,5 @@ const interval = setInterval(function() {
 
 $( document ).ready(function() {
     console.log('page loaded')
-    document.querySelectorAll(".hideThis").style.visibility = "visible"
+    document.querySelector(".hideThis").style.visibility = "visible"
 });
