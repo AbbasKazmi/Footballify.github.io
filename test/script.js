@@ -116,6 +116,11 @@ var run = async () => {
             homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
             sideScore.appendChild(homeTeamLogoRightDiv)
 
+            let homeTeamScoreRightDiv = document.createElement("div")
+            homeTeamScoreRightDiv.className = 'fixture'
+            homeTeamScoreRightDiv.innerHTML = homeTeamscore.innerHTML
+            sideScore.appendChild(homeTeamScoreRightDiv)
+
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
 
