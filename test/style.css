@@ -232,6 +232,7 @@ border-right: 1px groove;
   border: 2px solid black;
   border-radius: 6px;
   margin-bottom: 8px;
+  height: 120px;
 }
 
 .newsimg:hover {
