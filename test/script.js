@@ -237,4 +237,7 @@ const interval = setInterval(function() {
     run();
   }, 60000);
 
-$('#hiddenMain').delay(3000).fadeIn();
+
+$( document ).ready(function() {
+    $('.hideThis').delay(3000).fadeIn();
+});
