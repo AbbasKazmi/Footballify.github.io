@@ -244,3 +244,6 @@ const interval = setInterval(function() {
   }, 60000);
 
   
+  $(document).ready(function() {
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
+  });
