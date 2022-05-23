@@ -237,6 +237,4 @@ const interval = setInterval(function() {
     run();
   }, 60000);
 
-  $(window).on('load', function() {
-    $("#cover").hide();
- });
+$('.hiddenMain').delay(3000).fadeIn();
