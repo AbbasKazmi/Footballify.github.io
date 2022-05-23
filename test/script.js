@@ -67,6 +67,11 @@ var run = async () => {
         homeTeamName.innerHTML = filtered[i][x].teams.home.name
         parent.appendChild(homeTeamName)
       
+        let homeTeamLogo = document.createElement("div")
+        homeTeamLogo.className = 'logo1'
+        homeTeamLogo.setAttribute("src",filtered[i][x].teams.home.logo)
+        parent.appendChild(homeTeamLogo)
+
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
@@ -92,29 +97,34 @@ var run = async () => {
         //Push all Data to DOM
         parent.addEventListener("click", function(){
 
-        $('.rightDiv').remove();
+            $('.rightDiv').remove();
 
-        let sideScore = document.createElement("div")
-        sideScore.className = 'rightDiv'
+            let sideScore = document.createElement("div")
+            sideScore.className = 'rightDiv'
 
-        let homeTeamNameRightDiv = document.createElement("div")
-        homeTeamNameRightDiv.className = 'fixture'
-        homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + " - " 
-        sideScore.appendChild(homeTeamNameRightDiv)
+            let homeTeamNameRightDiv = document.createElement("div")
+            homeTeamNameRightDiv.className = 'fixture'
+            homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + "-" 
+            sideScore.appendChild(homeTeamNameRightDiv)
 
-        let awayTeamNameRightDiv = document.createElement("div")
-        awayTeamNameRightDiv.className = 'fixture'
-        awayTeamNameRightDiv.innerHTML = " " + awayTeamName.innerHTML
-        sideScore.appendChild(awayTeamNameRightDiv)
-      
-        console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
+            let awayTeamNameRightDiv = document.createElement("div")
+            awayTeamNameRightDiv.className = 'fixture'
+            awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
+            sideScore.appendChild(awayTeamNameRightDiv)
+
+            let homeTeamLogoRightDiv = document.createElement("div")
+            homeTeamLogoRightDiv.className = 'logo1'
+            homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo)
+            parent.appendChild(homeTeamLogoRightDiv)
+
+            console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
 
-        document.querySelector('.sideScoreDiv').appendChild(sideScore);
+            document.querySelector('.sideScoreDiv').appendChild(sideScore);
 
-        })
+            })
 
-        document.querySelector('.parentContainer').appendChild(parent);
+            document.querySelector('.parentContainer').appendChild(parent);
 
 
 
