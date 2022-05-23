@@ -300,6 +300,7 @@ border-right: 1px groove;
 
 .rightDiv {
   text-align: center;
+  overflow: hidden; 
 }
 
 .rightBar {
