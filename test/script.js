@@ -129,6 +129,11 @@ var run = async () => {
             homeTeamScore.innerHTML = filtered[i][x].goals.home
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
+        } else if (String(filtered[i][x].fixture.status.short) === 'PST') {
+            homeTeamScore.classList.remove('hide')
+            homeTeamScore.innerHTML = filtered[i][x].goals.home
+            awayTeamScore.classList.remove('hide')
+            awayTeamScore.innerHTML = filtered[i][x].goals.away
         } else if (String(filtered[i][x].fixture.status.short) === 'AET') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
@@ -237,6 +242,6 @@ run();
 
 const interval = setInterval(function() {
     run();
-  }, 20000);
+  }, 60000);
 
   
