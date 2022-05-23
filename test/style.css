@@ -320,3 +320,11 @@ border-right: 1px groove;
   display: inline-block;
 }
 
+.fixturel {
+  float: left;
+  margin-left: 93px;
+}
+
+.fixturer { 
+  float: left;
+}
