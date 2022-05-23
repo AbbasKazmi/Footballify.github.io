@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
-
+.hideThis {
+  visibility: hidden;
+}
 nav{
   display: flex;
   height: 60px;
