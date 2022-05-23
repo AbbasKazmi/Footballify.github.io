@@ -1,10 +1,4 @@
-var left = document.querySelector('#left')
-var right = document.querySelector('#right')
-let middle = document.querySelector('.parentContainer')
 
-$(document).ready(function(){
-    $('.fade').fadeIn(2000);
-});
 
 //Order of Leagues
 var desiredOrder = [
@@ -243,7 +237,6 @@ const interval = setInterval(function() {
     run();
   }, 60000);
 
-  
-  $(document).ready(function() {
-    document.getElementsByTagName("html")[0].style.visibility = "visible";
-  });
+  $(window).on('load', function() {
+    $("#cover").hide();
+ });

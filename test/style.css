@@ -5,7 +5,8 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
-html { visibility:hidden; }
+#cover 
+{position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;}
 
 html,body {
   height: 100%;

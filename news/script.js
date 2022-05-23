@@ -56,6 +56,3 @@ var responsiveSlider = function() {
     responsiveSlider();  
     }
     
-    $(document).ready(function() {
-      document.getElementsByTagName("html")[0].style.visibility = "visible";
-    });
