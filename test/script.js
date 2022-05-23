@@ -91,7 +91,22 @@ var run = async () => {
         parent.appendChild(awayTeamScore)
         //Push all Data to DOM
         parent.addEventListener("click", function(){
-            console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
+
+        $('.rightDiv').remove();
+        
+        let sideScore = document.createElement("div")
+        sideScore.className = 'rightDiv'
+
+        let homeTeamNameRightDiv = document.createElement("div")
+        homeTeamNameRightDiv.className = 'team1'
+        homeTeamNameRightDiv.innerHTML = filtered[i][x].teams.home.name
+        sideScore.appendChild(homeTeamNameRightDiv)
+      
+        console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
+
+
+        document.querySelector('.sideScoreDiv').appendChild(parent);
+
         })
 
         document.querySelector('.parentContainer').appendChild(parent);
