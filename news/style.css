@@ -271,3 +271,11 @@ input[type="checkbox"]{
   #slider #next {
     right: 10px;
   }
+
+  .story{
+    margin-left: 87px;
+  }
+
+  p {
+    text-align: justify;
+  }
