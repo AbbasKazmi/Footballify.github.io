@@ -259,10 +259,6 @@ border-right: 1px groove;
   background-color: white;
 }
 
-.newsel:hover {
-  background-color: #e8e8e8;
-}
-
 .roundedBar {
   border-top: 3px solid #e3e3e3;
   border-radius: 217px;
