@@ -1,3 +1,5 @@
+
+
 var responsiveSlider = function() {
 
     var slider = document.getElementById("slider");
