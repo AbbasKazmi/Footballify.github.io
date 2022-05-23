@@ -239,5 +239,6 @@ const interval = setInterval(function() {
 
 
 $( document ).ready(function() {
-    $('.hideThis').delay(3000).fadeIn();
+    console.log('page loaded')
+    document.querySelectorAll(".hideThis").style.visibility = "visible"
 });
