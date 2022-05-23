@@ -93,13 +93,13 @@ var run = async () => {
         parent.addEventListener("click", function(){
 
         $('.rightDiv').remove();
-        
+
         let sideScore = document.createElement("div")
         sideScore.className = 'rightDiv'
 
         let homeTeamNameRightDiv = document.createElement("div")
         homeTeamNameRightDiv.className = 'team1'
-        homeTeamNameRightDiv.innerHTML = filtered[i][x].teams.home.name
+        homeTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
         sideScore.appendChild(homeTeamNameRightDiv)
       
         console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
