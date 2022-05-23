@@ -116,10 +116,6 @@ var run = async () => {
             homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
             sideScore.appendChild(homeTeamLogoRightDiv)
 
-            let homeTeamScoreRightDiv = document.createElement("div")
-            homeTeamScoreRightDiv.className = 'fixture'
-            homeTeamScoreRightDiv.innerHTML = homeTeamscore.innerHTML
-            sideScore.appendChild(homeTeamScoreRightDiv)
 
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
@@ -127,9 +123,6 @@ var run = async () => {
             document.querySelector('.sideScoreDiv').appendChild(sideScore);
 
             })
-
-            document.querySelector('.parentContainer').appendChild(parent);
-
 
 
         if (String(filtered[i][x].fixture.status.short) === 'NS') {
@@ -264,7 +257,11 @@ var run = async () => {
             awayTeamScore.classList.add('loser')
         }
 
-
+        let homeTeamScoreRightDiv = document.createElement("div")
+            homeTeamScoreRightDiv.className = 'fixture'
+            homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
+            sideScore.appendChild(homeTeamScoreRightDiv)
+        document.querySelector('.parentContainer').appendChild(parent);
 
     }
   }     
