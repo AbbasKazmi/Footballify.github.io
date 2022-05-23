@@ -114,7 +114,7 @@ var run = async () => {
 
             let homeTeamLogoRightDiv = document.createElement("div")
             homeTeamLogoRightDiv.className = 'logo1'
-            homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo)
+            homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
             parent.appendChild(homeTeamLogoRightDiv)
 
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
