@@ -293,3 +293,7 @@ border-right: 1px groove;
 .hiddenMain {
   display: none;
 }
+
+fixture {
+  text-align: center;
+}

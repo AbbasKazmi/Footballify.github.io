@@ -98,12 +98,12 @@ var run = async () => {
         sideScore.className = 'rightDiv'
 
         let homeTeamNameRightDiv = document.createElement("div")
-        homeTeamNameRightDiv.className = 'team1'
+        homeTeamNameRightDiv.className = 'fixture'
         homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + " - " 
         sideScore.appendChild(homeTeamNameRightDiv)
 
         let awayTeamNameRightDiv = document.createElement("div")
-        awayTeamNameRightDiv.className = 'team1'
+        awayTeamNameRightDiv.className = 'fixture'
         awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
         sideScore.appendChild(awayTeamNameRightDiv)
       
