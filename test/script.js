@@ -70,7 +70,6 @@ var run = async () => {
         let homeTeamLogo = document.createElement("img")
         homeTeamLogo.className = 'logo1'
         homeTeamLogo.setAttribute("src",filtered[i][x].teams.home.logo)
-        parent.appendChild(homeTeamLogo)
 
         //Home Score
         let homeTeamScore = document.createElement("div")
@@ -115,7 +114,7 @@ var run = async () => {
             let homeTeamLogoRightDiv = document.createElement("img")
             homeTeamLogoRightDiv.className = 'logo1'
             homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
-            parent.appendChild(homeTeamLogoRightDiv)
+            sideScore.appendChild(homeTeamLogoRightDiv)
 
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
