@@ -240,5 +240,7 @@ const interval = setInterval(function() {
 
 $( document ).ready(function() {
     console.log('page loaded')
-    document.querySelector(".hideThis").style.visibility = "visible"
+    setTimeout(function () {
+        document.querySelector(".hideThis").style.visibility = "visible"
+    }, 3000);
 });
