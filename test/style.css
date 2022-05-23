@@ -294,6 +294,10 @@ border-right: 1px groove;
   display: none;
 }
 
-fixture {
+.fixture {
+  display: inline-block;
+}
+
+.rightDiv {
   text-align: center;
 }

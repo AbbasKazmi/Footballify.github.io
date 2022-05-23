@@ -104,7 +104,7 @@ var run = async () => {
 
         let awayTeamNameRightDiv = document.createElement("div")
         awayTeamNameRightDiv.className = 'fixture'
-        awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
+        awayTeamNameRightDiv.innerHTML = " " + awayTeamName.innerHTML
         sideScore.appendChild(awayTeamNameRightDiv)
       
         console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
