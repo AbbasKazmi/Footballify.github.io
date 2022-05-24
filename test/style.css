@@ -302,6 +302,11 @@ border-right: 1px groove;
   text-align: center;
   overflow: hidden; 
 }
+.rightDivScores {
+  text-align: center;
+  overflow: hidden; 
+  margin-top: 18px;
+}
 
 .rightBar {
   font-weight: 700;
@@ -327,4 +332,12 @@ border-right: 1px groove;
 
 .fixturer { 
   display: inline;
+}
+
+.fixtureScoreRight {
+  margin-right: 67px;
+}
+
+.fixtureScoreLeft {
+  margin-left: 69px;
 }
