@@ -317,12 +317,12 @@ var run = async () => {
                 let homeTeamScoreRightDiv = document.createElement("div")
                 homeTeamScoreRightDiv.className = 'fixtureScoreRight'
                 homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
-                sideScore.appendChild(homeTeamScoreRightDiv)
     
                 let awayTeamScoreRightDiv = document.createElement("div")
                 awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
                 awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
-                sideScore.appendChild(awayTeamScoreRightDiv)
+
+                timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;
             }
         }, 1000);
             sideScore.appendChild(timer)
