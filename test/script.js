@@ -339,8 +339,8 @@ var run = async () => {
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
 
-            $('.sideScoreDiv').appendChild(teamNames)
-            $('.sideScoreDiv').appendChild(sideScore)
+            document.querySelector('.sideScoreDiv').appendChild(teamNames);
+            document.querySelector('.sideScoreDiv').appendChild(sideScore);
 
         });
 
