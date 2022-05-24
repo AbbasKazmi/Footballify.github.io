@@ -216,11 +216,11 @@ var run = async () => {
 
         parent.addEventListener("click", function(){
             $('.rightDiv').fadeOut(400, function(){
-                remove();
+                $('.rightDiv').remove();
             });
             
             $('.rightDivScores').fadeOut(400, function(){
-                remove();
+                $('.rightDiv').remove();
             });
 
             let teamNames = document.createElement("div")
