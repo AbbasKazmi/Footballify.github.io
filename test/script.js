@@ -342,7 +342,9 @@ var run = async () => {
             infoButton.classList='infoButton'
             infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
-            
+
+
+            window.onload=function(){
             var infoFunc = document.querySelector('.infoButton');
             if(infoFunc){
             infoFunc.addEventListener('click', function(){
@@ -350,7 +352,7 @@ var run = async () => {
             });
             } else {
                 console.log('null :(')
-            }
+            }};
         
         
 
