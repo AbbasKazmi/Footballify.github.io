@@ -343,6 +343,7 @@ var run = async () => {
             infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
             
+        document.addEventListener('DOMContentLoaded', function () {
             var infoFunc = document.getElementById('infoButton');
             if(infoFunc){
             infoFunc.addEventListener('click', function(){
@@ -351,6 +352,7 @@ var run = async () => {
             } else {
                 console.log('null :(')
             }
+        });
         
 
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
