@@ -371,9 +371,12 @@ border-right: 1px groove;
 }
 
 .statsButton:hover{
-  background-color: white;
-  background: white;
+  background: #ffffff;
   color: black;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0px 3px 50px rgb(0 0 0 / 20%);
+
 }
 
 .eventsButton {
@@ -383,6 +386,15 @@ border-right: 1px groove;
   padding-bottom: 17px;
 }
 
+.eventsButton:hover{
+  background: #ffffff;
+  color: black;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0px 3px 50px rgb(0 0 0 / 20%);
+
+}
+
 .infoButton {
   padding-left: 32px;
   padding-right: 32px;
@@ -390,11 +402,29 @@ border-right: 1px groove;
   padding-bottom: 17px;
 }
 
+.infoButton:hover{
+  background: #ffffff;
+  color: black;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0px 3px 50px rgb(0 0 0 / 20%);
+
+}
+
 .lineupButton {
   padding-left: 32px;
   padding-right: 32px;
   padding-top: 17px;
   padding-bottom: 17px;
+}
+
+.lineupButton:hover{
+  background: #ffffff;
+  color: black;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0px 3px 50px rgb(0 0 0 / 20%);
+
 }
 
 .navbarMini {
