@@ -319,15 +319,21 @@ var run = async () => {
 
             let eventsButton = document.createElement('button')
             eventsButton.className = 'eventsButton'
+            navbarMini.appendChild(eventsButton)
 
             let statsButton=document.createElement('button')
             statsButton.className='statsButton';
+            navbarMini.appendChild(statsButton);
 
             let lineupButton=document.createElement('button')
             lineupButton.className='lineupButton';
+            navbarMini.appendChild(lineupButton)
 
             let infoButton=document.createElement('button')
             infoButton.classList='infoButton'
+            navbarMini.appendChild(infoButton)
+
+            parent.appendChild(navbarMini)
         })
 
         
