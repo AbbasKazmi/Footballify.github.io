@@ -323,10 +323,11 @@ var run = async () => {
             }
             var countDownDate = new Date(`${month} + ${timerOrigin.innerHTML.slice(9,10)}, ${timerOrigin.innerHTML.slice(0,4)} ${timerOrigin.innerHTML.slice(12,19)} `).getTime();
             console.log(countDownDate)
+            
             let timer = document.createElement("div")
             timer.className = 'timer'
             timer.innerHTML = 
-            timer.appendChild(awayTeamScoreRightDiv)
+            sideScore.appendChild(timer)
 
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
