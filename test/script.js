@@ -67,6 +67,10 @@ var run = async () => {
         homeTeamName.innerHTML = filtered[i][x].teams.home.name
         parent.appendChild(homeTeamName)
       
+        let timerOrigin = document.createElement("div")
+        timerOrigin.className = 'timer'
+        timerOrigin.innerHTML = filtered[i][x].fixture.date;
+
         let homeTeamLogo = document.createElement("img")
         homeTeamLogo.className = 'logo1'
         homeTeamLogo.setAttribute("src",filtered[i][x].teams.home.logo)
@@ -280,6 +284,38 @@ var run = async () => {
             awayTeamLogoRightDiv.className = 'logo1'
             awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
             sideScore.appendChild(awayTeamLogoRightDiv)
+            
+            if (timerOrigin.innerHTML.slice(6,7) = "01") {
+                let month = Jan
+            } else if (timerOrigin.innerHTML.slice(6,7) = "02") {
+                let month = Feb
+            } else if (timerOrigin.innerHTML.slice(6,7) = "03") {
+                let month = Mar
+            } else if (timerOrigin.innerHTML.slice(6,7) = "04") {
+                let month = Apr
+            } else if (timerOrigin.innerHTML.slice(6,7) = "05") {
+                let month = May
+            } else if (timerOrigin.innerHTML.slice(6,7) = "06") {
+                let month = Jun
+            } else if (timerOrigin.innerHTML.slice(6,7) = "07") {
+                let month = Jul
+            } else if (timerOrigin.innerHTML.slice(6,7) = "08") {
+                let month = Aug
+            } else if (timerOrigin.innerHTML.slice(6,7) = "09") {
+                let month = Sep
+            } else if (timerOrigin.innerHTML.slice(6,7) = "10") {
+                let month = Oct
+            } else if (timerOrigin.innerHTML.slice(6,7) = "11") {
+                let month = Nov
+            } else if (timerOrigin.innerHTML.slice(6,7) = "12") {
+                let month = Dec
+            }
+            var countDownDate = new Date(`${month} + ${timerOrigin.innerHTML.slice(9,10)}, ${timerOrigin.innerHTML.slice(0,4)} ${timerOrigin.innerHTML.slice(12,19)} `).getTime();
+            console.log(countDownDate)
+            let timer = document.createElement("div")
+            timer.className = 'timer'
+            timer.innerHTML = 
+            timer.appendChild(awayTeamScoreRightDiv)
 
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
