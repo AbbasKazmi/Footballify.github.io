@@ -342,17 +342,17 @@ var run = async () => {
             infoButton.classList='infoButton'
             infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
+
+            document.querySelector('.sideScoreDiv').appendChild(navbarMini)
+
         })
 
         
 
         document.querySelector('.parentContainer').appendChild(parent);
 
-        
-        document.querySelector('.sideScoreDiv').appendChild(navbarMini)
-
         document.addEventListener('DOMContentLoaded', function(){
-        
+            
             document.querySelector('.infoButton').addEventListener('click', function(){
             console.log('click info')
         });
