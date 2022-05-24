@@ -71,6 +71,10 @@ var run = async () => {
         homeTeamLogo.className = 'logo1'
         homeTeamLogo.setAttribute("src",filtered[i][x].teams.home.logo)
 
+        let awayTeamLogo = document.createElement("img")
+        awayTeamLogo.className = 'logo1'
+        awayTeamLogo.setAttribute("src",filtered[i][x].teams.away.logo)
+
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
@@ -259,6 +263,16 @@ var run = async () => {
             homeTeamScoreRightDiv.className = 'fixture'
             homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
             sideScore.appendChild(homeTeamScoreRightDiv)
+
+            let awayTeamScoreRightDiv = document.createElement("div")
+            awayTeamScoreRightDiv.className = 'fixture'
+            awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML + "-" 
+            sideScore.appendChild(awayTeamScoreRightDiv)
+
+            let awayTeamLogoRightDiv = document.createElement("img")
+            awayTeamLogoRightDiv.className = 'logo1'
+            awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
+            sideScore.appendChild(awayTeamLogoRightDiv)
 
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
