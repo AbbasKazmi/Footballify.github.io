@@ -301,11 +301,14 @@ border-right: 1px groove;
 .rightDiv {
   text-align: center;
   overflow: hidden; 
+  background: #cbffd2;
 }
 .rightDivScores {
   text-align: center;
   overflow: hidden; 
-  margin-top: 18px;
+  padding-top: 18px;
+  padding-bottom: 30px;
+  background: #cbffd2;
 }
 
 .rightBar {
