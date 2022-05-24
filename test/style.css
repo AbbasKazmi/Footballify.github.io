@@ -362,3 +362,24 @@ border-right: 1px groove;
   font-size: 30px;
   font-weight: 500;
 }
+
+.statsButton{
+  padding: 17px;
+}
+.eventsButton {
+  padding: 17px;
+}
+
+.infoButton {
+  padding: 17px;
+}
+
+.lineupButton {
+  padding: 17px;
+}
+
+.navbarMini {
+  background: #cbffd2;
+
+}
+
