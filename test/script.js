@@ -129,12 +129,7 @@ var run = async () => {
             homeTeamScore.innerHTML = filtered[i][x].goals.home
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'TBD') {
-            homeTeamScore.classList.add('hide')
-            homeTeamScore.innerHTML = 0//filtered[i][x].goals.home
-            awayTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0//filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'FT') {
+        } else if (String(filtered[i][x].fixture.status.short) === 'FT' || filtered[i][x].fixture.status.short === 'TBD') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
             awayTeamScore.classList.remove('hide')
@@ -197,33 +192,13 @@ var run = async () => {
             homeTeamScore.classList.add('loser')
           //Match Not Started or  Cancelled
         
-      } else if (filtered[i][x].fixture.status.short == 'NS' || filtered[i][x].fixture.status.short == 'TBD'){
+      } else if (filtered[i][x].fixture.status.short == 'NS' || filtered[i][x].fixture.status.short == 'TBD' || filtered[i][x].fixture.status.short == '1H' || filtered[i][x].fixture.status.short == '2H' || filtered[i][x].fixture.status.short == 'INT'  || filtered[i][x].fixture.status.short == 'ET'){
         homeTeamName.classList.add('winner')
         homeTeamScore.classList.add('winner')
         awayTeamScore.classList.add('winner')
         awayTeamName.classList.add('winner')
 
-      } else if (filtered[i][x].fixture.status.short == '1H'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-        
-      } else if (filtered[i][x].fixture.status.short == '2H'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-      } else if (filtered[i][x].fixture.status.short == 'ET'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-      } else if (filtered[i][x].fixture.status.short == 'INT'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
+      } 
       } else if (filtered[i][x].fixture.status.short == 'HT'){
         homeTeamName.classList.add('winner')
         homeTeamScore.classList.add('winner')
