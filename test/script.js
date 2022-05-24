@@ -333,7 +333,7 @@ var run = async () => {
             infoButton.classList='infoButton'
             navbarMini.appendChild(infoButton)
 
-            parent.appendChild(navbarMini)
+            document.querySelector('.sideScoreDiv').appendChild(navbarMini)
         })
 
         
