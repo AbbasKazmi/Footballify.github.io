@@ -342,12 +342,12 @@ border-right: 1px groove;
   display: inline-block;
   margin-left: 69px;
   font-size: 30px;
-  font-weight: 800;
-}
+  font-weight: 500;
+} 
 
 .fixtureScoreLeft {
   display: inline-block;
   margin-right: 67px;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 500;
 }
