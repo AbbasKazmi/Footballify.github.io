@@ -339,8 +339,8 @@ var run = async () => {
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
 
-            document.querySelector('.sideScoreDiv').hide().appendChild(teamNames).fadeIn();
-            document.querySelector('.sideScoreDiv').hide().appendChild(sideScore).fadeIn();
+            $('.sideScoreDiv').hide().appendChild(teamNames).fadeIn();
+            $('.sideScoreDiv').hide().appendChild(sideScore).fadeIn();
 
         });
 
