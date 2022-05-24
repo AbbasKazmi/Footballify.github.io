@@ -306,7 +306,11 @@ var run = async () => {
             }
                 
             // Display the time
+            if (Number(seconds)>0){
             timer.innerHTML = hours + ":" + minutes + ":" + seconds;
+            } else{
+                console.log('game not available')
+            }
   
             // If the count down is finished, Display score
             if (distance < 0) {
