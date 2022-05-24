@@ -303,20 +303,20 @@ var run = async () => {
 
 
             let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (days * 24);
-            if (hours.length == 1) {
+            if (String(hours).length == 1) {
                 hours= "0" + hours;
             }
 
 
             let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            if (minutes.length == 1) {
+            if (String(minutes).length == 1) {
                 minutes= "0" + minutes;
             }
 
 
             let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            if (seconds.length == 1) {
+            if (String(seconds).length == 1) {
                 seconds = "0" + seconds;
             }
                 
