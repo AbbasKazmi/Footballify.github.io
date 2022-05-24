@@ -199,46 +199,13 @@ var run = async () => {
             homeTeamName.classList.add('loser')
             awayTeamScore.classList.add('winner')
             homeTeamScore.classList.add('loser')
-          //Match Not Started or  Cancelled
-	  } else if (filtered[i][x].fixture.status.short == 'TBD'){
+          //Match Not Started or  Cancelled or In Progress
+	  } else if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
         homeTeamName.classList.add('winner')
         homeTeamScore.classList.add('winner')
         awayTeamScore.classList.add('winner')
         awayTeamName.classList.add('winner')
-        
-      } else if (filtered[i][x].fixture.status.short == 'NS'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-
-      } else if (filtered[i][x].fixture.status.short == '1H'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-        
-      } else if (filtered[i][x].fixture.status.short == '2H'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-      } else if (filtered[i][x].fixture.status.short == 'ET'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-      } else if (filtered[i][x].fixture.status.short == 'INT'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-      } else if (filtered[i][x].fixture.status.short == 'HT'){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
-      } else {
+        } else {
           //Draw
             homeTeamName.classList.add('loser')
             awayTeamName.classList.add('loser')
@@ -310,7 +277,6 @@ var run = async () => {
             timer.innerHTML = hours + ":" + minutes + ":" + seconds;
             } else{
                 if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD") {
-                console.log('game not available')
                 timer.innerHTML="0-0"
                 timer.classList.add("hide")
                 } else if (distance < 0) {
