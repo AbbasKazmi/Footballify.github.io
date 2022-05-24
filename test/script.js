@@ -131,9 +131,9 @@ var run = async () => {
             awayTeamScore.innerHTML = filtered[i][x].goals.away
         } else if (String(filtered[i][x].fixture.status.short) === 'TBD') {
             homeTeamScore.classList.remove('hide')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
+            homeTeamScore.innerHTML = 0//filtered[i][x].goals.home
             awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
+            awayTeamScore.innerHTML = 0//filtered[i][x].goals.away
         } else if (String(filtered[i][x].fixture.status.short) === 'FT') {
             homeTeamScore.classList.remove('hide')
             homeTeamScore.innerHTML = filtered[i][x].goals.home
@@ -266,7 +266,7 @@ var run = async () => {
 
             let awayTeamScoreRightDiv = document.createElement("div")
             awayTeamScoreRightDiv.className = 'fixture'
-            awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML + "-" 
+            awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
             sideScore.appendChild(awayTeamScoreRightDiv)
 
             let awayTeamLogoRightDiv = document.createElement("img")
