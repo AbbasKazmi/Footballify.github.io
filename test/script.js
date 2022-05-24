@@ -314,8 +314,10 @@ var run = async () => {
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
 
-            document.querySelector('.sideScoreDiv').appendChild(teamNames)
-            document.querySelector('.sideScoreDiv').appendChild(sideScore)
+            document.querySelector('.sideScoreDiv').appendChild(teamNames).hide()
+            document.querySelector('.sideScoreDiv').appendChild(sideScore).hide()
+
+            $('.sideScoreDiv').fadeIn(400)
         })
 
         
