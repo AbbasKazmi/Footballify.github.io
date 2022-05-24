@@ -320,9 +320,12 @@ var run = async () => {
   
             // If the count down is finished, Display score
             if (distance < 0) {
+                if (homeTeamScore.innerHTML=null) {
+                    console.log('null game')
+                } else {
             clearInterval(x);
             timer.innerHTML = homeTeamScore.innerHTML + "-" + awayTeamScore.innerHTML;
-            }
+            }}
         }, 1000);
             sideScore.appendChild(timer)
 
