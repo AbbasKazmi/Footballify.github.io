@@ -291,6 +291,7 @@ var run = async () => {
                     awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
     
                     timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
+                    timer.classList.add('live')
                 }
             }
   
