@@ -282,6 +282,9 @@ var run = async () => {
             } else{
                 if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD") {
                 timer.innerHTML="-";
+                } if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
+                    timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
+                    timer.classList.remove('live')
                 } else if (distance < 0) {
                     let homeTeamScoreRightDiv = document.createElement("div")
                     homeTeamScoreRightDiv.className = 'fixtureScoreRight'
