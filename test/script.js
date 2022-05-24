@@ -215,13 +215,10 @@ var run = async () => {
         } else {}
 
         parent.addEventListener("click", function(){
-            $('.rightDiv').fadeOut(400, function(){
-                $('.rightDiv').remove();
-            });
-            
-            $('.rightDivScores').fadeOut(400, function(){
+
+                $('.rightDiv').remove();      
                 $('.rightDivScores').remove();
-            });
+           
 
             let teamNames = document.createElement("div")
             teamNames.className = 'rightDiv'
@@ -301,7 +298,7 @@ var run = async () => {
   
             // If the count down is finished, Display score
         
-        }, .010);
+        }, .005);
             sideScore.appendChild(timer)
 
             let awayTeamLogoRightDiv = document.createElement("img")
@@ -314,10 +311,8 @@ var run = async () => {
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
 
-            document.querySelector('.sideScoreDiv').appendChild(teamNames).hide()
-            document.querySelector('.sideScoreDiv').appendChild(sideScore).hide()
-
-            $('.sideScoreDiv').fadeIn(400)
+            document.querySelector('.sideScoreDiv').appendChild(teamNames)
+            document.querySelector('.sideScoreDiv').appendChild(sideScore)
         })
 
         
