@@ -82,7 +82,7 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-
+        
         
         parent.appendChild(homeTeamScore)
 
@@ -270,16 +270,6 @@ var run = async () => {
             homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
             sideScore.appendChild(homeTeamLogoRightDiv)
 
-            // let homeTeamScoreRightDiv = document.createElement("div")
-            // homeTeamScoreRightDiv.className = 'fixtureScoreRight'
-            // homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
-            // sideScore.appendChild(homeTeamScoreRightDiv)
-
-            // let awayTeamScoreRightDiv = document.createElement("div")
-            // awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
-            // awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
-            // sideScore.appendChild(awayTeamScoreRightDiv)
-
             let timer = document.createElement("div")
             timer.className = 'timer'
             // Update the count down every 1 second
@@ -320,12 +310,15 @@ var run = async () => {
   
             // If the count down is finished, Display score
             if (distance < 0) {
-                console.log(homeTeamScore.innerHTML)
-                if (homeTeamScore.innerHTML=null) {
-                    console.log('null game')
-                } 
-            clearInterval(x);
-            timer.innerHTML = homeTeamScore.innerHTML + "-" + awayTeamScore.innerHTML;
+                let homeTeamScoreRightDiv = document.createElement("div")
+                homeTeamScoreRightDiv.className = 'fixtureScoreRight'
+                homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
+                timer.appendChild(homeTeamScoreRightDiv)
+    
+                let awayTeamScoreRightDiv = document.createElement("div")
+                awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
+                awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
+                timer.appendChild(awayTeamScoreRightDiv)
             }
         }, 1000);
             sideScore.appendChild(timer)
