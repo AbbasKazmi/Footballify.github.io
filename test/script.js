@@ -319,20 +319,24 @@ var run = async () => {
             let navbarMini = document.createElement('nav')
             navbarMini.className='navbarMini';
 
-            let eventsButton = document.createElement('button')
+            let eventsButton = document.createElement('div')
             eventsButton.className = 'eventsButton'
+            eventsButton.innerHTML = "Events"
             navbarMini.appendChild(eventsButton)
 
-            let statsButton=document.createElement('button')
+            let statsButton=document.createElement('div')
             statsButton.className='statsButton';
+            statsButton.innerHTML='Statistics'
             navbarMini.appendChild(statsButton);
 
-            let lineupButton=document.createElement('button')
+            let lineupButton=document.createElement('div')
             lineupButton.className='lineupButton';
+            lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
 
-            let infoButton=document.createElement('button')
+            let infoButton=document.createElement('div')
             infoButton.classList='infoButton'
+            infoButton.innerHTML='Info'
             navbarMini.appendChild(infoButton)
 
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
