@@ -322,8 +322,6 @@ var run = async () => {
                 month = "Dec"
             }
             var countDownDate = new Date(`${month} + ${timerOrigin.innerHTML.slice(9,10)}, ${timerOrigin.innerHTML.slice(0,4)} ${timerOrigin.innerHTML.slice(12,19)} `).getTime();
-            console.log(countDownDate)
-
             let timer = document.createElement("div")
             timer.className = 'timer'
             // Update the count down every 1 second
@@ -333,6 +331,8 @@ var run = async () => {
             var now = new Date().getTime();
   
             // Find the distance between now and the count down date
+            console.log(countDownDate)
+            console.log(now)
             var distance = countDownDate - now;
   
             // Time calculations for days, hours, minutes and seconds
