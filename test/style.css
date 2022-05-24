@@ -339,9 +339,13 @@ border-right: 1px groove;
 .fixtureScoreRight {
   display: inline-block;
   margin-left: 69px;
+  font-size: 30px;
+  font-weight: 800;
 }
 
 .fixtureScoreLeft {
   display: inline-block;
   margin-right: 67px;
+  font-size: 30px;
+  font-weight: 700;
 }
