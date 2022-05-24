@@ -243,6 +243,7 @@ var run = async () => {
         }
         parent.addEventListener("click", function(){
             $('.rightDiv').fadeOut(300, function() { $(this).remove(); });
+            $('.rightDivScore').fadeOut(300, function() { $(this).remove(); });
 
             let teamNames = document.createElement("div")
             teamNames.className = 'rightDiv'
