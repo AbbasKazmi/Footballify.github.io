@@ -340,8 +340,12 @@ var run = async () => {
 
             let infoButton=document.createElement('div')
             infoButton.classList='infoButton'
-            infoButton.innerHTML='Info'
+            infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
+
+            document.querySelector('.infoButton').addEventListener("click", function(){
+                    console.log('info clicked')
+            }); 
 
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
         })
