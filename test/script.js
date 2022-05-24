@@ -130,9 +130,9 @@ var run = async () => {
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
         } else if (String(filtered[i][x].fixture.status.short) === 'TBD') {
-            homeTeamScore.classList.remove('hide')
+            homeTeamScore.classList.add('hide')
             homeTeamScore.innerHTML = 0//filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
+            awayTeamScore.classList.add('hide')
             awayTeamScore.innerHTML = 0//filtered[i][x].goals.away
         } else if (String(filtered[i][x].fixture.status.short) === 'FT') {
             homeTeamScore.classList.remove('hide')
