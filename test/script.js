@@ -342,13 +342,20 @@ var run = async () => {
             infoButton.classList='infoButton'
             infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
+            
+            var infoFunc = document.getElementById('.infoButton');
+            if(infoFunc){
+            infoFunc.addEventListener('click', function(){
+                console.log('click info')
+            });
+            } 
+        
         
 
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
         })
 
-            
-    
+        
 
         document.querySelector('.parentContainer').appendChild(parent);
 
@@ -365,15 +372,6 @@ run();
 const interval = setInterval(function() {
     run();
   }, 60000);
-
-  var infoFunc = document.getElementById('infoButton');
-            if(infoFunc){
-            infoFunc.addEventListener('click', function(){
-                console.log('click info')
-            });
-            } else {
-                console.log('null :(')
-            }
 
 //Page Load Delay
 $( document ).ready(function() {
