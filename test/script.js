@@ -323,6 +323,12 @@ var run = async () => {
                 awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
 
                 timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;
+                
+                if (String(filtered[i][x].fixture.status.short) === 'NS') {
+                    timer.innerHTML = 0
+                    timer.classList.add('hide')
+                }
+                
             }
         }, 1000);
             sideScore.appendChild(timer)
