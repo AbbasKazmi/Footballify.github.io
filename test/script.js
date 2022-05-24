@@ -284,41 +284,42 @@ var run = async () => {
             awayTeamLogoRightDiv.className = 'logo1'
             awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
             sideScore.appendChild(awayTeamLogoRightDiv)
+            let month="placeholder"
             let timeHTML = timerOrigin.innerHTML.slice(6,7)
             console.log(timeHTML)
             if (timeHTML = "1") {
-                let month = "Jan"
+                month = "Jan"
                 timeHTML="01"
             } else if (timerOrigin.innerHTML.slice(6,7) = "2") {
-                let month = "Feb"
+                month = "Feb"
                 timeHTML="02"
             } else if (timerOrigin.innerHTML.slice(6,7) = "3") {
-                let month = "Mar"
+                month = "Mar"
                 timeHTML="03"
             } else if (timerOrigin.innerHTML.slice(6,7) = "4") {
-                let month = "Apr"
+                month = "Apr"
                 timeHTML="04"
             } else if (timerOrigin.innerHTML.slice(6,7) = "5") {
-                let month = "May"
+                month = "May"
                 timeHTML="05"
             } else if (timerOrigin.innerHTML.slice(6,7) = "6") {
-                let month = "Jun"
+                month = "Jun"
                 timeHTML="06"
             } else if (timerOrigin.innerHTML.slice(6,7) = "7") {
-                let month = "Jul"
+                month = "Jul"
                 timeHTML="07"
             } else if (timerOrigin.innerHTML.slice(6,7) = "8") {
-                let month = "Aug"
+                month = "Aug"
                 timeHTML="08"
             } else if (timerOrigin.innerHTML.slice(6,7) = "9") {
-                let month = "Sep"
+                month = "Sep"
                 timeHTML="09"
             } else if (timerOrigin.innerHTML.slice(6,7) = "10") {
-                let month = "Oct"
+                month = "Oct"
             } else if (timerOrigin.innerHTML.slice(6,7) = "11") {
-                let month = "Nov"
+                month = "Nov"
             } else if (timerOrigin.innerHTML.slice(6,7) = "12") {
-                let month = "Dec"
+                month = "Dec"
             }
             var countDownDate = new Date(`${month} + ${timerOrigin.innerHTML.slice(9,10)}, ${timerOrigin.innerHTML.slice(0,4)} ${timerOrigin.innerHTML.slice(12,19)} `).getTime();
             console.log(countDownDate)
