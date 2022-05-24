@@ -279,7 +279,7 @@ var run = async () => {
             // Display the time
             if (Number(seconds)>=0){
             timer.innerHTML = hours + ":" + minutes + ":" + seconds;
-            } else{
+            } else {
                 if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD") {
                 timer.innerHTML="-";
                 } else if (distance < 0) {

@@ -364,24 +364,37 @@ border-right: 1px groove;
 }
 
 .statsButton{
-  padding: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .statsButton:hover{
   background-color: white;
-  background: black;
+  background: white;
+  color: black;
 }
 
 .eventsButton {
-  padding: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .infoButton {
-  padding: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .lineupButton {
-  padding: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .navbarMini {
