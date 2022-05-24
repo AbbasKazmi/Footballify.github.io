@@ -325,6 +325,7 @@ border-right: 1px groove;
   height: 70px;
   width: 70px;
   display: inline-block;
+  box-shadow: 0px 3px 50px rgb(0 0 0 / 20%);
 }
 
 .fixturel {
