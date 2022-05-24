@@ -307,7 +307,7 @@ border-right: 1px groove;
   text-align: center;
   overflow: hidden; 
   padding-top: 18px;
-  padding-bottom: 30px;
+  padding-bottom: 18px;
   background: #cbffd2;
 }
 
@@ -364,18 +364,18 @@ border-right: 1px groove;
 }
 
 .statsButton{
-  padding: 17px;
+  padding: 32px;
 }
 .eventsButton {
-  padding: 17px;
+  padding: 32px;
 }
 
 .infoButton {
-  padding: 17px;
+  padding: 32px;
 }
 
 .lineupButton {
-  padding: 17px;
+  padding: 32px;
 }
 
 .navbarMini {
