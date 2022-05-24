@@ -275,7 +275,7 @@ var run = async () => {
             }
                 
             // Display the time
-            if (Number(seconds)>0){
+            if (Number(seconds)>=0){
             timer.innerHTML = hours + ":" + minutes + ":" + seconds;
             } else{
                 if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD") {
