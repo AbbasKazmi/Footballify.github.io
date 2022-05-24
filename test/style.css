@@ -338,7 +338,7 @@ border-right: 1px groove;
   display: inline;
 }
 
-.fixtureScoreRight {
+/* .fixtureScoreRight {
   display: inline-block;
   margin-left: 69px;
   font-size: 30px;
@@ -350,4 +350,10 @@ border-right: 1px groove;
   margin-right: 67px;
   font-size: 30px;
   font-weight: 500;
+} */
+
+.timer{
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 40px;
 }
