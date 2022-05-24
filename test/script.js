@@ -343,11 +343,11 @@ var run = async () => {
             infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
             
-            window.onload=function(){
+            
             document.querySelector('.infoButton').addEventListener("click", function(){
                     console.log('info clicked')
             });
-        } 
+        
 
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
         })
