@@ -309,27 +309,23 @@ var run = async () => {
             if (Number(seconds)>0){
             timer.innerHTML = hours + ":" + minutes + ":" + seconds;
             } else{
+                if (gameStatus.innerHTML=="NS") {
                 console.log('game not available')
+                } else if (distance < 0) {
+                    let homeTeamScoreRightDiv = document.createElement("div")
+                    homeTeamScoreRightDiv.className = 'fixtureScoreRight'
+                    homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
+        
+                    let awayTeamScoreRightDiv = document.createElement("div")
+                    awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
+                    awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
+    
+                    timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
+                }
             }
   
             // If the count down is finished, Display score
-            if (distance < 0) {
-                let homeTeamScoreRightDiv = document.createElement("div")
-                homeTeamScoreRightDiv.className = 'fixtureScoreRight'
-                homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
-    
-                let awayTeamScoreRightDiv = document.createElement("div")
-                awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
-                awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
-
-                timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;
-                
-                if (String(filtered[i][x].fixture.status.short) === 'NS') {
-                    timer.innerHTML = 0
-                    timer.classList.add('hide')
-                }
-                
-            }
+        
         }, 1000);
             sideScore.appendChild(timer)
 
