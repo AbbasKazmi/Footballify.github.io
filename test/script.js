@@ -220,7 +220,7 @@ var run = async () => {
             });
             
             $('.rightDivScores').fadeOut(400, function(){
-                $('.rightDiv').remove();
+                $('.rightDivScores').remove();
             });
 
             let teamNames = document.createElement("div")
