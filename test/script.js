@@ -334,6 +334,7 @@ var run = async () => {
             console.log(timerOrigin.innerHTML)
             console.log(now)
             var distance = timerOrigin.innerHTML - now;
+            console.log(distance)
   
             // Time calculations for days, hours, minutes and seconds
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
