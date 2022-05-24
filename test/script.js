@@ -318,7 +318,7 @@ var run = async () => {
             $('.sideScoreDiv').document.querySelector('.sideScoreDiv').appendChild(sideScore).hide().fadeIn(600);
         })
 
-        });
+        
 
         document.querySelector('.parentContainer').appendChild(parent);
 
