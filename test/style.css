@@ -322,10 +322,9 @@ border-right: 1px groove;
 }
 
 .fixturel {
-  float: left;
-  margin-left: 93px;
+  display: inline;
 }
 
 .fixturer { 
-  float: left;
+  display: inline;
 }
