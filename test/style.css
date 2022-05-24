@@ -336,10 +336,10 @@ border-right: 1px groove;
 
 .fixtureScoreRight {
   display: inline-block;
-  margin-right: 67px;
+  margin-left: 69px;
 }
 
 .fixtureScoreLeft {
   display: inline-block;
-  margin-left: 69px;
+  margin-right: 67px;
 }
