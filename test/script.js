@@ -297,7 +297,7 @@ var run = async () => {
   
             // If the count down is finished, Display score
         
-        }, 1000);
+        }, .010);
             sideScore.appendChild(timer)
 
             let awayTeamLogoRightDiv = document.createElement("img")
