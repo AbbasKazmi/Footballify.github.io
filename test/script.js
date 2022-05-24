@@ -284,8 +284,9 @@ var run = async () => {
             awayTeamLogoRightDiv.className = 'logo1'
             awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
             sideScore.appendChild(awayTeamLogoRightDiv)
-            
-            if (timerOrigin.innerHTML.slice(6,7) = "01") {
+            let timeHTML = timerOrigin.innerHTML.slice(6,7)
+            console.log(timeHTML)
+            if (timeHTML = "01") {
                 let month = Jan
             } else if (timerOrigin.innerHTML.slice(6,7) = "02") {
                 let month = Feb
