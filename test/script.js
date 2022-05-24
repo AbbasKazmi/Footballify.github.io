@@ -280,11 +280,6 @@ var run = async () => {
             // awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
             // sideScore.appendChild(awayTeamScoreRightDiv)
 
-            let awayTeamLogoRightDiv = document.createElement("img")
-            awayTeamLogoRightDiv.className = 'logo1'
-            awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
-            sideScore.appendChild(awayTeamLogoRightDiv)
-
             let timer = document.createElement("div")
             timer.className = 'timer'
             // Update the count down every 1 second
@@ -330,6 +325,13 @@ var run = async () => {
             }
         }, 1000);
             sideScore.appendChild(timer)
+
+            let awayTeamLogoRightDiv = document.createElement("img")
+            awayTeamLogoRightDiv.className = 'logo1'
+            awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
+            sideScore.appendChild(awayTeamLogoRightDiv)
+
+            
 
             console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
 
