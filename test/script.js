@@ -215,8 +215,13 @@ var run = async () => {
         } else {}
 
         parent.addEventListener("click", function(){
-            $('.rightDiv').remove();
-            $('.rightDivScores').remove();
+            $('.rightDiv').fadeOut(fast, function(){
+                remove();
+            });
+            
+            $('.rightDivScores').fadeOut(fast, function(){
+                remove();
+            });
 
             let teamNames = document.createElement("div")
             teamNames.className = 'rightDiv'
