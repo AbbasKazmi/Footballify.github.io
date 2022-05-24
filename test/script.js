@@ -242,8 +242,8 @@ var run = async () => {
             awayTeamScore.classList.add('loser')
         }
         parent.addEventListener("click", function(){
-            $('.rightDiv').fadeOut(300, function() { $(this).remove(); });
-            $('.rightDivScore').fadeOut(300, function() { $(this).remove(); });
+            $('.rightDiv').remove();
+            $('.rightDivScores').remove();
 
             let teamNames = document.createElement("div")
             teamNames.className = 'rightDiv'
