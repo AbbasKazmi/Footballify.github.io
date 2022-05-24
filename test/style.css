@@ -431,5 +431,7 @@ border-right: 1px groove;
   background: #cbffd2;
   padding: 0px;
   flex-wrap: nowrap;
+  box-shadow: 0px 3px 50px rgb(0 0 0 / 20%);
+
 }
 
