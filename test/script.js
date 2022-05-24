@@ -331,9 +331,9 @@ var run = async () => {
             var now = new Date().getTime();
   
             // Find the distance between now and the count down date
-            console.log(timerOrigin.innerHTML)
+            console.log(Number(String(timerOrigin.innerHTML)+"000"))
             console.log(now)
-            var distance = timerOrigin.innerHTML - now;
+            var distance = Number(String(timerOrigin.innerHTML)+"000") - now;
             console.log(distance)
   
             // Time calculations for days, hours, minutes and seconds
