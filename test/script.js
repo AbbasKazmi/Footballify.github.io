@@ -215,11 +215,11 @@ var run = async () => {
         } else {}
 
         parent.addEventListener("click", function(){
-            $('.rightDiv').fadeOut(fast, function(){
+            $('.rightDiv').fadeOut(400, function(){
                 remove();
             });
             
-            $('.rightDivScores').fadeOut(fast, function(){
+            $('.rightDivScores').fadeOut(400, function(){
                 remove();
             });
 
