@@ -309,8 +309,10 @@ var run = async () => {
             if (Number(seconds)>0){
             timer.innerHTML = hours + ":" + minutes + ":" + seconds;
             } else{
-                if (gameStatus.innerHTML=="NS") {
+                if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD") {
                 console.log('game not available')
+                timer.innerHTML="0-0"
+                timer.classList.add("hide")
                 } else if (distance < 0) {
                     let homeTeamScoreRightDiv = document.createElement("div")
                     homeTeamScoreRightDiv.className = 'fixtureScoreRight'
