@@ -343,12 +343,14 @@ var run = async () => {
             infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
             
-            var infoFunc = document.getElementById('.infoButton');
+            var infoFunc = document.querySelector('.infoButton');
             if(infoFunc){
             infoFunc.addEventListener('click', function(){
                 console.log('click info')
             });
-            } 
+            } else {
+                console.log('null :(')
+            }
         
         
 
