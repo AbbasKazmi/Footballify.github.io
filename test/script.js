@@ -69,7 +69,7 @@ var run = async () => {
       
         let timerOrigin = document.createElement("div")
         timerOrigin.className = 'timer'
-        timerOrigin.innerHTML = filtered[i][x].fixture.date;
+        timerOrigin.innerHTML = filtered[i][x].fixture.timestamp;
 
         let homeTeamLogo = document.createElement("img")
         homeTeamLogo.className = 'logo1'
@@ -284,44 +284,44 @@ var run = async () => {
             awayTeamLogoRightDiv.className = 'logo1'
             awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
             sideScore.appendChild(awayTeamLogoRightDiv)
-            let month="placeholder"
-            let timeHTML = timerOrigin.innerHTML.slice(6,7)
-            console.log(timeHTML)
-            if (timeHTML = "1") {
-                month = "Jan"
-                timeHTML="01"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "2") {
-                month = "Feb"
-                timeHTML="02"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "3") {
-                month = "Mar"
-                timeHTML="03"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "4") {
-                month = "Apr"
-                timeHTML="04"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "5") {
-                month = "May"
-                timeHTML="05"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "6") {
-                month = "Jun"
-                timeHTML="06"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "7") {
-                month = "Jul"
-                timeHTML="07"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "8") {
-                month = "Aug"
-                timeHTML="08"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "9") {
-                month = "Sep"
-                timeHTML="09"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "10") {
-                month = "Oct"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "11") {
-                month = "Nov"
-            } else if (timerOrigin.innerHTML.slice(6,7) = "12") {
-                month = "Dec"
-            }
-            var countDownDate = new Date(`${month} + ${timerOrigin.innerHTML.slice(9,10)}, ${timerOrigin.innerHTML.slice(0,4)} ${timerOrigin.innerHTML.slice(12,19)} `).getTime();
+            // let month="placeholder"
+            // let timeHTML = timerOrigin.innerHTML.slice(6,7)
+            // console.log(timeHTML)
+            // if (timeHTML = "1") {
+            //     month = "Jan"
+            //     timeHTML="01"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "2") {
+            //     month = "Feb"
+            //     timeHTML="02"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "3") {
+            //     month = "Mar"
+            //     timeHTML="03"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "4") {
+            //     month = "Apr"
+            //     timeHTML="04"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "5") {
+            //     month = "May"
+            //     timeHTML="05"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "6") {
+            //     month = "Jun"
+            //     timeHTML="06"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "7") {
+            //     month = "Jul"
+            //     timeHTML="07"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "8") {
+            //     month = "Aug"
+            //     timeHTML="08"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "9") {
+            //     month = "Sep"
+            //     timeHTML="09"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "10") {
+            //     month = "Oct"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "11") {
+            //     month = "Nov"
+            // } else if (timerOrigin.innerHTML.slice(6,7) = "12") {
+            //     month = "Dec"
+            // }
+            // var countDownDate = new Date(`${month} + ${timerOrigin.innerHTML.slice(9,10)}, ${timerOrigin.innerHTML.slice(0,4)} ${timerOrigin.innerHTML.slice(12,19)} `).getTime();
             let timer = document.createElement("div")
             timer.className = 'timer'
             // Update the count down every 1 second
@@ -331,7 +331,7 @@ var run = async () => {
             var now = new Date().getTime();
   
             // Find the distance between now and the count down date
-            console.log(countDownDate)
+            console.log(timerOrigin.innerHTML)
             console.log(now)
             var distance = countDownDate - now;
   
