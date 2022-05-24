@@ -313,6 +313,21 @@ var run = async () => {
 
             document.querySelector('.sideScoreDiv').appendChild(teamNames)
             document.querySelector('.sideScoreDiv').appendChild(sideScore)
+
+            let navbarMini = document.createElement('nav')
+            navbarMini.className='navbarMini';
+
+            let eventsButton = document.createElement('button')
+            eventsButton.className = 'eventsButton'
+
+            let statsButton=document.createElement('button')
+            statsButton.className='statsButton';
+
+            let lineupButton=document.createElement('button')
+            lineupButton.className='lineupButton';
+
+            let infoButton=document.createElement('button')
+            infoButton.classList='infoButton'
         })
 
         
