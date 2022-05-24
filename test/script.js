@@ -347,14 +347,7 @@ var run = async () => {
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
         })
 
-            var infoFunc = document.getElementById('infoButton');
-            if(infoFunc){
-            infoFunc.addEventListener('click', function(){
-                console.log('click info')
-            });
-            } else {
-                console.log('null :(')
-            }
+            
     
 
         document.querySelector('.parentContainer').appendChild(parent);
@@ -372,6 +365,15 @@ run();
 const interval = setInterval(function() {
     run();
   }, 60000);
+
+  var infoFunc = document.getElementById('infoButton');
+            if(infoFunc){
+            infoFunc.addEventListener('click', function(){
+                console.log('click info')
+            });
+            } else {
+                console.log('null :(')
+            }
 
 //Page Load Delay
 $( document ).ready(function() {
