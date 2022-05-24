@@ -345,14 +345,11 @@ var run = async () => {
 
 
             document.addEventListener('DOMContentLoaded', function(){
-            var infoFunc = document.querySelector('.infoButton');
-            if(infoFunc){
-            infoFunc.addEventListener('click', function(){
+            
+                document.querySelector('.infoButton').addEventListener('click', function(){
                 console.log('click info')
             });
-            } else {
-                console.log('null :(')
-            }});
+           });
         
         
 
