@@ -314,6 +314,8 @@ var run = async () => {
             document.querySelector('.sideScoreDiv').appendChild(teamNames)
             document.querySelector('.sideScoreDiv').appendChild(sideScore)
 
+            $('.navbarMini').remove();
+
             let navbarMini = document.createElement('nav')
             navbarMini.className='navbarMini';
 
