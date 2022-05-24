@@ -356,4 +356,6 @@ border-right: 1px groove;
   display: inline-block;
   margin-left: 40px;
   margin-right: 40px;
+  font-size: 30px;
+  font-weight: 500;
 }
