@@ -196,7 +196,13 @@ var run = async () => {
             awayTeamScore.classList.add('winner')
             homeTeamScore.classList.add('loser')
           //Match Not Started or  Cancelled
-	  } else if (filtered[i][x].fixture.status.short == 'NS'){
+	  } else if (filtered[i][x].fixture.status.short == 'TBD'){
+        homeTeamName.classList.add('winner')
+        homeTeamScore.classList.add('winner')
+        awayTeamScore.classList.add('winner')
+        awayTeamName.classList.add('winner')
+        
+      } else if (filtered[i][x].fixture.status.short == 'NS'){
         homeTeamName.classList.add('winner')
         homeTeamScore.classList.add('winner')
         awayTeamScore.classList.add('winner')
