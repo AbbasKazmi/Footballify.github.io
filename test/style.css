@@ -366,6 +366,12 @@ border-right: 1px groove;
 .statsButton{
   padding: 32px;
 }
+
+.statsButton:hover{
+  background-color: white;
+  background: black;
+}
+
 .eventsButton {
   padding: 32px;
 }
