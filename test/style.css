@@ -380,6 +380,7 @@ border-right: 1px groove;
 
 .navbarMini {
   background: #cbffd2;
-
+  padding: 0px;
+  flex-wrap: nowrap;
 }
 
