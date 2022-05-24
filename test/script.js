@@ -197,8 +197,6 @@ var run = async () => {
         homeTeamScore.classList.add('winner')
         awayTeamScore.classList.add('winner')
         awayTeamName.classList.add('winner')
-
-      } 
       } else if (filtered[i][x].fixture.status.short == 'HT'){
         homeTeamName.classList.add('winner')
         homeTeamScore.classList.add('winner')
