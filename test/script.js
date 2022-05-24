@@ -186,32 +186,34 @@ var run = async () => {
 
         } else {}
 
-        //If Home Wins
-        if (filtered[i][x].teams.home.winner == true) {
-            homeTeamName.classList.add('winner')
-            awayTeamName.classList.add('loser')
-            homeTeamScore.classList.add('winner')
-            awayTeamScore.classList.add('loser')
+        //Match Not Started or  Cancelled or In Progress
+    if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
+                 
+                                                               homeTeamName.classList.add('winner')
+                                                               homeTeamScore.classList.add('winner')
+                                                               awayTeamScore.classList.add('winner')
+                                                               awayTeamName.classList.add('winner')
 
-	  } else if (filtered[i][x].teams.away.winner == true) {
-          //If Away Wins
-            awayTeamName.classList.add('winner')
-            homeTeamName.classList.add('loser')
-            awayTeamScore.classList.add('winner')
-            homeTeamScore.classList.add('loser')
-          //Match Not Started or  Cancelled or In Progress
-	  } else if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
-        homeTeamName.classList.add('winner')
-        homeTeamScore.classList.add('winner')
-        awayTeamScore.classList.add('winner')
-        awayTeamName.classList.add('winner')
+        //If Home Wins
+        } else if (filtered[i][x].teams.home.winner == true) { homeTeamName.classList.add('winner') 
+                                                               awayTeamName.classList.add('loser')
+                                                               homeTeamScore.classList.add('winner')
+                                                               awayTeamScore.classList.add('loser')
+
+	    } else if (filtered[i][x].teams.away.winner == true) {
+        //If Away Wins
+                                                               awayTeamName.classList.add('winner')
+                                                               homeTeamName.classList.add('loser')
+                                                               awayTeamScore.classList.add('winner')
+                                                               homeTeamScore.classList.add('loser')
         } else {
-          //Draw
-            homeTeamName.classList.add('loser')
-            awayTeamName.classList.add('loser')
-            homeTeamScore.classList.add('loser')
-            awayTeamScore.classList.add('loser')
+        //Draw
+                                                               homeTeamName.classList.add('loser')
+                                                               awayTeamName.classList.add('loser')
+                                                               homeTeamScore.classList.add('loser')
+                                                               awayTeamScore.classList.add('loser')
         }
+
         parent.addEventListener("click", function(){
             $('.rightDiv').remove();
             $('.rightDivScores').remove();
