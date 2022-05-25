@@ -338,19 +338,19 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
 
-            let infoButton=document.createElement('div')
+            let infoButton=document.createElement('button')
             infoButton.classList='infoButton'
             infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
 
-            document.querySelector('.sideScoreDiv').appendChild(navbarMini)
-            
             document.addEventListener('DOMContentLoaded', function(){
             
                 document.querySelector('.navbarMini').addEventListener('click', function(){
                 console.log('click info')
             });
            });
+           
+            document.querySelector('.sideScoreDiv').appendChild(navbarMini)
 
         })
 
@@ -358,7 +358,6 @@ var run = async () => {
 
         document.querySelector('.parentContainer').appendChild(parent);
 
-        
 
     }
   }     
