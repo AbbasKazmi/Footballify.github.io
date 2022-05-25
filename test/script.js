@@ -115,8 +115,8 @@ var run = async () => {
         parent.appendChild(awayTeamScore)
         //Push all Data to DOM
 
-                //Match Not Started or  Cancelled or In Progress
-    if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
+                //Match Not Started or  Cancelled/Postponed or In Progress
+    if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'PST' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
                  
                                                                homeTeamName.classList.add('winner')
                                                                homeTeamScore.classList.add('winner')
@@ -169,9 +169,9 @@ var run = async () => {
             awayTeamScore.classList.remove('hide')
             awayTeamScore.innerHTML = filtered[i][x].goals.away
         } else if (String(filtered[i][x].fixture.status.short) === 'PST') {
-            homeTeamScore.classList.remove('hide')
+            homeTeamScore.classList.add('hide')
             homeTeamScore.innerHTML = 0
-            awayTeamScore.classList.remove('hide')
+            awayTeamScore.classList.add('hide')
             awayTeamScore.innerHTML = 0
         } else if (String(filtered[i][x].fixture.status.short) === 'TBD') {
             homeTeamScore.classList.add('hide')
