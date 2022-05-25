@@ -144,6 +144,8 @@ var run = async () => {
                 console.log(lineupData[b].startXI)
                 console.log(lineupData[b].startXI[d])
                 console.log(lineupData[b].startXI[d].name)
+                console.log(lineupData[b].startXI[d].player.name)
+
 
             let lineupParent = document.createElement('div')
             lineupParent.classList = "lineupParent"
