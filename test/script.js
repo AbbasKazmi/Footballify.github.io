@@ -408,17 +408,12 @@ var run = async () => {
                 // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
                     var run = async () => {
                         const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
-                    headers: {
+                    "method": 'GET',
+                    "headers": {
                         'X-RapidAPI-Host': 'v3.football.api-sports.io',
                         'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
                     },
                 });
-                
-               
-                    // .then(response => response.json())
-                    // .then(response => console.log(response))
-                    // .catch(err => console.error(err));
-
                     const lineupData = (await lin.json())?.response;
                     console.log(lineupData)
                 // }
