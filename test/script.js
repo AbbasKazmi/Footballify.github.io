@@ -19,6 +19,18 @@ var run = async () => {
         },
     });
 
+var runLineups = async () => {
+        const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
+    headers: {
+        'X-RapidAPI-Host': 'v3.football.api-sports.io',
+        'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
+    },
+});
+    const lineupData = (await lin.json())?.response;
+    console.log(lineupData)
+// }
+}
+
     //Parse JSON
     const json = (await res.json())?.response;
     console.log(json)
@@ -407,17 +419,7 @@ var run = async () => {
                 //     const json = (await res.json())?.response;
 
                 // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
-                    var runLineups = async () => {
-                        const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
-                    headers: {
-                        'X-RapidAPI-Host': 'v3.football.api-sports.io',
-                        'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
-                    },
-                });
-                    const lineupData = (await lin.json())?.response;
-                    console.log(lineupData)
-                // }
-        }});
+    });
 
             runLineups();
 
