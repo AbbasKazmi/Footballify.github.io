@@ -405,9 +405,12 @@ var run = async () => {
                 };
                 
                 fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, options)
-                    .then(response => response.json())
-                    .then(response => console.log(response))
-                    .catch(err => console.error(err));
+                    // .then(response => response.json())
+                    // .then(response => console.log(response))
+                    // .catch(err => console.error(err));
+
+                    const lineupData = (await res.json())?.response;
+                    console.log(lineupData)
                 // }
         });
 
