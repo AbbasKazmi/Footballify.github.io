@@ -128,6 +128,7 @@ var run = async () => {
         //Push all Data to DOM
 
         var runLineups = async () => {
+            fixtureId.innerHTML = filtered[i][x].fixture.id;
             const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
         headers: {
             'X-RapidAPI-Host': 'v3.football.api-sports.io',
