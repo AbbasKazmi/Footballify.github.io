@@ -382,10 +382,10 @@ var run = async () => {
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
 
-                $('venue').remove();
-                $('city').remove();
-                $('referee').remove();
-                
+                $('.venue').remove();
+                $('.city').remove();
+                $('.referee').remove();
+
                 let venueOnClick=document.createElement('Div')
                 venueOnClick.classList='venue'
                 venueOnClick.innerHTML=venue.innerHTML
