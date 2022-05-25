@@ -459,3 +459,11 @@ border-right: 1px groove;
   
   margin-left: 12px;
 }
+
+.lineupParentHome {
+  float: left;
+}
+
+.lineupParentAway {
+  float: right;
+}
