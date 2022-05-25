@@ -137,22 +137,15 @@ var run = async () => {
         const lineupData = (await lin.json())?.response;
         console.log(lineupData)
 
+        
         for (let b=0; b<=lineupData.length-1;b++) {
             for (let d=0; d<=lineupData[b].startXI.length-1; d++) {
 
-                console.log(lineupData[b])
-                console.log(lineupData[b].startXI)
-                console.log(lineupData[b].startXI[d])
-                console.log(lineupData[b].startXI[d].name)
-                console.log(lineupData[b].startXI[d].player.name)
-
-
             let lineupParent = document.createElement('div')
             lineupParent.classList = "lineupParent"
-            lineupParent.innerHTML=lineupData[b].startXI[d].name
+            lineupParent.innerHTML=lineupData[b].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParent)
 
-            console.log(lineupData[b].startXI[d].name)
             }
         }
         // }
@@ -276,6 +269,7 @@ var run = async () => {
                 $('.venue').remove();
                 $('.city').remove();
                 $('.referee').remove();
+                $('.lineupParent').remove();
  
            
 
