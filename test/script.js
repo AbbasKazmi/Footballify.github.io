@@ -91,10 +91,6 @@ var run = async () => {
         country.className = 'country'
         country.innerHTML = filtered[i][x].league.country;
 
-        let fixtureId = document.createElement("div")
-        fixtureId.className = 'fixtureId'
-        fixtureId.innerHTML = filtered[i][x].fixture.id;
-
         let homeTeamLogo = document.createElement("img")
         homeTeamLogo.className = 'logo1'
         homeTeamLogo.setAttribute("src",filtered[i][x].teams.home.logo)
@@ -263,6 +259,10 @@ var run = async () => {
             let teamNames = document.createElement("div")
             teamNames.className = 'rightDiv'
 
+            let fixtureId = document.createElement("div")
+        fixtureId.className = 'fixtureId'
+        fixtureId.innerHTML = filtered[i][x].fixture.id;
+
             let homeTeamNameRightDiv = document.createElement("div")
             homeTeamNameRightDiv.className = 'fixturel'
             homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + "-" 
@@ -404,17 +404,6 @@ var run = async () => {
                 statsButton.classList.remove("clicked")
 
                 console.log(fixtureId.innerHTML)
-
-                // var run = async () => {
-                //     const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=${isoStr}`, {
-                //         headers: {
-                //             'X-RapidAPI-Host': "v3.football.api-sports.io",
-                //             "X-RapidAPI-Key": "e54f3d3972ca8251c1259694b49948de"
-                //         },
-                //     });
-                
-                //     //Parse JSON
-                //     const json = (await res.json())?.response;
 
                 // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
     });
