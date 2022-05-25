@@ -143,7 +143,9 @@ var run = async () => {
             let lineupParent = document.createElement('div')
             lineupParent.classList = "lineupParent"
             lineupParent.innerHTML=lineupData[b].startXI[d].name
-             document.querySelector('.sideScoreDiv').appendChild(lineupParent)
+            document.querySelector('.sideScoreDiv').appendChild(lineupParent)
+
+            console.log(lineupData[b].startXI[d].name)
             }
         }
         // }
