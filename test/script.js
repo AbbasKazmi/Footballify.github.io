@@ -234,6 +234,10 @@ var run = async () => {
 
                 $('.rightDiv').remove();      
                 $('.rightDivScores').remove();
+                $('.venue').remove();
+                $('.city').remove();
+                $('.referee').remove();
+
            
 
             let teamNames = document.createElement("div")
