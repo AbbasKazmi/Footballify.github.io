@@ -394,7 +394,7 @@ var run = async () => {
 
                 console.log(fixtureId.innerHTML)
 
-                while (gameStatus != "FT" && Number(hours)<=0) {
+                while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
 
                 const options = {
                     method: 'GET',
@@ -404,7 +404,7 @@ var run = async () => {
                     }
                 };
                 
-                fetch('https://api-football-v1.p.rapidapi.com/v3/fixtures/lineups?fixture=215662', options)
+                fetch(`https://api-football-v1.p.rapidapi.com/v3/fixtures/lineups?fixture=${fixtureId.innerHTML}`, options)
                     .then(response => response.json())
                     .then(response => console.log(response))
                     .catch(err => console.error(err));
