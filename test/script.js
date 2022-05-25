@@ -395,19 +395,19 @@ var run = async () => {
 
                 let venueOnClick=document.createElement('Div')
                 venueOnClick.classList='venue'
-                venueOnClick.innerHTML=venue.innerHTML
+                venueOnClick.innerHTML=`Venue: ${venue.innerHTML}`
                 document.querySelector('.sideScoreDiv').appendChild(venueOnClick)
 
                 
                 let refereeOnClick=document.createElement('Div')
                 refereeOnClick.classList='referee'
-                refereeOnClick.innerHTML=referee.innerHTML
+                refereeOnClick.innerHTML=`Referee: ${referee.innerHTML}`
                 document.querySelector('.sideScoreDiv').appendChild(refereeOnClick)
 
                 
                 let cityOnClick=document.createElement('Div')
                 cityOnClick.classList='city'
-                cityOnClick.innerHTML=city.innerHTML +', ' + country.innerHTML
+                cityOnClick.innerHTML=`Location ${city.innerHTML}, ${country.innerHTML}`
                 document.querySelector('.sideScoreDiv').appendChild(cityOnClick)
 
 
