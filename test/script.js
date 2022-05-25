@@ -338,18 +338,18 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
 
-            let infoButton=document.createElement('button')
+            let infoButton=document.createElement('div')
             infoButton.classList='infoButton'
             infoButton.innerHTML='Info  '
             navbarMini.appendChild(infoButton)
 
             document.addEventListener('DOMContentLoaded', function(){
             
-                document.querySelector('.navbarMini').addEventListener('click', function(){
+                document.querySelector('.lineupButton').addEventListener('click', function(){
                 console.log('click info')
             });
            });
-           
+
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
 
         })
