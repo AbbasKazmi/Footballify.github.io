@@ -453,6 +453,7 @@ var run = async () => {
                 $('.venue').remove();
                 $('.city').remove();
                 $('.referee').remove();
+                $('lineupC').remove();
 
                 let venueOnClick=document.createElement('Div')
                 venueOnClick.classList='venue'
