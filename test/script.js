@@ -136,6 +136,20 @@ var run = async () => {
         });
         const lineupData = (await lin.json())?.response;
         console.log(lineupData)
+
+        for (let b=0; b<=lineupData.length-1;b++) {
+            for (let d=0; d<=lineupData[b].length-1; d++) {
+
+            let lineupParent = document.createElement('div')
+            lineupParent.className = "lineupParent"
+
+            lineupParent.appendChild(lineupData[b].startXI[d])
+
+            }
+        }
+
+        document.querySelector('.sideScoreDiv').appendChild(lineupParent)
+
         // }
         }
 
