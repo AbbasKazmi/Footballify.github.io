@@ -328,7 +328,10 @@ var run = async () => {
             eventsButton.innerHTML = "Events"
             navbarMini.appendChild(eventsButton)
             eventsButton.addEventListener("click", function(){ 
-                console.log('hi')
+                eventsButton.classList.add("clicked")
+                statsButton.classList.remove("clicked")
+                infoButton.classList.remove("clicked")
+                lineupButton.classList.remove("clicked")
             }) 
 
             let statsButton=document.createElement('button')
@@ -336,7 +339,11 @@ var run = async () => {
             statsButton.innerHTML='Statistics'
             navbarMini.appendChild(statsButton);
             statsButton.addEventListener("click", function(){ 
-                console.log('hi')
+                statsButton.classList.add("clicked")
+                infoButton.classList.remove("clicked")
+                eventsButton.classList.remove("clicked")
+                lineupButton.classList.remove("clicked")
+
             }) 
 
             let lineupButton=document.createElement('button')
@@ -344,14 +351,20 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
-                console.log('hi')
+                lineupButton.classList.add("clicked")
+                infoButton.classList.remove("clicked")
+                eventsButton.classList.remove("clicked")
+                statsButton.classList.remove("clicked")
             }) 
 
             let infoButton=document.createElement('button')
             infoButton.classList='infoButton'
             infoButton.innerHTML='Info  '
             infoButton.addEventListener("click", function(){ 
-                console.log('hi')
+                infoButton.classList.add("clicked")
+                statsButton.classList.remove("clicked")
+                eventsButton.classList.remove("clicked")
+                lineupButton.classList.remove("clicked")
             }) 
             
             navbarMini.appendChild(infoButton)
