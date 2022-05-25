@@ -461,9 +461,20 @@ border-right: 1px groove;
 }
 
 .lineupParentHome {
-  float: left;
+  
 }
 
 .lineupParentAway {
-  float: right;
+  text-align: right;
 }
+
+.lineupC {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.lineupC>div {
+  width: 50%;
+}
+
