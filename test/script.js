@@ -141,10 +141,9 @@ var run = async () => {
             for (let d=0; d<=lineupData[b].length-1; d++) {
 
             let lineupParent = document.createElement('div')
-            lineupParent.className = "lineupParent"
-
-            lineupParent.appendChild(lineupData[b].startXI[d])
-            document.querySelector('.sideScoreDiv').appendChild(lineupParent)
+            lineupParent.classList = "lineupParent"
+            lineupParent.innerHTML=lineupData[b].startXI[d].name
+             document.querySelector('.sideScoreDiv').appendChild(lineupParent)
             }
         }
         // }
