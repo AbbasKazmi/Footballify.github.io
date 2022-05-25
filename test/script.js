@@ -394,7 +394,7 @@ var run = async () => {
 
                 console.log(fixtureId.innerHTML)
 
-                while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
+                // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
 
                 const options = {
                     method: 'GET',
@@ -408,7 +408,7 @@ var run = async () => {
                     .then(response => response.json())
                     .then(response => console.log(response))
                     .catch(err => console.error(err));
-                }
+                // }
         });
 
             let infoButton=document.createElement('button')
