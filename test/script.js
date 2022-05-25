@@ -264,8 +264,8 @@ var run = async () => {
             teamNames.className = 'rightDiv'
 
             let fixtureId2 = document.createElement("div")
-            fixtureId2.className = 'fixtureId2'
-            fixtureId2.innerHTML = fixureId.innerHTML;
+            fixtureId2.className = 'fixtureId2'                                                         //
+            fixtureId2.innerHTML = fixtureId.innerHTML;
 
             let homeTeamNameRightDiv = document.createElement("div")
             homeTeamNameRightDiv.className = 'fixturel'
