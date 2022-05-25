@@ -406,9 +406,10 @@ var run = async () => {
                 console.log(fixtureId.innerHTML)
 
                 // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
+                    runLineups();
     });
 
-            runLineups();
+
 
             let infoButton=document.createElement('button')
             infoButton.classList='infoButton'
