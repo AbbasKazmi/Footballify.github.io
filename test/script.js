@@ -341,14 +341,16 @@ var run = async () => {
             let infoButton=document.createElement('div')
             infoButton.classList='infoButton'
             infoButton.innerHTML='Info  '
+            infoButton.addEventListener("click", function(){ console.log('hi')})
+            
             navbarMini.appendChild(infoButton)
 
-            document.addEventListener('DOMContentLoaded', function(){
+        //     document.addEventListener('DOMContentLoaded', function(){
             
-                document.querySelector('.lineupButton').addEventListener('click', function(){
-                console.log('click info')
-            });
-           });
+        //         document.querySelector('.lineupButton').addEventListener('click', function(){
+        //         console.log('click info')
+        //     });
+        //    });
 
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
 
