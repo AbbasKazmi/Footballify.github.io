@@ -144,12 +144,9 @@ var run = async () => {
             lineupParent.className = "lineupParent"
 
             lineupParent.appendChild(lineupData[b].startXI[d])
-
+            document.querySelector('.sideScoreDiv').appendChild(lineupParent)
             }
         }
-
-        document.querySelector('.sideScoreDiv').appendChild(lineupParent)
-
         // }
         }
 
