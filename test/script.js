@@ -141,12 +141,13 @@ var run = async () => {
         for (let b=0; b<=lineupData.length-1;b++) {
             for (let d=0; d<=lineupData[b].startXI.length-1; d++) {
             
-            if (d=0) {
+            if (d==0) {
 
             let lineupParentHome = document.createElement('div')
             lineupParentHome.classList = "lineupParentHome"
             lineupParentHome.innerHTML=lineupData[b].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+
 
             } else {
             let lineupParentAway = document.createElement('div')
@@ -276,9 +277,8 @@ var run = async () => {
                 $('.venue').remove();
                 $('.city').remove();
                 $('.referee').remove();
-                $('.lineupParentHome').remove();
-                $('.lineupParentAway').remove();
-
+                $('.lineupParent').remove();
+ 
            
 
             let teamNames = document.createElement("div")
@@ -493,6 +493,7 @@ var run = async () => {
     }
   }     
 
+}
 };
 
 
@@ -510,4 +511,4 @@ $( document ).ready(function() {
     setTimeout(function () {
         document.querySelector(".hideThis").style.visibility = "visible"
     }, 1000);
-})};
+});
