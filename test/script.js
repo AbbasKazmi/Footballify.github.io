@@ -10,18 +10,6 @@ var desiredOrder = [
 //Derive day based on UTC 
 const isoStr = new Date().toISOString().slice(0,10);
 
-var runLineups = async () => {
-    const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
-headers: {
-    'X-RapidAPI-Host': 'v3.football.api-sports.io',
-    'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
-},
-});
-const lineupData = (await lin.json())?.response;
-console.log(lineupData)
-// }
-}
-
 //Pull API Data for UTC
 var run = async () => {
     const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=${isoStr}`, {
@@ -138,6 +126,18 @@ var run = async () => {
 
         parent.appendChild(awayTeamScore)
         //Push all Data to DOM
+
+        var runLineups = async () => {
+            const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
+        headers: {
+            'X-RapidAPI-Host': 'v3.football.api-sports.io',
+            'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
+        },
+        });
+        const lineupData = (await lin.json())?.response;
+        console.log(lineupData)
+        // }
+        }
 
                 //Match Not Started or  Cancelled/Postponed or In Progress
     if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'PST' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
