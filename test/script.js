@@ -407,7 +407,7 @@ var run = async () => {
                 
                 let cityOnClick=document.createElement('Div')
                 cityOnClick.classList='city'
-                cityOnClick.innerHTML=`Location ${city.innerHTML}, ${country.innerHTML}`
+                cityOnClick.innerHTML=`Location: ${city.innerHTML}, ${country.innerHTML}`
                 document.querySelector('.sideScoreDiv').appendChild(cityOnClick)
 
 
