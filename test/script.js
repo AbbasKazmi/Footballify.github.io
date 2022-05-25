@@ -127,8 +127,8 @@ var run = async () => {
         parent.appendChild(awayTeamScore)
         //Push all Data to DOM
 
-        var runLineups = async () => {
-            const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
+        var runLineups = async (idParameter) => {
+            const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${idParameter}`, {
         headers: {
             'X-RapidAPI-Host': 'v3.football.api-sports.io',
             'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
@@ -426,10 +426,10 @@ var run = async () => {
                 eventsButton.classList.remove("clicked")
                 statsButton.classList.remove("clicked")
 
-                console.log(fixtureId.innerHTML)
+                
 
                 // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
-                    runLineups();
+                    runLineups(fixtureId.innerHTML);
     });
 
 
