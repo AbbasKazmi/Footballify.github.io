@@ -156,8 +156,9 @@ var run = async () => {
             document.querySelector('.sideScoreDiv').appendChild(lineupParentAway)
             }
         }
-        // }
+
         }
+    }
 
                 //Match Not Started or  Cancelled/Postponed or In Progress
     if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'PST' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
@@ -493,7 +494,6 @@ var run = async () => {
     }
   }     
 
-}
 };
 
 
