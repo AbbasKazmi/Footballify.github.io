@@ -447,7 +447,15 @@ border-right: 1px groove;
     transition: all 0.3s ease;
 }
 
-.referee .venue .city {
+.referee {
+  
+  margin-left: 12px;
+}
+.venue {
+  
+  margin-left: 12px;
+}
+.city {
   
   margin-left: 12px;
 }
