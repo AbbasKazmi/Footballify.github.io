@@ -87,6 +87,10 @@ var run = async () => {
         referee.className = 'referee'
         referee.innerHTML = filtered[i][x].fixture.referee;
 
+        let fixtureId = document.createElement("div")
+        fixtureId.className = 'fixtureId'
+        fixtureId.innerHTML = filtered[i][x].fixture.id;
+
         let country = document.createElement("div")
         country.className = 'country'
         country.innerHTML = filtered[i][x].league.country;
@@ -259,9 +263,9 @@ var run = async () => {
             let teamNames = document.createElement("div")
             teamNames.className = 'rightDiv'
 
-            let fixtureId = document.createElement("div")
-        fixtureId.className = 'fixtureId'
-        fixtureId.innerHTML = filtered[i][x].fixture.id;
+            let fixtureId2 = document.createElement("div")
+            fixtureId2.className = 'fixtureId2'
+            fixtureId2.innerHTML = fixureId.innerHTML;
 
             let homeTeamNameRightDiv = document.createElement("div")
             homeTeamNameRightDiv.className = 'fixturel'
