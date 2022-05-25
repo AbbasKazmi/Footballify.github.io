@@ -272,8 +272,9 @@ var run = async () => {
                 $('.venue').remove();
                 $('.city').remove();
                 $('.referee').remove();
-                $('.lineupParent').remove();
- 
+                $('.lineupParentHome').remove();
+                $('.lineupParentAway').remove();
+
            
 
             let teamNames = document.createElement("div")
