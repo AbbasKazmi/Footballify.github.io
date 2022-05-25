@@ -21,6 +21,7 @@ var run = async () => {
 
     //Parse JSON
     const json = (await res.json())?.response;
+    console.log(json)
     //Map desiredOrder onto API Call
     const ordered = desiredOrder.map((id) => json.filter(({ league }) => league?.id === id));
     //Remove any Null Values
