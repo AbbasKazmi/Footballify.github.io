@@ -148,12 +148,13 @@ var run = async () => {
             lineupParentHome.innerHTML=lineupData[b].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
             
-
+            b=1
             } else {
             let lineupParentAway = document.createElement('div')
             lineupParentAway.classList = "lineupParentAway"
             lineupParentAway.innerHTML=lineupData[b].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParentAway)
+            b=0
             }
         }
 
