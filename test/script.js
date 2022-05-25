@@ -156,6 +156,8 @@ var run = async () => {
             lineupParentAway.classList = "lineupParentAway"
             lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
             lineupC.appendChild(lineupParentAway)
+
+
         }
     }
 
@@ -483,6 +485,7 @@ var run = async () => {
         //    });
 
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
+            document.querySelector('.sideScoreDiv').appendChild(lineupC)
 
         })
 
