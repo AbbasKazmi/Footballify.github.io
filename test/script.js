@@ -137,7 +137,8 @@ var run = async () => {
         const lineupData = (await lin.json())?.response;
         console.log(lineupData)
 
-        
+        let lineupContainer = document.createElement('div')
+            lineupContainer.className='lineupContainer';
         // for (let b=0; b<=lineupData.length-1;b++) {
             for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
@@ -146,19 +147,21 @@ var run = async () => {
             let lineupParentHome = document.createElement('div')
             lineupParentHome.classList = "lineupParentHome"
             lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
-            document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+            document.querySelector('.lineupContainer').appendChild(lineupParentHome)
             
             
             // } else {
             let lineupParentAway = document.createElement('div')
             lineupParentAway.classList = "lineupParentAway"
             lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
-            document.querySelector('.sideScoreDiv').appendChild(lineupParentAway)
+            document.querySelector('.lineupContainer').appendChild(lineupParentAway)
             
             // }
         // }
 
         }
+        document.querySelector('.sideScoreDiv').appendChild(lineupContainer)
+
     }
 
                 //Match Not Started or  Cancelled/Postponed or In Progress
