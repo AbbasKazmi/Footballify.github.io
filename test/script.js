@@ -10,6 +10,18 @@ var desiredOrder = [
 //Derive day based on UTC 
 const isoStr = new Date().toISOString().slice(0,10);
 
+var runLineups = async () => {
+    const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
+headers: {
+    'X-RapidAPI-Host': 'v3.football.api-sports.io',
+    'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
+},
+});
+const lineupData = (await lin.json())?.response;
+console.log(lineupData)
+// }
+}
+
 //Pull API Data for UTC
 var run = async () => {
     const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=${isoStr}`, {
@@ -18,22 +30,8 @@ var run = async () => {
 			"X-RapidAPI-Key": "e54f3d3972ca8251c1259694b49948de"
         },
     });
-
-var runLineups = async () => {
-        const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
-    headers: {
-        'X-RapidAPI-Host': 'v3.football.api-sports.io',
-        'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
-    },
-});
-    const lineupData = (await lin.json())?.response;
-    console.log(lineupData)
-// }
-}
-
     //Parse JSON
     const json = (await res.json())?.response;
-    console.log(json)
     //Map desiredOrder onto API Call
     const ordered = desiredOrder.map((id) => json.filter(({ league }) => league?.id === id));
     //Remove any Null Values
