@@ -140,6 +140,11 @@ var run = async () => {
         for (let b=0; b<=lineupData.length-1;b++) {
             for (let d=0; d<=lineupData[b].startXI.length-1; d++) {
 
+                console.log(lineupData[b])
+                console.log(lineupData[b].startXI)
+                console.log(lineupData[b].startXI[d])
+                console.log(lineupData[b].startXI[d].name)
+
             let lineupParent = document.createElement('div')
             lineupParent.classList = "lineupParent"
             lineupParent.innerHTML=lineupData[b].startXI[d].name
