@@ -137,7 +137,7 @@ var run = async () => {
         const lineupData = (await lin.json())?.response;
         console.log(lineupData)
 
-
+        $('lineupC').remove();
         let lineupC = document.createElement('div')
         lineupC.className='lineupC';
 
@@ -281,8 +281,7 @@ var run = async () => {
                 $('.venue').remove();
                 $('.city').remove();
                 $('.referee').remove();
-                $('.lineupParentHome').remove();
-                $('.lineupParentAway').remove();
+                $('lineupC').remove();
 
            
 
@@ -424,9 +423,12 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
+                $('.rightDiv').remove();      
+                $('.rightDivScores').remove();
                 $('.venue').remove();
                 $('.city').remove();
                 $('.referee').remove();
+                $('lineupC').remove();
 
                 lineupButton.classList.add("clicked")
                 infoButton.classList.remove("clicked")
