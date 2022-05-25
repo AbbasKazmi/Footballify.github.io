@@ -73,10 +73,14 @@ var run = async () => {
 
         let venue = document.createElement("div")
         venue.className = 'venue'
-        venue.innerHTML = filtered[i][x].fixture.venue;
+        venue.innerHTML = filtered[i][x].fixture.venue.name;
+
+        let city = document.createElement("div")
+        city.className = 'city'
+        city.innerHTML = filtered[i][x].fixture.venue.city;
 
         let referee = document.createElement("div")
-        referee.className = 'venue'
+        referee.className = 'referee'
         referee.innerHTML = filtered[i][x].fixture.referee;
 
         let homeTeamLogo = document.createElement("img")
@@ -375,6 +379,7 @@ var run = async () => {
                 lineupButton.classList.remove("clicked")
                 console.log(venue.innerHTML)
                 console.log(referee.innerHTML)
+                console.log(city.innerHTML)
             }) 
             
             navbarMini.appendChild(infoButton)
