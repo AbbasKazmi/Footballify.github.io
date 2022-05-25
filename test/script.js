@@ -377,6 +377,19 @@ var run = async () => {
                 statsButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
+
+                let venueOnClick=document.createElement('Div')
+                venueOnClick.classList='venue'
+                venueOnClick.innerHTML=venue.innerHTML
+
+                let refereeOnClick=document.createElement('Div')
+                refereeOnClick.classList='referee'
+                refereeOnClick.innerHTML=venue.innerHTML
+
+                let cityOnClick=document.createElement('Div')
+                cityOnClick.classList='city'
+                cityOnClick.innerHTML=city.innerHTML
+
                 console.log(venue.innerHTML)
                 console.log(referee.innerHTML)
                 console.log(city.innerHTML)
