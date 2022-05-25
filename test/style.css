@@ -472,6 +472,7 @@ border-right: 1px groove;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 12px;
 }
 
 .lineupC>div {
