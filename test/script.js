@@ -404,7 +404,7 @@ var run = async () => {
                     }
                 };
                 
-                fetch(`https://v3.football.api-sports.io/v3/fixtures/lineups?fixture=${fixtureId.innerHTML}`, options)
+                fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, options)
                     .then(response => response.json())
                     .then(response => console.log(response))
                     .catch(err => console.error(err));
