@@ -159,6 +159,8 @@ var run = async () => {
 
 
         }
+
+        document.querySelector('.sideScoreDiv').appendChild(lineupC)
     }
 
                 //Match Not Started or  Cancelled/Postponed or In Progress
@@ -485,7 +487,7 @@ var run = async () => {
         //    });
 
             document.querySelector('.sideScoreDiv').appendChild(navbarMini)
-            document.querySelector('.sideScoreDiv').appendChild(lineupC)
+           
 
         })
 
