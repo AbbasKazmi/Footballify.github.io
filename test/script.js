@@ -92,6 +92,10 @@ var run = async () => {
         country.className = 'country'
         country.innerHTML = filtered[i][x].league.country;
 
+        let fixtureId = document.createElement("div")
+        fixtureId.className = 'fixtureId'
+        fixtureId.innerHTML = filtered[i][x].fixture.id;
+
         let homeTeamLogo = document.createElement("img")
         homeTeamLogo.className = 'logo1'
         homeTeamLogo.setAttribute("src",filtered[i][x].teams.home.logo)
@@ -379,10 +383,29 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
+                $('.venue').remove();
+                $('.city').remove();
+                $('.referee').remove();
+
                 lineupButton.classList.add("clicked")
                 infoButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 statsButton.classList.remove("clicked")
+
+                console.log(fixtureId.innerHTML)
+
+                const options = {
+                    method: 'GET',
+                    headers: {
+                        'X-RapidAPI-Host': 'v3.football.api-sports.io',
+                        'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
+                    }
+                };
+                
+                fetch('https://api-football-v1.p.rapidapi.com/v3/fixtures/lineups?fixture=215662', options)
+                    .then(response => response.json())
+                    .then(response => console.log(response))
+                    .catch(err => console.error(err));
             }) 
 
             let infoButton=document.createElement('button')
