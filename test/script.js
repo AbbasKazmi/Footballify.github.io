@@ -391,6 +391,7 @@ var run = async () => {
             $('.venue').remove();
             $('.city').remove();
             $('.referee').remove();
+            $('lineupC').remove();
 
             let navbarMini = document.createElement('nav')
             navbarMini.className='navbarMini';
