@@ -71,6 +71,14 @@ var run = async () => {
         timerOrigin.className = 'timer'
         timerOrigin.innerHTML = filtered[i][x].fixture.timestamp;
 
+        let venue = document.createElement("div")
+        venue.className = 'venue'
+        venue.innerHTML = filtered[i][x].fixture.venue;
+
+        let referee = document.createElement("div")
+        referee.className = 'venue'
+        referee.innerHTML = filtered[i][x].fixture.referee;
+
         let homeTeamLogo = document.createElement("img")
         homeTeamLogo.className = 'logo1'
         homeTeamLogo.setAttribute("src",filtered[i][x].teams.home.logo)
@@ -365,8 +373,8 @@ var run = async () => {
                 statsButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-                console.log(filtered[i][x].fixture.venue)
-                console.log(filtered[i][x].fixture.referee)
+                console.log(venue.innerHTML)
+                console.log(referee.innerHTML)
             }) 
             
             navbarMini.appendChild(infoButton)
