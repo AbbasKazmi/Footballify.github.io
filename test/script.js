@@ -47,7 +47,12 @@ var run = async () => {
         //League Name
         let league = document.createElement("div")
         league.className = 'league'
+
+        if (filtered[i][x].league.flag) {
         league.innerHTML = filtered[i][x].league.name + `<img class='flag' src=${filtered[i][x].league.flag}>`
+        } else {
+        league.innerHTML = filtered[i][x].league.name + `<img class='flag' src=${filtered[i][x].league.logo}>`  
+        }
         parent.appendChild(league)
         }
 
