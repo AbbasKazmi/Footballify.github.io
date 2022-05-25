@@ -83,6 +83,10 @@ var run = async () => {
         referee.className = 'referee'
         referee.innerHTML = filtered[i][x].fixture.referee;
 
+        let country = document.createElement("div")
+        country.className = 'country'
+        country.innerHTML = filtered[i][x].league.country;
+
         let homeTeamLogo = document.createElement("img")
         homeTeamLogo.className = 'logo1'
         homeTeamLogo.setAttribute("src",filtered[i][x].teams.home.logo)
@@ -388,7 +392,7 @@ var run = async () => {
 
                 let cityOnClick=document.createElement('Div')
                 cityOnClick.classList='city'
-                cityOnClick.innerHTML=city.innerHTML
+                cityOnClick.innerHTML=city.innerHTML +', ' + country.innerHTML
 
                 console.log(venue.innerHTML)
                 console.log(referee.innerHTML)
