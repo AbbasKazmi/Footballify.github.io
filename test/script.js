@@ -365,6 +365,8 @@ var run = async () => {
                 statsButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
+                console.log(filtered[i][x].fixture.venue)
+                console.log(filtered[i][x].fixture.referee)
             }) 
             
             navbarMini.appendChild(infoButton)
