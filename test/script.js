@@ -138,25 +138,25 @@ var run = async () => {
         console.log(lineupData)
 
         
-        for (let b=0; b<=lineupData.length-1;b++) {
-            for (let d=0; d<=lineupData[b].startXI.length-1; d++) {
+        // for (let b=0; b<=lineupData.length-1;b++) {
+            for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
-            if (b==0) {
+            // if (b==0) {
 
             let lineupParentHome = document.createElement('div')
             lineupParentHome.classList = "lineupParentHome"
-            lineupParentHome.innerHTML=lineupData[b].startXI[d].player.name
+            lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
             
-            b=1
-            } else {
+            
+            // } else {
             let lineupParentAway = document.createElement('div')
             lineupParentAway.classList = "lineupParentAway"
-            lineupParentAway.innerHTML=lineupData[b].startXI[d].player.name
+            lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParentAway)
-            b=0
-            }
-        }
+            
+            // }
+        // }
 
         }
     }
