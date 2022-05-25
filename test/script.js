@@ -392,6 +392,9 @@ var run = async () => {
             $('.city').remove();
             $('.referee').remove();
             $('lineupC').remove();
+            $('lineupParentHome').remove();
+            $('lineupParentHome').remove();
+
 
             let navbarMini = document.createElement('nav')
             navbarMini.className='navbarMini';
@@ -405,6 +408,14 @@ var run = async () => {
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
+
+            $('.navbarMini').remove();
+            $('.venue').remove();
+            $('.city').remove();
+            $('.referee').remove();
+            $('lineupC').remove();
+            $('lineupParentHome').remove();
+            $('lineupParentHome').remove();
             }) 
 
             let statsButton=document.createElement('button')
@@ -424,10 +435,13 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
-                $('.venue').remove();
-                $('.city').remove();
-                $('.referee').remove();
-                $('lineupC').remove();
+            $('.navbarMini').remove();
+            $('.venue').remove();
+            $('.city').remove();
+            $('.referee').remove();
+            $('lineupC').remove();
+            $('lineupParentHome').remove();
+            $('lineupParentHome').remove();
 
                 lineupButton.classList.add("clicked")
                 infoButton.classList.remove("clicked")
@@ -451,10 +465,13 @@ var run = async () => {
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
 
-                $('.venue').remove();
-                $('.city').remove();
-                $('.referee').remove();
-                $('lineupC').remove();
+            $('.navbarMini').remove();
+            $('.venue').remove();
+            $('.city').remove();
+            $('.referee').remove();
+            $('lineupC').remove();
+            $('lineupParentHome').remove();
+            $('lineupParentHome').remove();
 
                 let venueOnClick=document.createElement('Div')
                 venueOnClick.classList='venue'
