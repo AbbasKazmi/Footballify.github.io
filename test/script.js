@@ -423,8 +423,6 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
-                $('.rightDiv').remove();      
-                $('.rightDivScores').remove();
                 $('.venue').remove();
                 $('.city').remove();
                 $('.referee').remove();
