@@ -338,10 +338,12 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
 
-            let infoButton=document.createElement('div')
+            let infoButton=document.createElement('button')
             infoButton.classList='infoButton'
             infoButton.innerHTML='Info  '
-            infoButton.addEventListener("click", function(){ console.log('hi')})
+            infoButton.addEventListener("click", function(){ 
+                console.log('hi')
+            }) 
             
             navbarMini.appendChild(infoButton)
 
