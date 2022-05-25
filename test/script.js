@@ -323,20 +323,29 @@ var run = async () => {
             let navbarMini = document.createElement('nav')
             navbarMini.className='navbarMini';
 
-            let eventsButton = document.createElement('div')
+            let eventsButton = document.createElement('button')
             eventsButton.className = 'eventsButton'
             eventsButton.innerHTML = "Events"
             navbarMini.appendChild(eventsButton)
+            eventsButton.addEventListener("click", function(){ 
+                console.log('hi')
+            }) 
 
-            let statsButton=document.createElement('div')
+            let statsButton=document.createElement('button')
             statsButton.className='statsButton';
             statsButton.innerHTML='Statistics'
             navbarMini.appendChild(statsButton);
+            statsButton.addEventListener("click", function(){ 
+                console.log('hi')
+            }) 
 
-            let lineupButton=document.createElement('div')
+            let lineupButton=document.createElement('button')
             lineupButton.className='lineupButton';
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
+            lineupButton.addEventListener("click", function(){ 
+                console.log('hi')
+            }) 
 
             let infoButton=document.createElement('button')
             infoButton.classList='infoButton'
