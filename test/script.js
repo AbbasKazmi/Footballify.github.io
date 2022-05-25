@@ -137,20 +137,25 @@ var run = async () => {
         const lineupData = (await lin.json())?.response;
         console.log(lineupData)
 
-            for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
+
+        let lineupC = document.createElement('div')
+        lineupC.className='lineupC';
+
+        for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
 
             let lineupParentHome = document.createElement('div')
             lineupParentHome.classList = "lineupParentHome"
             lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+            lineupC.appendChild(lineupParentHome)
+
             
             
             let lineupParentAway = document.createElement('div')
             lineupParentAway.classList = "lineupParentAway"
             lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
-            document.querySelector('.sideScoreDiv').appendChild(lineupParentAway)
-
+            lineupC.appendChild(lineupParentAway)
         }
     }
 
