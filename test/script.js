@@ -282,6 +282,8 @@ var run = async () => {
                 $('.city').remove();
                 $('.referee').remove();
                 $('lineupC').remove();
+                $('lineupParentHome').remove();
+                $('lineupParentAway').remove();
 
            
 
@@ -387,13 +389,13 @@ var run = async () => {
             document.querySelector('.sideScoreDiv').appendChild(teamNames)
             document.querySelector('.sideScoreDiv').appendChild(sideScore)
 
-            $('.navbarMini').remove();
+            
             $('.venue').remove();
             $('.city').remove();
             $('.referee').remove();
             $('lineupC').remove();
             $('lineupParentHome').remove();
-            $('lineupParentHome').remove();
+            $('lineupParentAway').remove();
 
 
             let navbarMini = document.createElement('nav')
@@ -409,13 +411,12 @@ var run = async () => {
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
 
-            $('.navbarMini').remove();
             $('.venue').remove();
             $('.city').remove();
             $('.referee').remove();
             $('lineupC').remove();
             $('lineupParentHome').remove();
-            $('lineupParentHome').remove();
+            $('lineupParentAway').remove();
             }) 
 
             let statsButton=document.createElement('button')
@@ -428,6 +429,13 @@ var run = async () => {
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
 
+            $('.venue').remove();
+            $('.city').remove();
+            $('.referee').remove();
+            $('lineupC').remove();
+            $('lineupParentHome').remove();
+            $('lineupParentAway').remove();
+
             }) 
 
             let lineupButton=document.createElement('button')
@@ -435,13 +443,13 @@ var run = async () => {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
-            $('.navbarMini').remove();
+            
             $('.venue').remove();
             $('.city').remove();
             $('.referee').remove();
             $('lineupC').remove();
             $('lineupParentHome').remove();
-            $('lineupParentHome').remove();
+            $('lineupParentAway').remove();
 
                 lineupButton.classList.add("clicked")
                 infoButton.classList.remove("clicked")
@@ -465,13 +473,12 @@ var run = async () => {
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
 
-            $('.navbarMini').remove();
             $('.venue').remove();
             $('.city').remove();
             $('.referee').remove();
             $('lineupC').remove();
             $('lineupParentHome').remove();
-            $('lineupParentHome').remove();
+            $('lineupParentAway').remove();
 
                 let venueOnClick=document.createElement('Div')
                 venueOnClick.classList='venue'
