@@ -296,7 +296,7 @@ var run = async () => {
             if (Number(seconds)>=0){
             timer.innerHTML = hours + ":" + minutes + ":" + seconds;
             } else {
-                if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD") {
+                if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD" || gameStatus.innerHTML=="NA" || gameStatus.innerHTML=="PST") {
                 timer.innerHTML="-";
                 } else if (distance < 0) {
                     let homeTeamScoreRightDiv = document.createElement("div")
