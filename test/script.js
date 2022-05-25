@@ -394,25 +394,35 @@ var run = async () => {
 
                 console.log(fixtureId.innerHTML)
 
-                // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
+                // var run = async () => {
+                //     const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=${isoStr}`, {
+                //         headers: {
+                //             'X-RapidAPI-Host': "v3.football.api-sports.io",
+                //             "X-RapidAPI-Key": "e54f3d3972ca8251c1259694b49948de"
+                //         },
+                //     });
+                
+                //     //Parse JSON
+                //     const json = (await res.json())?.response;
 
-                const options = {
-                    method: 'GET',
+                // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
+                    var run = async () => {
+                        const lin = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, {
                     headers: {
                         'X-RapidAPI-Host': 'v3.football.api-sports.io',
                         'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
-                    }
-                };
+                    },
+                });
                 
-                fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${fixtureId.innerHTML}`, options)
+               
                     // .then(response => response.json())
                     // .then(response => console.log(response))
                     // .catch(err => console.error(err));
 
-                    const lineupData = (await res.json())?.response;
+                    const lineupData = (await lin.json())?.response;
                     console.log(lineupData)
                 // }
-        });
+        }});
 
             let infoButton=document.createElement('button')
             infoButton.classList='infoButton'
