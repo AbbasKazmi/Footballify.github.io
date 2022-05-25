@@ -382,17 +382,24 @@ var run = async () => {
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
 
+                $('venue').remove();
                 let venueOnClick=document.createElement('Div')
                 venueOnClick.classList='venue'
                 venueOnClick.innerHTML=venue.innerHTML
+                document.querySelector('.sideScoreDiv').appendChild(venueOnClick)
 
+                $('referee').remove();
                 let refereeOnClick=document.createElement('Div')
                 refereeOnClick.classList='referee'
                 refereeOnClick.innerHTML=venue.innerHTML
+                document.querySelector('.sideScoreDiv').appendChild(refereeOnClick)
 
+                $('city').remove();
                 let cityOnClick=document.createElement('Div')
                 cityOnClick.classList='city'
                 cityOnClick.innerHTML=city.innerHTML +', ' + country.innerHTML
+                document.querySelector('.sideScoreDiv').appendChild(cityOnClick)
+
 
                 console.log(venue.innerHTML)
                 console.log(referee.innerHTML)
