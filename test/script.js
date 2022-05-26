@@ -154,6 +154,7 @@ var run = async () => {
             lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
             lineupC.appendChild(lineupParentHome)
+            
 
             
             
@@ -166,6 +167,9 @@ var run = async () => {
         }
 
         document.querySelector('.sideScoreDiv').appendChild(lineupC)
+        $(lineupParentHome).hide().fadeIn(1000);
+        $(lineupParentAway).hide().fadeIn(1000);
+
     }
 
                 //Match Not Started or  Cancelled/Postponed or In Progress
