@@ -484,3 +484,9 @@ border-right: 1px groove;
     font-weight: 600;
     justify-content: space-evenly;
 }
+
+.fixtureInfo {    
+  display: flex;
+  font-weight: 600;
+  justify-content: space-evenly;
+}
