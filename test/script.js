@@ -144,7 +144,7 @@ var run = async () => {
         let textstart11 = document.createElement('div')
         textstart11.classname = 'start11'
         textstart11.innerHTML = 'Starting XI'
-        lineupC.appendChild(textstart11)
+        document.querySelector('.sideScoreDiv').appendChild(textstart11)
 
         for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
