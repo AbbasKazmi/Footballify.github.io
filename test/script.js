@@ -299,6 +299,8 @@ var run = async () => {
                 $('.lineupParentHome').remove();
                 $('.lineupParentAway').remove();
                 $('.startEleven').remove();
+                $('.fixtureInfo').remove();
+
 
            
 
@@ -412,6 +414,8 @@ var run = async () => {
             $('.lineupParentHome').remove();
             $('.lineupParentAway').remove();
             $('.startEleven').remove();
+            $('.fixtureInfo').remove();
+
 
 
             let navbarMini = document.createElement('nav')
@@ -434,6 +438,8 @@ var run = async () => {
             $('.lineupParentHome').remove();
             $('.lineupParentAway').remove();
             $('.startEleven').remove();
+            $('.fixtureInfo').remove();
+
             }) 
 
             let statsButton=document.createElement('button')
@@ -452,7 +458,9 @@ var run = async () => {
             $('.lineupC').remove();
             $('.lineupParentHome').remove();
             $('.lineupParentAway').remove();
-            $('.startEleven').remove();
+            $('.startEleven').remove();     
+            $('.fixtureInfo').remove();
+
 
             }) 
 
@@ -469,6 +477,8 @@ var run = async () => {
             $('.lineupParentHome').remove();
             $('.lineupParentAway').remove();
             $('.startEleven').remove();
+            $('.fixtureInfo').remove();
+
 
                 lineupButton.classList.add("clicked")
                 infoButton.classList.remove("clicked")
@@ -499,6 +509,13 @@ var run = async () => {
             $('.lineupParentHome').remove();
             $('.lineupParentAway').remove();
             $('.startEleven').remove();
+            $('.fixtureInfo').remove();
+
+                let infoText = document.createElement('div')
+                infoText.className = 'fixtureInfo'
+                infoText.innerHTML = 'Information'
+                document.querySelector('.sideScoreDiv').appendChild(infoText)
+                $(infoText).hide().fadeIn(1000);
 
                 let venueOnClick=document.createElement('Div')
                 venueOnClick.classList='venue'
