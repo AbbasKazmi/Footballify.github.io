@@ -275,7 +275,7 @@ var run = async () => {
         } else {}
 
         parent.addEventListener("click", function(){
-
+                $('.navbarMini').remove()
                 $('.rightDiv').remove();      
                 $('.rightDivScores').remove();
                 $('.venue').remove();
