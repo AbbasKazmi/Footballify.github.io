@@ -147,9 +147,6 @@ var run = async () => {
         document.querySelector('.sideScoreDiv').appendChild(textstart11)
         $(textstart11).hide().fadeIn(1000);
 
-        
-if (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
-
         for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
 
@@ -174,12 +171,21 @@ if (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
         }
 
        
-    } else {
-        textstart11.innerHTML = 'Starting XI no'
-    }
+
     document.querySelector('.sideScoreDiv').appendChild(lineupC)
     }
 
+    var runStats = async (idParameter) => {
+        const stats = await fetch(`https://v3.football.api-sports.io/fixtures/lineups?fixture=${idParameter}`, {
+    headers: {
+        'X-RapidAPI-Host': 'v3.football.api-sports.io',
+        'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
+    },
+    })
+    const statsData = (await stats.json())?.response;
+    console.log(statsData)
+};
+    
                 //Match Not Started or  Cancelled/Postponed or In Progress
     if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'PST' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
                  
@@ -464,6 +470,7 @@ if (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
             $('.startEleven').remove();     
             $('.fixtureInfo').remove();
 
+            runStats(fixtureId.innerHTML);
 
             }) 
 
