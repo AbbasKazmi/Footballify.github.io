@@ -141,6 +141,10 @@ var run = async () => {
         let lineupC = document.createElement('div')
         lineupC.className='lineupC';
 
+        let start11 = document.createElement('div')
+        start11.classname = 'start11'
+        start11.innerHTML = 'Starting XI'
+
         for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
 
