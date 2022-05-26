@@ -479,3 +479,8 @@ border-right: 1px groove;
   width: 50%;
 }
 
+.start11 {
+    display: flex;
+    font-weight: 600;
+    justify-content: space-evenly;
+}
