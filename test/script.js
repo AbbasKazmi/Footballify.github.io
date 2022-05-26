@@ -147,9 +147,7 @@ var run = async () => {
         document.querySelector('.sideScoreDiv').appendChild(textstart11)
         $(textstart11).hide().fadeIn(1000);
 
-        if (lineupData[0].startXI.length = undefined) {
-            textstart11.innerHTML = "Starting XI Available 30 Minutes Before Match"
-        } else {
+        
 
         for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
@@ -172,7 +170,7 @@ var run = async () => {
             $(lineupParentAway).hide().fadeIn(1000);
 
 
-        }}
+        }
 
         document.querySelector('.sideScoreDiv').appendChild(lineupC)
        
