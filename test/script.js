@@ -282,7 +282,7 @@ var run = async () => {
                 $('.city').remove();
                 $('.referee').remove();
                 $('.lineupC').remove();
-                $('.').remove();
+                $('.lineupParentHome').remove();
                 $('.lineupParentAway').remove();
 
            
