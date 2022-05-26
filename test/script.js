@@ -141,43 +141,43 @@ var run = async () => {
         let lineupC = document.createElement('div')
         lineupC.className='lineupC';
 
-//         let textstart11 = document.createElement('div')
-//         textstart11.className = 'startEleven'
-//         textstart11.innerHTML = 'Starting XI'
-//         document.querySelector('.sideScoreDiv').appendChild(textstart11)
-//         $(textstart11).hide().fadeIn(1000);
+        let textstart11 = document.createElement('div')
+        textstart11.className = 'startEleven'
+        textstart11.innerHTML = 'Starting XI'
+        document.querySelector('.sideScoreDiv').appendChild(textstart11)
+        $(textstart11).hide().fadeIn(1000);
 
         
-// if (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
+if (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
 
-//         for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
+        for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
 
-//             let lineupParentHome = document.createElement('div')
-//             lineupParentHome.classList = "lineupParentHome"
-//             lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
-//             document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
-//             lineupC.appendChild(lineupParentHome)
-//             $(lineupParentHome).hide().fadeIn(1000);
+            let lineupParentHome = document.createElement('div')
+            lineupParentHome.classList = "lineupParentHome"
+            lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
+            document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+            lineupC.appendChild(lineupParentHome)
+            $(lineupParentHome).hide().fadeIn(1000);
            
             
 
             
             
-//             let lineupParentAway = document.createElement('div')
-//             lineupParentAway.classList = "lineupParentAway"
-//             lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
-//             lineupC.appendChild(lineupParentAway)
-//             $(lineupParentAway).hide().fadeIn(1000);
+            let lineupParentAway = document.createElement('div')
+            lineupParentAway.classList = "lineupParentAway"
+            lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
+            lineupC.appendChild(lineupParentAway)
+            $(lineupParentAway).hide().fadeIn(1000);
 
 
-//         }
+        }
 
        
-//     } else {
-//         textstart11.innerHTML = 'Starting XI no'
-//     }
-//     document.querySelector('.sideScoreDiv').appendChild(lineupC)
+    } else {
+        textstart11.innerHTML = 'Starting XI no'
+    }
+    document.querySelector('.sideScoreDiv').appendChild(lineupC)
     }
 
                 //Match Not Started or  Cancelled/Postponed or In Progress
@@ -395,44 +395,6 @@ var run = async () => {
         
         }, .005);
             sideScore.appendChild(timer)
-
-            let textstart11 = document.createElement('div')
-        textstart11.className = 'startEleven'
-        textstart11.innerHTML = 'Starting XI'
-        document.querySelector('.sideScoreDiv').appendChild(textstart11)
-        $(textstart11).hide().fadeIn(1000);
-
-        
-if (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
-
-        for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
-            
-
-            let lineupParentHome = document.createElement('div')
-            lineupParentHome.classList = "lineupParentHome"
-            lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
-            document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
-            lineupC.appendChild(lineupParentHome)
-            $(lineupParentHome).hide().fadeIn(1000);
-           
-            
-
-            
-            
-            let lineupParentAway = document.createElement('div')
-            lineupParentAway.classList = "lineupParentAway"
-            lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
-            lineupC.appendChild(lineupParentAway)
-            $(lineupParentAway).hide().fadeIn(1000);
-
-
-        }
-
-       
-    } else {
-        textstart11.innerHTML = 'Starting XI no'
-    }
-    document.querySelector('.sideScoreDiv').appendChild(lineupC)
 
             let awayTeamLogoRightDiv = document.createElement("img")
             awayTeamLogoRightDiv.className = 'logo1'
