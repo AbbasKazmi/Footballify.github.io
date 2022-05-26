@@ -145,6 +145,7 @@ var run = async () => {
         textstart11.className = 'startEleven'
         textstart11.innerHTML = 'Starting XI'
         document.querySelector('.sideScoreDiv').appendChild(textstart11)
+        $(textstart11).hide().fadeIn(1000);
 
         for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
@@ -501,23 +502,22 @@ var run = async () => {
                 venueOnClick.classList='venue'
                 venueOnClick.innerHTML=`Venue: ${venue.innerHTML}`
                 document.querySelector('.sideScoreDiv').appendChild(venueOnClick)
+                $(venueOnClick).hide().fadeIn(1000);
 
                 
                 let refereeOnClick=document.createElement('Div')
                 refereeOnClick.classList='referee'
                 refereeOnClick.innerHTML=`Referee: ${referee.innerHTML}`
                 document.querySelector('.sideScoreDiv').appendChild(refereeOnClick)
+                $(refereeOnClick).hide().fadeIn(1000);
 
                 
                 let cityOnClick=document.createElement('Div')
                 cityOnClick.classList='city'
                 cityOnClick.innerHTML=`Location: ${city.innerHTML}, ${country.innerHTML}`
                 document.querySelector('.sideScoreDiv').appendChild(cityOnClick)
+                $(cityOnClick).hide().fadeIn(1000);
 
-
-                console.log(venue.innerHTML)
-                console.log(referee.innerHTML)
-                console.log(city.innerHTML)
             }) 
             
             navbarMini.appendChild(infoButton)
