@@ -147,7 +147,7 @@ var run = async () => {
         document.querySelector('.sideScoreDiv').appendChild(textstart11)
         $(textstart11).hide().fadeIn(1000);
 
-        if (lineupData[0].startXI = undefined) {
+        if (lineupData[0].startXI.length = undefined) {
             textstart11.innerHTML = "Starting XI Available 30 Minutes Before Match"
         } else {
 
