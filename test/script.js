@@ -154,6 +154,8 @@ var run = async () => {
             lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
             document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
             lineupC.appendChild(lineupParentHome)
+            $(lineupParentHome).hide().fadeIn(1000);
+           
             
 
             
@@ -162,13 +164,13 @@ var run = async () => {
             lineupParentAway.classList = "lineupParentAway"
             lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
             lineupC.appendChild(lineupParentAway)
+            $(lineupParentAway).hide().fadeIn(1000);
 
 
         }
 
         document.querySelector('.sideScoreDiv').appendChild(lineupC)
-        $(lineupParentHome).hide().fadeIn(1000);
-        $(lineupParentAway).hide().fadeIn(1000);
+       
 
     }
 
