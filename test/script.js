@@ -148,6 +148,7 @@ var run = async () => {
         $(textstart11).hide().fadeIn(1000);
 
         
+if (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
 
         for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
             
@@ -174,7 +175,9 @@ var run = async () => {
 
         document.querySelector('.sideScoreDiv').appendChild(lineupC)
        
-
+    } else {
+        textstart11.innerHTML = 'Starting XI no'
+    }
     }
 
                 //Match Not Started or  Cancelled/Postponed or In Progress
