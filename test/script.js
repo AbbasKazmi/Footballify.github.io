@@ -145,7 +145,7 @@ var run = async () => {
         textstart11.className = 'startEleven'
         if (lineupData[0].formation) {
             textstart11.innerHTML = 'Starting XI'
-        
+            console.log(lineupData[0].formation)
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
             $(textstart11).hide().fadeIn(1000);
     
