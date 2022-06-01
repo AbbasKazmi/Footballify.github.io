@@ -217,6 +217,7 @@ border-bottom: 1px groove;
     float: left;
     margin-left: 57px;
     height: 100%;
+    border-left: 1px groove;
 }
 .parentContainer {
   float:left;
@@ -231,6 +232,7 @@ border-bottom: 1px groove;
   float: left;
   margin-right: 30px;
   background-color: white;
+  border-right: 1px groove;
 }
 
 .newsimg {
