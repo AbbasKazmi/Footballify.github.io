@@ -138,8 +138,12 @@ var run = async () => {
         console.log(lineupData)
 
         $('lineupC').remove();
+        $('subsC').remove();
         let lineupC = document.createElement('div')
         lineupC.className='lineupC';
+
+        let subsC = document.createElement('div')
+        subsC.className='lineupC';
 
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
@@ -185,14 +189,14 @@ var run = async () => {
                 subsHome.classList = "lineupParentHome"
                 subsHome.innerHTML=lineupData[0].substitutes[d].player.name
                 document.querySelector('.sideScoreDiv').appendChild(subsHome)
-                lineupC.appendChild(subsHome)
+                subsC.appendChild(subsHome)
                 $(subsHome).hide().fadeIn(500);
                 
                 if (lineupData[1].substitutes.length-1>=d) {
                 let subsAway = document.createElement('div')
                 subsAway.classList = "lineupParentAway"
                 subsAway.innerHTML=lineupData[1].substitutes[d].player.name
-                lineupC.appendChild(subsAway)
+                subsC.appendChild(subsAway)
                 $(subsAway).hide().fadeIn(500);
                 }
 
@@ -209,6 +213,8 @@ var run = async () => {
     
 
     document.querySelector('.sideScoreDiv').appendChild(lineupC)
+    document.querySelector('.sideScoreDiv').appendChild(subsC)
+
     }
 
     var runStats = async (idParameter) => {
