@@ -144,7 +144,7 @@ var run = async () => {
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
 
-        if (lineupData[0].formation==undefined) {
+        if (lineupData.length===0) {
             console.log('undef')
         } else {
 
