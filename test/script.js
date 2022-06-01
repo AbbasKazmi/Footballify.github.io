@@ -144,6 +144,10 @@ var run = async () => {
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
 
+        if (lineupData[0].formation==undefined) {
+            console.log('undef')
+        } else {
+
         if (lineupData[0].formation) {
             textstart11.innerHTML = 'Starting XI'
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
@@ -173,7 +177,7 @@ var run = async () => {
 
         }
 
-       
+    }
 
     document.querySelector('.sideScoreDiv').appendChild(lineupC)
     }
