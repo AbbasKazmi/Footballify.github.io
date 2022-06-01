@@ -208,7 +208,7 @@ var run = async () => {
                 $(CoachHome).hide().fadeIn(500);
 
             let CoachAway = document.createElement('div')
-                CoacAway.classList = "lineupParentHome"
+                CoachAway.classList = "lineupParentHome"
                 CoachAway.innerHTML=lineupData[1].coach.name
                 document.querySelector('.sideScoreDiv').appendChild(CoachAway)
                 CoachC.appendChild(CoachAway)
