@@ -144,9 +144,8 @@ var run = async () => {
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
 
-        if (lineupData[0]) {
+        if (lineupData[0].formation) {
             textstart11.innerHTML = 'Starting XI'
-            console.log(lineupData[0].formation)
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
             $(textstart11).hide().fadeIn(500);
     
@@ -165,7 +164,7 @@ var run = async () => {
                 lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
                 lineupC.appendChild(lineupParentAway)
                 $(lineupParentAway).hide().fadeIn(500);
-        }
+               }
         } else {
         console.log(lineupData[0].formation)
         textstart11.innerHTML = 'Starting XI Not Available'
