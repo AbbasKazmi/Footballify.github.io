@@ -177,11 +177,6 @@ var run = async () => {
                 $(lineupParentAway).hide().fadeIn(500);
                 }
 
-                let substitutes = document.createElement('div')
-                substitutes.className = 'startEleven'
-                substitutes.innerHTML="Substitutes"
-                document.querySelector('.sideScoreDiv').appendChild(substitutes)
-
             for (let d=0; d<=lineupData[0].substitutes.length-1; d++) {
                 
     
@@ -211,7 +206,12 @@ var run = async () => {
     }
 
     document.querySelector('.sideScoreDiv').appendChild(lineupC)
+
+    let substitutes = document.createElement('div')
+    substitutes.className = 'startEleven'
+    substitutes.innerHTML="Substitutes"
     document.querySelector('.sideScoreDiv').appendChild(substitutes)
+    
     document.querySelector('.sideScoreDiv').appendChild(subsC)
 
     }
