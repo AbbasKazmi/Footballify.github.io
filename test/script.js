@@ -144,9 +144,6 @@ var run = async () => {
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
 
-        let substitutes = document.createElement('div')
-        substitutes.className = 'startEleven'
-
         //Starting 11
 
         if (lineupData.length===0) {
@@ -162,7 +159,6 @@ var run = async () => {
     
             for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
                 
-    
                 let lineupParentHome = document.createElement('div')
                 lineupParentHome.classList = "lineupParentHome"
                 lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
@@ -175,7 +171,29 @@ var run = async () => {
                 lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
                 lineupC.appendChild(lineupParentAway)
                 $(lineupParentAway).hide().fadeIn(500);
-               }
+                }
+
+                let substitutes = document.createElement('div')
+                substitutes.className = 'startEleven'
+                substitutes.innerHTML="Substitutes"
+                document.querySelector('.sideScoreDiv').appendChild(substitutes)
+
+            for (let d=0; d<=lineupData[0].substitutes.length-1; d++) {
+                
+    
+                let subsHome = document.createElement('div')
+                subsHome.classList = "lineupParentHome"
+                subsHome.innerHTML=lineupData[0].substitutes[d].player.name
+                document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+                lineupC.appendChild(subsHome)
+                $(subsHome).hide().fadeIn(500);
+       
+                let subsAway = document.createElement('div')
+                subsAway.classList = "lineupParentAway"
+                subsAway.innerHTML=lineupData[1].substitutes[d].player.name
+                lineupC.appendChild(lineupParentAway)
+                $(subsAway).hide().fadeIn(500);
+            }
             } else {
             textstart11.innerHTML = 'Lineups Not Available'
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
@@ -185,22 +203,7 @@ var run = async () => {
 
     }
 
-    for (let d=0; d<=lineupData[0].substitutes.length-1; d++) {
-                
     
-        let subsHome = document.createElement('div')
-        subsHome.classList = "lineupParentHome"
-        subsHome.innerHTML=lineupData[0].substitutes[d].player.name
-        document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
-        lineupC.appendChild(subsHome)
-        $(subsHome).hide().fadeIn(500);
-       
-        let subsAway = document.createElement('div')
-        subsAway.classList = "lineupParentAway"
-        subsAway.innerHTML=lineupData[1].substitutes[d].player.name
-        lineupC.appendChild(lineupParentAway)
-        $(subsAway).hide().fadeIn(500);
-       }
 
     document.querySelector('.sideScoreDiv').appendChild(lineupC)
     }
