@@ -170,6 +170,7 @@ var run = async () => {
                 $(lineupParentAway).hide().fadeIn(1000);
         }
         } else {
+        console.log(lineupData[0].formation)
         textstart11.innerHTML = 'Starting XI Not Available'
         
 
