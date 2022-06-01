@@ -145,10 +145,12 @@ var run = async () => {
         textstart11.className = 'startEleven'
 
         if (lineupData.length===0) {
-            console.log('undef')
+            textstart11.innerHTML = 'Starting XI Not Available'
+            document.querySelector('.sideScoreDiv').appendChild(textstart11)
+            $(textstart11).hide().fadeIn(500);
         } else {
 
-        if (lineupData[0].formation) {
+            if (lineupData[0].formation) {
             textstart11.innerHTML = 'Starting XI'
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
             $(textstart11).hide().fadeIn(500);
@@ -169,11 +171,10 @@ var run = async () => {
                 lineupC.appendChild(lineupParentAway)
                 $(lineupParentAway).hide().fadeIn(500);
                }
-        } else {
-        console.log(lineupData[0].formation)
-        textstart11.innerHTML = 'Starting XI Not Available'
-        document.querySelector('.sideScoreDiv').appendChild(textstart11)
-        $(textstart11).hide().fadeIn(500);
+            } else {
+            textstart11.innerHTML = 'Starting XI Not Available'
+            document.querySelector('.sideScoreDiv').appendChild(textstart11)
+            $(textstart11).hide().fadeIn(500);
 
         }
 
