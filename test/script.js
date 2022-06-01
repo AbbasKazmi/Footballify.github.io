@@ -145,6 +145,9 @@ var run = async () => {
         let subsC = document.createElement('div')
         subsC.className='lineupC';
 
+        let CoachC = document.createElement('div')
+        CoachC.className='lineupC';
+
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
 
@@ -196,6 +199,21 @@ var run = async () => {
                 }
 
             }
+
+            let CoachHome = document.createElement('div')
+                CoachHome.classList = "lineupParentHome"
+                CoachHome.innerHTML=lineupData[0].coach.name
+                document.querySelector('.sideScoreDiv').appendChild(CoachHome)
+                CoachC.appendChild(CoachHome)
+                $(CoachHome).hide().fadeIn(500);
+
+            let CoachAway = document.createElement('div')
+                CoacAway.classList = "lineupParentHome"
+                CoachAway.innerHTML=lineupData[1].coach.name
+                document.querySelector('.sideScoreDiv').appendChild(CoachAway)
+                CoachC.appendChild(CoachAway)
+                $(CoachAway).hide().fadeIn(500);
+
             } else {
             textstart11.innerHTML = 'Lineups Not Available'
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
@@ -214,6 +232,14 @@ var run = async () => {
     $(substitutes).hide().fadeIn(500);
 
     document.querySelector('.sideScoreDiv').appendChild(subsC)
+
+    let coaches = document.createElement('div')
+    coaches.className = 'startEleven'
+    coaches.innerHTML="Substitutes"
+    document.querySelector('.sideScoreDiv').appendChild(coaches)
+    $(coaches).hide().fadeIn(500);
+
+    document.querySelector('.sideScoreDiv').appendChild(CoachC)
 
     }
 
