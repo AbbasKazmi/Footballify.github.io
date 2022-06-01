@@ -144,8 +144,13 @@ var run = async () => {
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
 
+        let substitutes = document.createElement('div')
+        substitutes.className = 'startEleven'
+
+        //Starting 11
+
         if (lineupData.length===0) {
-            textstart11.innerHTML = 'Starting XI Not Available'
+            textstart11.innerHTML = 'Lineups Not Available'
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
             $(textstart11).hide().fadeIn(500);
         } else {
@@ -172,13 +177,30 @@ var run = async () => {
                 $(lineupParentAway).hide().fadeIn(500);
                }
             } else {
-            textstart11.innerHTML = 'Starting XI Not Available'
+            textstart11.innerHTML = 'Lineups Not Available'
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
             $(textstart11).hide().fadeIn(500);
 
         }
 
     }
+
+    for (let d=0; d<=lineupData[0].substitutes.length-1; d++) {
+                
+    
+        let subsHome = document.createElement('div')
+        subsHome.classList = "lineupParentHome"
+        subsHome.innerHTML=lineupData[0].substitutes[d].player.name
+        document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+        lineupC.appendChild(subsHome)
+        $(subsHome).hide().fadeIn(500);
+       
+        let subsAway = document.createElement('div')
+        subsAway.classList = "lineupParentAway"
+        subsAway.innerHTML=lineupData[1].substitutes[d].player.name
+        lineupC.appendChild(lineupParentAway)
+        $(subsAway).hide().fadeIn(500);
+       }
 
     document.querySelector('.sideScoreDiv').appendChild(lineupC)
     }
