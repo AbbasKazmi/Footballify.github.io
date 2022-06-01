@@ -143,34 +143,35 @@ var run = async () => {
 
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
-        if (lineupData[0].formation=null) {
-            textstart11.innerHTML = 'Starting XI Not Available'
-        } else {
-        textstart11.innerHTML = 'Starting XI'
+        if (lineupData[0].formation) {
+            textstart11.innerHTML = 'Starting XI'
+        
+            document.querySelector('.sideScoreDiv').appendChild(textstart11)
+            $(textstart11).hide().fadeIn(1000);
+    
+            for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
+                
+    
+                let lineupParentHome = document.createElement('div')
+                lineupParentHome.classList = "lineupParentHome"
+                lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
+                document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+                lineupC.appendChild(lineupParentHome)
+                $(lineupParentHome).hide().fadeIn(1000);
+               
+                
+    
+                
+                
+                let lineupParentAway = document.createElement('div')
+                lineupParentAway.classList = "lineupParentAway"
+                lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
+                lineupC.appendChild(lineupParentAway)
+                $(lineupParentAway).hide().fadeIn(1000);
         }
-        document.querySelector('.sideScoreDiv').appendChild(textstart11)
-        $(textstart11).hide().fadeIn(1000);
-
-        for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
-            
-
-            let lineupParentHome = document.createElement('div')
-            lineupParentHome.classList = "lineupParentHome"
-            lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
-            document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
-            lineupC.appendChild(lineupParentHome)
-            $(lineupParentHome).hide().fadeIn(1000);
-           
-            
-
-            
-            
-            let lineupParentAway = document.createElement('div')
-            lineupParentAway.classList = "lineupParentAway"
-            lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
-            lineupC.appendChild(lineupParentAway)
-            $(lineupParentAway).hide().fadeIn(1000);
-
+        } else {
+        textstart11.innerHTML = 'Starting XI Not Available'
+        
 
         }
 
