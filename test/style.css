@@ -210,6 +210,8 @@ border-right: 1px groove;
 #wrapper {
   clear:both;
   height: 100%;
+  display: grid;
+  grid-template-columns: 33.2rem auto 35rem;
 }
 #left {
   background-color: #ffffff;
@@ -220,6 +222,7 @@ border-right: 1px groove;
 }
 .parentContainer {
   float:left;
+  background-color: white;
 }
 #right {
   background-color: #ffffff;
@@ -227,6 +230,7 @@ border-right: 1px groove;
   float: left;
   margin-right: 30px;
   height: fit-content;
+  background-color: white;
 }
 
 .newsimg {
