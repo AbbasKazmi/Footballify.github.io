@@ -143,7 +143,11 @@ var run = async () => {
 
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
+        if (lineupData[0].formation=null) {
+            textstart11.innerHTML = 'Starting XI Not Available'
+        } else {
         textstart11.innerHTML = 'Starting XI'
+        }
         document.querySelector('.sideScoreDiv').appendChild(textstart11)
         $(textstart11).hide().fadeIn(1000);
 
