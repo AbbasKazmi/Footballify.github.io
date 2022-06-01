@@ -147,7 +147,7 @@ var run = async () => {
             textstart11.innerHTML = 'Starting XI'
             console.log(lineupData[0].formation)
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
-            $(textstart11).hide().fadeIn(1000);
+            $(textstart11).hide().fadeIn(500);
     
             for (let d=0; d<=lineupData[0].startXI.length-1; d++) {
                 
@@ -173,6 +173,8 @@ var run = async () => {
         console.log(lineupData[0].formation)
         textstart11.innerHTML = 'Starting XI Not Available'
         document.querySelector('.sideScoreDiv').appendChild(textstart11)
+        $(textstart11).hide().fadeIn(500);
+
         }
 
        
