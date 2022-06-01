@@ -137,8 +137,6 @@ width: 450px;
 text-align: center;
 background-color: #f4f4f4;
 border-bottom: 1px groove;
-border-left: 1px groove;
-border-right: 1px groove;
 }
 .league{
   font-size: large;
@@ -224,6 +222,8 @@ border-right: 1px groove;
   float:left;
   background-color: white;
   border-top: 1px groove;
+  border-left: 1px groove;
+  border-right: 1px groove;
 }
 #right {
   background-color: #ffffff;
