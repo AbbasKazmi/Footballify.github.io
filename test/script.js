@@ -191,7 +191,7 @@ var run = async () => {
                 let subsAway = document.createElement('div')
                 subsAway.classList = "lineupParentAway"
                 subsAway.innerHTML=lineupData[1].substitutes[d].player.name
-                lineupC.appendChild(lineupParentAway)
+                lineupC.appendChild(subsAway)
                 $(subsAway).hide().fadeIn(500);
             }
             } else {
