@@ -187,12 +187,15 @@ var run = async () => {
                 document.querySelector('.sideScoreDiv').appendChild(subsHome)
                 lineupC.appendChild(subsHome)
                 $(subsHome).hide().fadeIn(500);
-       
+                
+                if (lineupData[1].substitutes.length-1>=d) {
                 let subsAway = document.createElement('div')
                 subsAway.classList = "lineupParentAway"
                 subsAway.innerHTML=lineupData[1].substitutes[d].player.name
                 lineupC.appendChild(subsAway)
                 $(subsAway).hide().fadeIn(500);
+                }
+
             }
             } else {
             textstart11.innerHTML = 'Lineups Not Available'
