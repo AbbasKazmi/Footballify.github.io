@@ -226,7 +226,7 @@ border-right: 1px groove;
   width: 475px;
   float: left;
   margin-right: 30px;
-  height: 100%;
+  height: fit-content;
 }
 
 .newsimg {
