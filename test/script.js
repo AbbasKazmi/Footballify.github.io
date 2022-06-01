@@ -227,7 +227,7 @@ var run = async () => {
 
     let substitutes = document.createElement('div')
     substitutes.className = 'startEleven'
-    substitutes.innerHTML="Coaches"
+    substitutes.innerHTML="Substitutes"
     document.querySelector('.sideScoreDiv').appendChild(substitutes)
     $(substitutes).hide().fadeIn(500);
 
@@ -235,7 +235,7 @@ var run = async () => {
 
     let coaches = document.createElement('div')
     coaches.className = 'startEleven'
-    coaches.innerHTML="Substitutes"
+    coaches.innerHTML="Coaches"
     document.querySelector('.sideScoreDiv').appendChild(coaches)
     $(coaches).hide().fadeIn(500);
 
