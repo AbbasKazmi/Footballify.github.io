@@ -184,7 +184,7 @@ var run = async () => {
                 let subsHome = document.createElement('div')
                 subsHome.classList = "lineupParentHome"
                 subsHome.innerHTML=lineupData[0].substitutes[d].player.name
-                document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+                document.querySelector('.sideScoreDiv').appendChild(subsHome)
                 lineupC.appendChild(subsHome)
                 $(subsHome).hide().fadeIn(500);
        
