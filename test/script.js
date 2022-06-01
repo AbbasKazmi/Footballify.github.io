@@ -210,9 +210,8 @@ var run = async () => {
 
     }
 
-    
-
     document.querySelector('.sideScoreDiv').appendChild(lineupC)
+    document.querySelector('.sideScoreDiv').appendChild(substitutes)
     document.querySelector('.sideScoreDiv').appendChild(subsC)
 
     }
