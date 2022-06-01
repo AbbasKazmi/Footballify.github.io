@@ -136,7 +136,7 @@ input[type="checkbox"]{
 width: 450px;
 text-align: center;
 background-color: #f4f4f4;
-border-top: 1px groove;
+border-bottom: 1px groove;
 border-left: 1px groove;
 border-right: 1px groove;
 }
@@ -223,13 +223,13 @@ border-right: 1px groove;
 .parentContainer {
   float:left;
   background-color: white;
+  border-top: 1px groove;
 }
 #right {
   background-color: #ffffff;
   width: 475px;
   float: left;
   margin-right: 30px;
-  height: fit-content;
   background-color: white;
 }
 
