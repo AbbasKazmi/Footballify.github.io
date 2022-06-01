@@ -143,7 +143,7 @@ var run = async () => {
 
         let textstart11 = document.createElement('div')
         textstart11.className = 'startEleven'
-        if (lineupData[0].formation) {
+        if (lineupData[0].formation!=null || lineupData[0].formation!=undefined) {
             textstart11.innerHTML = 'Starting XI'
             console.log(lineupData[0].formation)
             document.querySelector('.sideScoreDiv').appendChild(textstart11)
