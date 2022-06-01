@@ -157,7 +157,7 @@ var run = async () => {
                 lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
                 document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
                 lineupC.appendChild(lineupParentHome)
-                $(lineupParentHome).hide().fadeIn(1000);
+                $(lineupParentHome).hide().fadeIn(500);
                
                 
     
@@ -167,13 +167,12 @@ var run = async () => {
                 lineupParentAway.classList = "lineupParentAway"
                 lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
                 lineupC.appendChild(lineupParentAway)
-                $(lineupParentAway).hide().fadeIn(1000);
+                $(lineupParentAway).hide().fadeIn(500);
         }
         } else {
         console.log(lineupData[0].formation)
         textstart11.innerHTML = 'Starting XI Not Available'
-        
-
+        document.querySelector('.sideScoreDiv').appendChild(textstart11)
         }
 
        
