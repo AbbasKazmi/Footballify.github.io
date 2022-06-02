@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -358,7 +358,8 @@ border-bottom: 1px groove;
   margin-right: 40px;
   font-size: 30px;
   font-weight: 500;
-  font-family: 'DM Mono', monospace;}
+  font-family: 'Courier Prime', monospace;
+}
 .statsButton{
   padding-left: 32px;
   padding-right: 32px;
