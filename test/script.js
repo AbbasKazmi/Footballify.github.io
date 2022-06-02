@@ -641,7 +641,6 @@ var run = async () => {
 
                 
 
-                // while (gameStatus != "FT" && Number(timer.innerHTML.slice(1,2))<=0) {
                     runLineups(fixtureId.innerHTML);
     });
 
