@@ -534,12 +534,15 @@ border-bottom: 1px groove;
   text-align: right;
   border-bottom: 1px solid #afa6a6;
   font-family: 'Azeret Mono', monospace;
+  word-spacing: -9px;
+
 
 }
 
 .homeEvent {
   border-bottom: 1px solid #afa6a6;
   font-family: 'Azeret Mono', monospace;
+  word-spacing: -9px;
 
 }
 
