@@ -168,14 +168,14 @@ var run = async () => {
                 
                 let lineupParentHome = document.createElement('div')
                 lineupParentHome.classList = "lineupParentHome"
-                lineupParentHome.innerHTML=lineupData[0].startXI[d].player.name
+                lineupParentHome.innerHTML=`${lineupData[0].startXI[d].player.pos} | ` + lineupData[0].startXI[d].player.name  + `(${lineupData[0].startXI[d].player.pos})`
                 document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
                 lineupC.appendChild(lineupParentHome)
                 $(lineupParentHome).hide().fadeIn(500);
                
                 let lineupParentAway = document.createElement('div')
                 lineupParentAway.classList = "lineupParentAway"
-                lineupParentAway.innerHTML=lineupData[1].startXI[d].player.name
+                lineupParentAway.innerHTML=`${lineupData[1].startXI[d].player.pos} | ` + lineupData[1].startXI[d].player.name + `(${lineupData[1].startXI[d].player.pos})`
                 lineupC.appendChild(lineupParentAway)
                 $(lineupParentAway).hide().fadeIn(500);
                 }
