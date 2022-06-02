@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Courier+Prime&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -533,8 +533,19 @@ border-bottom: 1px groove;
 .awayEvent{
   text-align: right;
   border-bottom: 1px solid #afa6a6;
+  font-family: 'B612 Mono', monospace;
+
 }
 
 .homeEvent {
   border-bottom: 1px solid #afa6a6;
+  font-family: 'B612 Mono', monospace;
+
+}
+
+.card {
+  margin-top: -3px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 2px;
 }
