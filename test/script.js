@@ -328,6 +328,8 @@ let eventsC = document.createElement('div')
 
 
 
+console.log(homeTm)
+console.log(awayTm)
 
 for (let d=eventsData.length-1; d>=0; d--) {
                 
@@ -622,8 +624,6 @@ for (let d=eventsData.length-1; d>=0; d--) {
 
             let homeTm = homeTeamName.innerHTML
             let awayTm = awayTeamName.innerHTML
-            console.log(homeTm)
-            console.log(awayTm)
 
             runEvents(fixtureId.innerHTML);
 
