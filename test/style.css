@@ -340,7 +340,7 @@ border-bottom: 1px groove;
   display: inline-block;
   box-shadow: 0px 3px 50px rgb(0 0 0 / 20%);
   border: 1px solid lightgray;
-  border-radius: 130px;
+  border-radius: 20px;
 }
 
 .fixturel {
@@ -350,20 +350,6 @@ border-bottom: 1px groove;
 .fixturer { 
   display: inline;
 }
-
-/* .fixtureScoreRight {
-  display: inline-block;
-  margin-left: 69px;
-  font-size: 30px;
-  font-weight: 500;
-} 
-
-.fixtureScoreLeft {
-  display: inline-block;
-  margin-right: 67px;
-  font-size: 30px;
-  font-weight: 500;
-} */
 
 .timer{
   display: inline-block;
