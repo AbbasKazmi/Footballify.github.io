@@ -313,7 +313,7 @@ var run = async () => {
         }
 };
 
-var runEvents = async (idParameter, home) => {
+var runEvents = async (idParameter) => {
     const events = await fetch(`https://v3.football.api-sports.io/fixtures/events?fixture=${idParameter}`, {
 headers: {
     'X-RapidAPI-Host': 'v3.football.api-sports.io',
@@ -333,9 +333,8 @@ for (let d=eventsData.length-1; d>=0; d--) {
                 
     let eventOccured = document.createElement('div')
     eventOccured.classList = "lineupParentHome"
-    
 
-    if (home=eventsData[d].team.name) {
+    if (homeTm=eventsData[d].team.name) {
         if (eventsData[d].type=="Goal") {
         eventOccured.innerHTML=`<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
         }
@@ -621,7 +620,12 @@ for (let d=eventsData.length-1; d>=0; d--) {
             $('.awayStats').remove();
             $('.statName').remove();
 
-            runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
+            let homeTm = homeTeamName.innerHTML
+            let awayTm = awayTeamName.innerHTML
+            console.log(homeTm)
+            console.log(awayTm)
+
+            runEvents(fixtureId.innerHTML);
 
             }) 
 
