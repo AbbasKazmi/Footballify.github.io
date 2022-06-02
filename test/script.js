@@ -312,6 +312,16 @@ var run = async () => {
 
         }
 };
+
+var runEvents = async (idParameter) => {
+    const events = await fetch(`https://v3.football.api-sports.io/fixtures/events?fixture=${idParameter}`, {
+headers: {
+    'X-RapidAPI-Host': 'v3.football.api-sports.io',
+    'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
+},
+})
+const eventsData = (await events.json())?.response;
+console.log(eventsData)
     
                 //Match Not Started or  Cancelled/Postponed or In Progress
     if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'PST' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
@@ -584,7 +594,7 @@ var run = async () => {
             $('.awayStats').remove();
             $('.statName').remove();
 
-            runStats(fixtureId.innerHTML);
+            runEvents(fixtureId.innerHTML);
 
             }) 
 
