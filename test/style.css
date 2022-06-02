@@ -481,9 +481,15 @@ border-bottom: 1px groove;
   padding: 12px;
 }
 
-.lineupC>div {
+.lineupC>.lineupParentHome {
   width: 50%;
 }
+
+.lineupC>.lineupParentAway {
+  width: 50%;
+}
+
+
 
 .startEleven {
     display: flex;
