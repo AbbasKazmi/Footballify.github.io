@@ -620,9 +620,9 @@ for (let d=eventsData.length-1; d>=0; d--) {
             $('.homeStats').remove();
             $('.awayStats').remove();
             $('.statName').remove();
-
-            let homeTm = homeTeamName.innerHTML
-            let awayTm = awayTeamName.innerHTML
+            $('.eventsC').remove();
+            $('.homeEvent').remove();
+            $('.awayEvent').remove();
 
             runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
 

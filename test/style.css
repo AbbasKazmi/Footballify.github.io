@@ -532,4 +532,9 @@ border-bottom: 1px groove;
 
 .awayEvent{
   text-align: right;
+  border-bottom: 1px solid #afa6a6;
+}
+
+.homeEvent {
+  border-bottom: 1px solid #afa6a6;
 }
