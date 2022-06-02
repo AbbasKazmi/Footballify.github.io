@@ -609,7 +609,7 @@ var run = async () => {
             $('.awayStats').remove();
             $('.statName').remove();
 
-            if (timer.classList.includes('live')) {
+            if (timer.classList.contains('live')) {
             setInterval(function() {
                 runStats(fixtureId.innerHTML);
               }, 60000);
