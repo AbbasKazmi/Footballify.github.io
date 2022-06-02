@@ -331,7 +331,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
             if (eventsData[d].assist.name) { 
         eventOccured.innerHTML=`<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name + `<h1 class="light"> Assist: ${eventsData[d].assist.name}</h1>`
             } else {
-                console.log('null')
+        eventOccured.innerHTML=`<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
             }
     } else if (eventsData[d].detail=="Yellow Card") {
         eventOccured.innerHTML=`<svg class="card" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name 
