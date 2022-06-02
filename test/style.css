@@ -361,6 +361,8 @@ border-bottom: 1px groove;
   font-size: 35px;
   font-weight: 200;
   font-family: 'Courier Prime', monospace;
+  margin-top: 20px;
+  vertical-align: top;
 }
 .statsButton{
   padding-left: 32px;
