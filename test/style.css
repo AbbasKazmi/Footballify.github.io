@@ -356,8 +356,8 @@ border-bottom: 1px groove;
   display: inline-block;
   margin-left: 40px;
   margin-right: 40px;
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 35px;
+  font-weight: 200;
   font-family: 'Courier Prime', monospace;
 }
 .statsButton{
