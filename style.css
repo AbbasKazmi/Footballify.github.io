@@ -182,3 +182,11 @@ body {
   position: relative;
   top: -12px;
   width: 33.33333333333333%;}
+
+  .ball {
+    width: 18px;
+    float: left;
+    margin-right: 6px;
+    margin-top: 2.1px;
+    margin-left: 5px;
+  }
