@@ -636,6 +636,11 @@ var run = async () => {
             $('.lineupParentAway').remove();
             $('.startEleven').remove();
             $('.fixtureInfo').remove();
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
+
 
                 let infoText = document.createElement('div')
                 infoText.className = 'fixtureInfo'
