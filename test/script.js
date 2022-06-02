@@ -673,6 +673,8 @@ for (let d=eventsData.length-1; d>=0; d--) {
               }, 60000);
             
 
+        }else{
+            console.log('no click')
         }}) 
 
             let lineupButton=document.createElement('button')
