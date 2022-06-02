@@ -260,13 +260,18 @@ var run = async () => {
         statText.className = 'fixtureInfo'
         statText.innerHTML = 'Statistics'
         document.querySelector('.sideScoreDiv').appendChild(statText)
-        $(statText).hide().fadeIn(1000);
+        $(statText).hide().fadeIn(500);
 
     for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
         let homeStats = document.createElement('div')
         homeStats.classList = "homeStats"
         homeStats.innerHTML=statsData[0].statistics[k].value
+        if (statsData[0].statistics[k].value > statsData[1].statistics[k].value) {
+
+        } else {
+            homeStats.classList.add('light')
+        }
         document.querySelector('.sideScoreDiv').appendChild(homeStats)
         statsC.appendChild(homeStats)
         $(homeStats).hide().fadeIn(500);
@@ -281,6 +286,11 @@ var run = async () => {
         let awayStats = document.createElement('div')
         awayStats.classList = "awayStats"
         awayStats.innerHTML=statsData[1].statistics[k].value
+        if (statsData[1].statistics[k].value > statsData[0].statistics[k].value) {
+
+        } else {
+            awayStats.classList.add('light')
+        }
         document.querySelector('.sideScoreDiv').appendChild(awayStats)
         statsC.appendChild(awayStats)
         $(awayStats).hide().fadeIn(500);
