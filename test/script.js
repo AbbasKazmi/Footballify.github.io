@@ -339,7 +339,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
         }
 } else {
     if (eventsData[d].type=="Goal") {
-        eventOccured.innerHTML=`<h1>${eventsData[d].player.name} " | '" ${eventsData[d].time.elapsed} </h1>`  + `<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">`
+        eventOccured.innerHTML=eventsData[d].player.name +" | '"+ eventsData[d].time.elapsed  + `<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">`
         }
 }
     eventsC.appendChild(eventOccured)
