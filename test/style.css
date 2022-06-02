@@ -206,10 +206,12 @@ border-bottom: 1px groove;
 }
 
 #wrapper {
-  clear:both;
+  clear: both;
+  width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 33.2rem auto 35rem;
+  grid-template-columns: 33.2rem 28.260000000000005rem 35rem;
+  justify-content: center;
 }
 #left {
   background-color: #ffffff;
