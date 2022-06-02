@@ -322,6 +322,19 @@ headers: {
 })
 const eventsData = (await events.json())?.response;
 console.log(eventsData)
+
+for (let d=eventsData.length-1; d>=0; d--) {
+                
+    let eventOccured = document.createElement('div')
+    eventOccured.classList = "lineupParentHome"
+    if (eventsData[d].type=="Goal") {
+    eventOccured.innerHTML=eventsData[d].player.name
+    }
+    document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
+    eventC.appendChild(eventOccured)
+    $(lineupParentHome).hide().fadeIn(500);
+    }
+    document.querySelector('.sideScoreDiv').appendChild(eventsC)
 }
                 //Match Not Started or  Cancelled/Postponed or In Progress
     if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'PST' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
