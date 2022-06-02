@@ -331,7 +331,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
     let eventOccured = document.createElement('div')
     eventOccured.classList = "lineupParentHome"
     if (eventsData[d].type=="Goal") {
-    eventOccured.innerHTML=eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
+    eventOccured.innerHTML=`<img class='ball' src=${ball.png}>` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
     }
     eventsC.appendChild(eventOccured)
     $(eventOccured).hide().fadeIn(500);
