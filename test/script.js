@@ -356,8 +356,9 @@ for (let d=eventsData.length-1; d>=0; d--) {
             eventOccured.innerHTML=`<img class='sub' src="https://i.pinimg.com/originals/08/cc/a3/08cca3ff8e7b2f5ffd378abe72c1c036.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name + `<h1 class="light"> Out: ${eventsData[d].assist.name}</h1>`
             } else if (eventsData[d].detail=="Red Card") {
                 
-            }        }
-}
+            }        
+        }
+
     eventsC.appendChild(eventOccured)
     $(eventOccured).hide().fadeIn(500);
     }
