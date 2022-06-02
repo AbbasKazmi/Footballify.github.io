@@ -730,9 +730,9 @@ $( document ).ready(function() {
     console.log('page loaded')
     setTimeout(function () {
         document.querySelector(".hideThis").style.visibility = "visible"
+        jQuery(function(){
+            jQuery('.parentDiv').click();
+         });
     }, 1000);
 });
 
-jQuery(function(){
-    jQuery('.parentDiv').click();
- });
