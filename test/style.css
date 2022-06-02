@@ -512,3 +512,11 @@ border-bottom: 1px groove;
 
 .light {
 }
+
+.ball {
+  width: 18px;
+  float: left;
+  margin-right: 6px;
+  margin-top: 2.1px;
+  margin-left: 5px;
+}
