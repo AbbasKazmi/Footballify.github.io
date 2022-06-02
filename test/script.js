@@ -275,11 +275,7 @@ var run = async () => {
             homeStats.innerHTML=0
         }
 
-        if (statsData[0].statistics[k].value > statsData[1].statistics[k].value) {
-
-        } else {
-            homeStats.classList.add('light')
-        }
+        
         document.querySelector('.sideScoreDiv').appendChild(homeStats)
         statsC.appendChild(homeStats)
         $(homeStats).hide().fadeIn(500);
