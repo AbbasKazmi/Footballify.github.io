@@ -480,6 +480,9 @@ for (let d=eventsData.length-1; d>=0; d--) {
                 $('.lineupParentAway').remove();
                 $('.startEleven').remove();
                 $('.fixtureInfo').remove();
+                $('.eventsC').remove();
+            $('.homeEvent').remove();
+            $('.awayEvent').remove();
 
 
            
