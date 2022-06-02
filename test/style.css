@@ -367,6 +367,9 @@ border-bottom: 1px groove;
   padding-right: 32px;
   padding-top: 9px;
   padding-bottom: 9px;
+  background: #c9c9c9;
+    border: 2px solid #a0a0a0;
+    border-radius: 42px;
 }
 
 .statsButton:hover{
@@ -383,6 +386,9 @@ border-bottom: 1px groove;
   padding-right: 32px;
   padding-top: 9px;
   padding-bottom: 9px;
+  background: #c9c9c9;
+    border: 2px solid #a0a0a0;
+    border-radius: 42px;
 }
 
 .eventsButton:hover{
@@ -400,6 +406,9 @@ border-bottom: 1px groove;
   padding-right: 26px;
   padding-top: 9px;
   padding-bottom: 9px;
+  background: #c9c9c9;
+    border: 2px solid #a0a0a0;
+    border-radius: 42px;
 }
 
 .infoButton:hover{
@@ -417,6 +426,9 @@ border-bottom: 1px groove;
   padding-right: 32px;
   padding-top: 9px;
   padding-bottom: 9px;
+  background: #c9c9c9;
+    border: 2px solid #a0a0a0;
+    border-radius: 42px;
 }
 
 .lineupButton:hover{
