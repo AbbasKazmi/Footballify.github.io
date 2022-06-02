@@ -323,6 +323,9 @@ headers: {
 const eventsData = (await events.json())?.response;
 console.log(eventsData)
 
+let eventsC = document.createElement('div')
+        eventsC.className='eventsC';
+
 for (let d=eventsData.length-1; d>=0; d--) {
                 
     let eventOccured = document.createElement('div')
@@ -330,7 +333,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
     if (eventsData[d].type=="Goal") {
     eventOccured.innerHTML=eventsData[d].player.name
     }
-    eventC.appendChild(eventOccured)
+    eventsC.appendChild(eventOccured)
     $(lineupParentHome).hide().fadeIn(500);
     }
     document.querySelector('.sideScoreDiv').appendChild(eventsC)
