@@ -731,7 +731,7 @@ $( document ).ready(function() {
     setTimeout(function () {
         document.querySelector(".hideThis").style.visibility = "visible"
         jQuery(function(){
-            jQuery('.parentDiv').click();
+            jQuery('.parentDiv:first').click();
          });
     }, 1000);
 });
