@@ -527,9 +527,12 @@ border-bottom: 1px groove;
 
 
 .light {
-  color: #c9c9c9;
-  font-family: 'Azeret Mono', monospace;
-  word-spacing: -9px;
+  color: #999999;
+    font-family: 'Azeret Mono', monospace;
+    word-spacing: -9px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 200;
 }
 
 .ball {
