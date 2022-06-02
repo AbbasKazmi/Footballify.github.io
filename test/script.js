@@ -334,12 +334,14 @@ for (let d=eventsData.length-1; d>=0; d--) {
     
     if (homeTm==eventsData[d].team.name) {
         console.log('homew')
+        eventOccured.classList = "homeEvent"
         if (eventsData[d].type=="Goal") {
         eventOccured.innerHTML=`<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
         }
 } else {
     if (eventsData[d].type=="Goal") {
-        eventOccured.innerHTML=eventsData[d].player.name +" | '"+ eventsData[d].time.elapsed  + `<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">`
+        eventOccured.classList = "awayEvent"
+        eventOccured.innerHTML=eventsData[d].player.name +" | '"+ eventsData[d].time.elapsed  + `<img class='ballaway' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">`
         }
 }
     eventsC.appendChild(eventOccured)

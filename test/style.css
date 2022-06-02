@@ -520,3 +520,16 @@ border-bottom: 1px groove;
   margin-top: 2.1px;
   margin-left: 5px;
 }
+
+.ballaway {
+  width: 18px;
+  float: left;
+  margin-right: 6px;
+  margin-top: 2.1px;
+  margin-left: 5px;
+  float: right;
+}
+
+.awayEvent{
+  text-align: right;
+}
