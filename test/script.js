@@ -610,8 +610,16 @@ var run = async () => {
             $('.statName').remove();
 
             if (timer.classList.contains('live')) {
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
                 runStats(fixtureId.innerHTML);
             setInterval(function() {
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
                 runStats(fixtureId.innerHTML);
               }, 60000);
             
