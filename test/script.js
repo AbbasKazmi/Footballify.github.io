@@ -267,6 +267,12 @@ var run = async () => {
         let homeStats = document.createElement('div')
         homeStats.classList = "homeStats"
         homeStats.innerHTML=statsData[0].statistics[k].value
+        if (statsData[0].statistics[k].value) {
+
+        } else {
+            homeStats.innerHTML=0
+        }
+
         if (statsData[0].statistics[k].value > statsData[1].statistics[k].value) {
 
         } else {
@@ -286,6 +292,11 @@ var run = async () => {
         let awayStats = document.createElement('div')
         awayStats.classList = "awayStats"
         awayStats.innerHTML=statsData[1].statistics[k].value
+        if (statsData[1].statistics[k].value) {
+
+        } else {
+            homeStats.innerHTML=0
+        }
         if (statsData[1].statistics[k].value > statsData[0].statistics[k].value) {
 
         } else {
