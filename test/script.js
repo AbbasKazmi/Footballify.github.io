@@ -322,7 +322,7 @@ headers: {
 })
 const eventsData = (await events.json())?.response;
 console.log(eventsData)
-    
+}
                 //Match Not Started or  Cancelled/Postponed or In Progress
     if (gameStatus.innerHTML == 'TBD' || gameStatus.innerHTML == 'PST' || gameStatus.innerHTML == 'NS' || gameStatus.innerHTML == '1H' || gameStatus.innerHTML == '2H' || gameStatus.innerHTML == 'ET' || gameStatus.innerHTML == 'INT' || gameStatus.innerHTML == 'HT' ){
                  
@@ -524,6 +524,7 @@ console.log(eventsData)
                     let awayTeamScoreRightDiv = document.createElement("div")
                     awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
                     awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
+
                     if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
                         timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
                         timer.classList.remove('live') 
