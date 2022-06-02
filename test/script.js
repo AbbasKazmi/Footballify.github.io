@@ -522,6 +522,10 @@ var run = async () => {
             $('.lineupParentAway').remove();
             $('.startEleven').remove();
             $('.fixtureInfo').remove();
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
 
 
 
@@ -546,6 +550,11 @@ var run = async () => {
             $('.lineupParentAway').remove();
             $('.startEleven').remove();
             $('.fixtureInfo').remove();
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
+
 
             }) 
 
@@ -567,6 +576,10 @@ var run = async () => {
             $('.lineupParentAway').remove();
             $('.startEleven').remove();     
             $('.fixtureInfo').remove();
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
 
             runStats(fixtureId.innerHTML);
 
@@ -586,6 +599,11 @@ var run = async () => {
             $('.lineupParentAway').remove();
             $('.startEleven').remove();
             $('.fixtureInfo').remove();
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
+
 
 
                 lineupButton.classList.add("clicked")
