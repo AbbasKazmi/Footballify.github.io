@@ -612,12 +612,14 @@ var run = async () => {
             $('.statName').remove();
 
             if (timer.classList.contains('live')) {
+            $('.fixtureInfo').remove();
             $('.statsC').remove();
             $('.homeStats').remove();
             $('.awayStats').remove();
             $('.statName').remove();
                 runStats(fixtureId.innerHTML);
             setInterval(function() {
+            $('.fixtureInfo').remove();
             $('.statsC').remove();
             $('.homeStats').remove();
             $('.awayStats').remove();
