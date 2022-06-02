@@ -330,7 +330,6 @@ for (let d=eventsData.length-1; d>=0; d--) {
     if (eventsData[d].type=="Goal") {
     eventOccured.innerHTML=eventsData[d].player.name
     }
-    document.querySelector('.sideScoreDiv').appendChild(lineupParentHome)
     eventC.appendChild(eventOccured)
     $(lineupParentHome).hide().fadeIn(500);
     }
