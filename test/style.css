@@ -263,7 +263,7 @@ border-bottom: 1px groove;
   text-align: center;
   padding-top: 17px;
   
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .newsel {
@@ -559,8 +559,9 @@ border-bottom: 1px groove;
   width: 15px;
     float: left;
     margin-right: 6px;
-    margin-top: 5.1px;
+    margin-top: 4px;
     margin-left: 7px;
+    margin-bottom: 1.9px;
 }
 
 .eventsC {
