@@ -582,6 +582,7 @@ var run = async () => {
             $('.awayStats').remove();
             $('.statName').remove();
 
+            runStats(fixtureId.innerHTML);
 
             }) 
 
@@ -608,10 +609,13 @@ var run = async () => {
             $('.awayStats').remove();
             $('.statName').remove();
 
+            if (timer.classList.includes('live')) {
+            setInterval(function() {
+                runStats(fixtureId.innerHTML);
+              }, 60000);
+            
 
-            runStats(fixtureId.innerHTML);
-
-            }) 
+        }}) 
 
             let lineupButton=document.createElement('button')
             lineupButton.className='lineupButton';
