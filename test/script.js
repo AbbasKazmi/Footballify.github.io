@@ -253,6 +253,8 @@ var run = async () => {
     const statsData = (await stats.json())?.response;
     console.log(statsData)
 
+    $('statsC').remove();
+
     let statsC = document.createElement('div')
         statsC.className='statsC';
 
