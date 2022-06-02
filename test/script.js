@@ -665,7 +665,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
             $('.homeEvent').remove();
             $('.awayEvent').remove();
 
-            if (timer.classList.contains('live') && statsButton.classList.contains("clicked")) {
+            if (statsButton.classList.contains("clicked")) {
             $('.fixtureInfo').remove();
             $('.statsC').remove();
             $('.homeStats').remove();
