@@ -576,9 +576,25 @@ border-bottom: 1px groove;
   margin-right: 8px;
 }
 
+.cardFloat {
+  margin-top: -3px;
+  margin-left: 5px;
+  margin-right: 8px;
+  float: right;
+}
+
 .sub {
   width: 15px;
     float: left;
+    margin-right: 6px;
+    margin-top: 4px;
+    margin-left: 7px;
+    margin-bottom: 1.9px;
+}
+
+.subFloat {
+  width: 15px;
+    float: right;
     margin-right: 6px;
     margin-top: 4px;
     margin-left: 7px;
