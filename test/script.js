@@ -295,7 +295,7 @@ var run = async () => {
         if (statsData[1].statistics[k].value) {
 
         } else {
-            homeStats.innerHTML=0
+            awayStats.innerHTML=0
         }
         if (statsData[1].statistics[k].value > statsData[0].statistics[k].value) {
 
