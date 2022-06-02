@@ -254,7 +254,7 @@ var run = async () => {
     console.log(statsData)
 
     let statsC = document.createElement('div')
-        statsC.className='lineupC';
+        statsC.className='statsC';
 
     for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 

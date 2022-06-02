@@ -489,7 +489,17 @@ border-bottom: 1px groove;
   width: 50%;
 }
 
+.statsC>div{
+  width: 33%
+}
 
+.awayStats {
+  text-align: right;
+}
+
+.statName {
+  text-align: center;
+}
 
 .startEleven {
     display: flex;
