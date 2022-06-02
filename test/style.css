@@ -560,3 +560,9 @@ border-bottom: 1px groove;
     margin-top: 5.1px;
     margin-left: 7px;
 }
+
+.eventsC {
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
