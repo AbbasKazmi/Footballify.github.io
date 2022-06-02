@@ -252,6 +252,36 @@ var run = async () => {
     })
     const statsData = (await stats.json())?.response;
     console.log(statsData)
+
+    let statsC = document.createElement('div')
+        statsC.className='lineupC';
+
+    for (let k=0; k<=statsData[0].statistics.length-1; k++) {
+                
+        let homeStats = document.createElement('div')
+        homeStats.classList = "homeStats"
+        homeStats.innerHTML=statsData[0].statistics[k].value
+        document.querySelector('.sideScoreDiv').appendChild(homeStats)
+        statsC.appendChild(homeStats)
+        $(homeStats).hide().fadeIn(500);
+       
+        let statName = document.createElement('div')
+        statName.classList = "statName"
+        statName.innerHTML=statsData[0].statistics[k].type
+        document.querySelector('.sideScoreDiv').appendChild(statName)
+        statsC.appendChild(statName)
+        $(statName).hide().fadeIn(500);
+
+        let awayStats = document.createElement('div')
+        awayStats.classList = "awayStats"
+        awayStats.innerHTML=statsData[1].statistics[k].value
+        document.querySelector('.sideScoreDiv').appendChild(awayStats)
+        statsC.appendChild(awayStats)
+        $(awayStats).hide().fadeIn(500);
+
+        document.querySelector('.sideScoreDiv').appendChild(statsC)
+
+        }
 };
     
                 //Match Not Started or  Cancelled/Postponed or In Progress
