@@ -326,16 +326,17 @@ console.log(eventsData)
 let eventsC = document.createElement('div')
         eventsC.className='eventsC';
 
-let homeTm = homeTeamName.innerHTML
-let awayTm = awayTeamName.innerHTML
-console.log(homeTm)
-console.log(awayTm)
+
 
 
 for (let d=eventsData.length-1; d>=0; d--) {
                 
     let eventOccured = document.createElement('div')
     eventOccured.classList = "lineupParentHome"
+    let homeTm = homeTeamName.innerHTML
+let awayTm = awayTeamName.innerHTML
+console.log(homeTm)
+console.log(awayTm)
     
 
     if (homeTm=eventsData[d].team.name) {
