@@ -527,6 +527,9 @@ border-bottom: 1px groove;
 
 
 .light {
+  color: #c9c9c9;
+  font-family: 'Azeret Mono', monospace;
+  word-spacing: -9px;
 }
 
 .ball {
