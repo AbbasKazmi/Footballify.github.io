@@ -331,7 +331,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
     let eventOccured = document.createElement('div')
     eventOccured.classList = "lineupParentHome"
     if (eventsData[d].type=="Goal") {
-    eventOccured.innerHTML=eventsData[d].player.name + eventsData[d].assist.name
+    eventOccured.innerHTML=eventsData[d].player.name
     }
     eventsC.appendChild(eventOccured)
     $(eventOccured).hide().fadeIn(500);
@@ -637,7 +637,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
             $('.awayStats').remove();
             $('.statName').remove();
 
-            if (timer.classList.contains('live')) {
+            if (timer.classList.contains('live') || statsButton.classList.contains("clicked")) {
             $('.fixtureInfo').remove();
             $('.statsC').remove();
             $('.homeStats').remove();
