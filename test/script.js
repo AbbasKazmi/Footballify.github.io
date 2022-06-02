@@ -330,6 +330,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
                 
     let eventOccured = document.createElement('div')
     eventOccured.classList = "lineupParentHome"
+    console.log(eventsData[d].team.name)
     if (homeTeamName=eventsData[d].team.name) {
         if (eventsData[d].type=="Goal") {
         eventOccured.innerHTML=`<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
