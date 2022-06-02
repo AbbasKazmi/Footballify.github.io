@@ -732,3 +732,7 @@ $( document ).ready(function() {
         document.querySelector(".hideThis").style.visibility = "visible"
     }, 1000);
 });
+
+jQuery(function(){
+    jQuery('.parentDiv').click();
+ });
