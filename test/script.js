@@ -334,7 +334,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
     eventOccured.innerHTML=eventsData[d].player.name
     }
     eventsC.appendChild(eventOccured)
-    $(lineupParentHome).hide().fadeIn(500);
+    $(eventOccured).hide().fadeIn(500);
     }
     document.querySelector('.sideScoreDiv').appendChild(eventsC)
 }
