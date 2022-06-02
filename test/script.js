@@ -338,11 +338,10 @@ for (let d=eventsData.length-1; d>=0; d--) {
         if (eventsData[d].detail=="Normal Goal") {
         eventOccured.innerHTML=`<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
         } else if (eventsData[d].detail=="Yellow Card") {
-        eventOccured.innerHTML=`<svg class="card" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name + `<h1 class="light"> Out: ${eventsData[d].assist.name}</h1>`
+        eventOccured.innerHTML=`<svg class="card" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
 
         } else if (eventsData[d].type=="subst") {
-        eventOccured.innerHTML=`<img class='sub' src="https://i.pinimg.com/originals/08/cc/a3/08cca3ff8e7b2f5ffd378abe72c1c036.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name + `<h1 class="light"> ${eventsData[d].comment}</h1>`
-            
+        eventOccured.innerHTML=`<img class='sub' src="https://i.pinimg.com/originals/08/cc/a3/08cca3ff8e7b2f5ffd378abe72c1c036.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name + `<h1 class="light"> Out: ${eventsData[d].assist.name}</h1>`
         } else if (eventsData[d].detail=="Red Card") {
             
         }
