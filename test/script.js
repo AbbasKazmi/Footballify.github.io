@@ -610,6 +610,7 @@ var run = async () => {
             $('.statName').remove();
 
             if (timer.classList.contains('live')) {
+                runStats(fixtureId.innerHTML);
             setInterval(function() {
                 runStats(fixtureId.innerHTML);
               }, 60000);
