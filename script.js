@@ -720,6 +720,10 @@ if (eventsData[d].time.extra>0) {
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
 
+                if (this.classList.contains("clicked")) {
+                    console.log('clicked')
+                }
+
             $('.venue').remove();
             $('.city').remove();
             $('.referee').remove();
