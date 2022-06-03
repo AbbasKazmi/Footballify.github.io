@@ -346,7 +346,13 @@ for (let d=eventsData.length-1; d>=0; d--) {
             eventOccured.innerHTML=`<svg class="og" width="16" height="16" viewBox="0 0 1024 1024" style="min-width: 16px;display: inline-block;/* fill: aqua; */"><title>Own Goal</title><path d="M787.968 236.064c-152.16-152.16-399.744-152.16-551.936 0-152.16 152.128-152.16 399.776 0 551.936 152.16 152.096 399.744 152.16 551.936 0 152.16-152.16 152.16-399.808 0-551.936zM734.592 734.624c-99.040 98.912-248.096 118.048-366.4 57.376l28.064-66.144-98.080-98.112-66.208 28.064c-60.608-118.368-41.568-267.36 57.44-366.4 98.976-98.912 247.872-118.048 366.272-57.44l-27.776 65.376 98.144 98.144 65.664-27.808c61.056 118.432 42.016 267.744-57.12 366.944zM549.632 549.664l-32.608 150.912 127.2 49.216 105.6-105.6-50.72-128.576zM284.576 382.656l52.544 124.928 144.256-26.176 26.688-143.776-125.472-52.992z"></path></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name 
     
         } else if (eventsData[d].detail=="Yellow Card") {
-        eventOccured.innerHTML=`<svg class="card" width="16" height="16" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow Card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name 
+            if (eventsData[d].comments) {
+                eventOccured.innerHTML=`<svg class="card" width="16" height="16" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow Card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name 
+
+            } else {
+                eventOccured.innerHTML=`<svg class="card" width="16" height="16" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow Card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name  + `<h1 class='light'>${eventsData[d].player.name} </h1>`
+
+            }
 
         } else if (eventsData[d].type=="subst") {
         eventOccured.innerHTML=`<img class='sub' src="https://media.istockphoto.com/vectors/green-recycle-sign-icon-symbol-on-white-background-triangular-eco-vector-id1209231674?k=20&m=1209231674&s=612x612&w=0&h=OQumbbblFyt8Z2aKRjF2dYeKCsiiLbiR2zi9lW1Jxlg=">` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name + `<h1 class="light"> Out: ${eventsData[d].assist.name}</h1>`
@@ -369,8 +375,11 @@ for (let d=eventsData.length-1; d>=0; d--) {
                 eventOccured.innerHTML=  eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="og" width="16" height="16" viewBox="0 0 1024 1024" fill="#52b030" style="min-width: 16px;display: inline-block;"><title>Own Goal</title><path d="M787.968 236.064c-152.16-152.16-399.744-152.16-551.936 0-152.16 152.128-152.16 399.776 0 551.936 152.16 152.096 399.744 152.16 551.936 0 152.16-152.16 152.16-399.808 0-551.936zM734.592 734.624c-99.040 98.912-248.096 118.048-366.4 57.376l28.064-66.144-98.080-98.112-66.208 28.064c-60.608-118.368-41.568-267.36 57.44-366.4 98.976-98.912 247.872-118.048 366.272-57.44l-27.776 65.376 98.144 98.144 65.664-27.808c61.056 118.432 42.016 267.744-57.12 366.944zM549.632 549.664l-32.608 150.912 127.2 49.216 105.6-105.6-50.72-128.576zM284.576 382.656l52.544 124.928 144.256-26.176 26.688-143.776-125.472-52.992z"></path></svg>`
         
             } else if (eventsData[d].detail=="Yellow Card") {
-            eventOccured.innerHTML= eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="cardFloat" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>`
-    
+                if (eventsData[d].comments) {
+                eventOccured.innerHTML= eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="cardFloat" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>`
+                } else {
+                eventOccured.innerHTML= `<h1 class='light'>${eventsData[d].player.name} </h1>` + eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="cardFloat" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>`
+                }
             } else if (eventsData[d].type=="subst") {
             eventOccured.innerHTML= `<h1 class="light"> Out: ${eventsData[d].assist.name}</h1>` + eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'"+  `<img class='subFloat' src="https://media.istockphoto.com/vectors/green-recycle-sign-icon-symbol-on-white-background-triangular-eco-vector-id1209231674?k=20&m=1209231674&s=612x612&w=0&h=OQumbbblFyt8Z2aKRjF2dYeKCsiiLbiR2zi9lW1Jxlg=">`
             } else if (eventsData[d].detail=="Red Card") {
