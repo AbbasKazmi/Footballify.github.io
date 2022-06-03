@@ -798,7 +798,10 @@ if (eventsData[d].time.extra>0) {
             $('.homeEvent').remove();
             $('.awayEvent').remove();
 
-            runStats(fixtureId.innerHTML);
+            
+            setInterval(runStats(fixtureId.innerHTML), 60000)
+
+            
         }) 
 
             let lineupButton=document.createElement('button')
