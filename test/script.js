@@ -767,8 +767,9 @@ if (eventsData[d].time.extra>0) {
 
             runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
 
-            while (eventsButton.classList.contains('clicked')===true) {
+            while (eventsButton.classList.contains('clicked')==true) {
             setInterval(function() { 
+                console.log('reloaad')
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
             }, 5000);
 
@@ -801,8 +802,9 @@ if (eventsData[d].time.extra>0) {
             $('.awayEvent').remove();
 
             runStats(fixtureId.innerHTML);
-            while (statsButton.classList.contains('clicked')===true) {
+            while (statsButton.classList.contains('clicked')==true) {
                 setInterval(function() { 
+                    console.log('reloaad')
                     runStats(fixtureId.innerHTML);
                 }, 5000);
         }}) 
