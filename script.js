@@ -719,24 +719,12 @@ if (eventsData[d].time.extra>0) {
                 infoButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-                if (this.classList.contains("clicked")) {
-                    console.log('clicked')
-                
-             var handle = setInterval(function(){             
+            // var handle = setInterval(function(){             
+                // clearInterval(handle)
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
-                    runStats(fixtureId.innerHTML)        
-                    eventsButton.addEventListener("click", function(){ 
-                        clearInterval(handle)
-                        console.log('ended')
-                    })    
-                    statsButton.addEventListener("click", function(){ 
-                        clearInterval(handle)
-                        console.log('ended')
-                    })    
-                 }, 10000);
-                } else {
-                    console.log('???')
-                }
+                    runStats(fixtureId.innerHTML)            
+                // }, 10000);
+            
             })
 
 
