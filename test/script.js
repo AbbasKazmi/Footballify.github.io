@@ -502,6 +502,8 @@ for (let d=eventsData.length-1; d>=0; d--) {
                 $('.eventsC').remove();
             $('.homeEvent').remove();
             $('.awayEvent').remove();
+            runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
+
 
 
            
