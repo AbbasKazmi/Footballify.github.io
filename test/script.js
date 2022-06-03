@@ -798,8 +798,9 @@ if (eventsData[d].time.extra>0) {
             $('.eventsC').remove();
             $('.homeEvent').remove();
             $('.awayEvent').remove();
-
+            runStats(fixtureId.innerHTML)
             setInterval(function(){ 
+            $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runStats(fixtureId.innerHTML)
             }, 10000);
 
