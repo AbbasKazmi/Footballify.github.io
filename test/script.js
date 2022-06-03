@@ -802,12 +802,14 @@ if (eventsData[d].time.extra>0) {
             $('.awayEvent').remove();
             runStats(fixtureId.innerHTML)
                 
-            clearInterval(int)
+            
             let int = setInterval(function(){ 
             console.log('hi')
             $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runStats(fixtureId.innerHTML)
             }, 10000);
+
+            clearInterval(int)
         }) 
 
             let lineupButton=document.createElement('button')
