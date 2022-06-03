@@ -345,7 +345,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
     eventOccured.classList = "awayEvent"
     if (eventsData[d].detail=="Normal Goal") {
         if (eventsData[d].assist.name) { 
-            eventOccured.innerHTML=`<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name + `<h1 class="light"> Assist: ${eventsData[d].assist.name}</h1>`
+            eventOccured.innerHTML= `<h1 class="light"> Assist: ${eventsData[d].assist.name}</h1>` + eventsData[d].player.name + " | '" + eventsData[d].time.elapsed + `<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">`
                 } else {
             eventOccured.innerHTML=`<img class='ball' src="https://www.citypng.com/public/uploads/small/11649467416xzjfid709wwfnn4b4minvcmsdpiyjrajom2djrhvdh5r1fybjfrf2rsp7vq2bc6ujsij9nsb9jfznh2pvoofx8uziapv9ekhjexe.png">` + eventsData[d].time.elapsed + "' | " + eventsData[d].player.name
                 }
