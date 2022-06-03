@@ -806,15 +806,11 @@ if (eventsData[d].time.extra>0) {
             runStats(fixtureId.innerHTML)
             
             
-            var handle = setInterval(function(){ 
-                console.log('hi')
-                try{
-                    clearInterval(handle)
-                    }
-                    catch(err) {}
-        
+            // var handle = setInterval(function(){             
+                // clearInterval(handle)
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
-                    runStats(fixtureId.innerHTML)            }, 10000);
+                    runStats(fixtureId.innerHTML)            
+                // }, 10000);
             
             })
 
