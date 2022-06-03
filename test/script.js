@@ -802,9 +802,7 @@ if (eventsData[d].time.extra>0) {
             $('.statName').remove();
             $('.eventsC').remove();
             $('.homeEvent').remove();
-            $('.awayEvent').remove();
-            runStats(fixtureId.innerHTML)
-            
+            $('.awayEvent').remove();            
             
             // var handle = setInterval(function(){             
                 // clearInterval(handle)
