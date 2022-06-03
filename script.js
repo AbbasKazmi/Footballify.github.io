@@ -64,6 +64,11 @@ var run = async () => {
         gameStatus.className = 'status'
         gameStatus.innerHTML = filtered[i][x].fixture.status.short
         parent.appendChild(gameStatus)
+        //StartTime
+        // let gameTime = document.createElement("div")
+        // gameTime.className = 'gameTime'
+        // gameTime.innerHTML = filtered[i][x].fixture.status.short
+        // parent.appendChild(gameTime)
 
         //Home Name
         let homeTeamName = document.createElement("div")
@@ -276,14 +281,12 @@ var run = async () => {
         }
 
         
-        document.querySelector('.sideScoreDiv').appendChild(homeStats)
         statsC.appendChild(homeStats)
         $(homeStats).hide().fadeIn(500);
        
         let statName = document.createElement('div')
         statName.classList = "statName"
         statName.innerHTML=statsData[0].statistics[k].type
-        document.querySelector('.sideScoreDiv').appendChild(statName)
         statsC.appendChild(statName)
         $(statName).hide().fadeIn(500);
 
@@ -296,7 +299,6 @@ var run = async () => {
             awayStats.innerHTML=0
         }
         
-        document.querySelector('.sideScoreDiv').appendChild(awayStats)
         statsC.appendChild(awayStats)
         $(awayStats).hide().fadeIn(500);
 
@@ -684,6 +686,8 @@ if (eventsData[d].time.extra>0) {
                 if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD" || gameStatus.innerHTML=="NA" || gameStatus.innerHTML=="PST") {
                 timer.innerHTML="-";
                 } else if (distance < 0) {
+
+                    setInterval(function() {
                     let homeTeamScoreRightDiv = document.createElement("div")
                     homeTeamScoreRightDiv.className = 'fixtureScoreRight'
                     homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
@@ -691,6 +695,8 @@ if (eventsData[d].time.extra>0) {
                     let awayTeamScoreRightDiv = document.createElement("div")
                     awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
                     awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
+                      }, 60000);
+                    
 
                     if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
                         timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
