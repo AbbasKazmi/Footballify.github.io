@@ -259,6 +259,8 @@ var run = async () => {
     console.log(statsData)
 
     $('statsC').remove();
+    $('.fixtureInfo').remove();
+    
     var x = setInterval(function() {
         let statsC = document.createElement('div')
         statsC.className='statsC';
