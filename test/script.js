@@ -611,14 +611,6 @@ if (eventsData[d].time.extra>0) {
                 $('.eventsC').remove();
                 $('.homeEvent').remove();
                 $('.awayEvent').remove();
-                try {
-                    if (handle) {
-                        clearInterval(handle);
-                        }
-                  }
-                  catch(err) {
-                    
-                  }
                 
 
             runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
@@ -758,14 +750,7 @@ if (eventsData[d].time.extra>0) {
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-                try {
-                    if (handle) {
-                        clearInterval(handle);
-                        }
-                  }
-                  catch(err) {
-                    
-                  }
+    
                 
             $('.venue').remove();
             $('.city').remove();
@@ -783,11 +768,11 @@ if (eventsData[d].time.extra>0) {
             $('.homeEvent').remove();
             $('.awayEvent').remove();
 
-            clearInterval(int)
-            let int = setInterval(function(){ 
+            // clearInterval(int)
+            // let int = setInterval(function(){ 
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
-            }, 10000);
+            // }, 10000);
             
              
 
@@ -819,10 +804,15 @@ if (eventsData[d].time.extra>0) {
             $('.homeEvent').remove();
             $('.awayEvent').remove();
             runStats(fixtureId.innerHTML)
-                
+            
             
             var handle = setInterval(function(){ 
                 console.log('hi')
+                try{
+                    clearInterval(handle)
+                    }
+                    catch(err) {}
+        
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                     runStats(fixtureId.innerHTML)            }, 10000);
             
