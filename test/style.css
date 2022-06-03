@@ -605,4 +605,7 @@ border-bottom: 1px groove;
     margin-top: 7px;
 }
 
-.penFloat {float: right;}
+.penFloat {
+  float: right;
+  margin-left: 4px;
+  margin-right: 6px;}
