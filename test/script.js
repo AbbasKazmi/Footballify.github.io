@@ -766,6 +766,7 @@ if (eventsData[d].time.extra>0) {
             $('.awayEvent').remove();
 
             setInterval(function(){ 
+                $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
             }, 10000);
             
@@ -802,7 +803,7 @@ if (eventsData[d].time.extra>0) {
                 
             setInterval(function(){ 
         
-                console.log('hi')
+            console.log('hi')
             $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runStats(fixtureId.innerHTML)
             }, 10000);
