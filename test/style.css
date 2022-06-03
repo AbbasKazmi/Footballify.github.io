@@ -602,4 +602,5 @@ border-bottom: 1px groove;
   display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-top: 7px;
 }
