@@ -258,7 +258,7 @@ var run = async () => {
     const statsData = (await stats.json())?.response;
     console.log(statsData)
 
-    $('statsC').remove();
+    $('.statsC').remove();
     $('.fixtureInfo').remove();
     
     var x = setInterval(function() {
