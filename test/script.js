@@ -752,7 +752,9 @@ if (eventsData[d].time.extra>0) {
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-
+                if (handle) {
+                    clearInterval(handle);
+                    }
             $('.venue').remove();
             $('.city').remove();
             $('.referee').remove();
