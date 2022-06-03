@@ -557,6 +557,7 @@ border-bottom: 1px groove;
   text-align: right;
   border-bottom: 1px solid #afa6a6;
   line-height: 20px;
+  margin-top: 3px;
 
 
 }
@@ -565,6 +566,7 @@ border-bottom: 1px groove;
   border-bottom: 1px solid #afa6a6;
 
   line-height: 20px;
+  margin-top: 3px;
 
 }
 
@@ -617,4 +619,6 @@ border-bottom: 1px groove;
     vertical-align: middle;
     margin-left: 3px;
     margin-right: 6px;
+    width: 23px;
+    height: 21px;
   }
