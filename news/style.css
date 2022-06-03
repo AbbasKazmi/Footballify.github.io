@@ -288,6 +288,7 @@ input[type="checkbox"]{
     border: 1px solid black;
     border-radius: 6px;
     box-shadow: 0 0 30px rgb(0 0 0 / 30%);
+    width: 360px;
   }
 
   .blueLink {
