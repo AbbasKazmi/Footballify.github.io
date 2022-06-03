@@ -611,9 +611,9 @@ if (eventsData[d].time.extra>0) {
                 $('.eventsC').remove();
                 $('.homeEvent').remove();
                 $('.awayEvent').remove();
-            if (handle) {
-            clearInterval(handle);
-            }
+                if (typeof handle !== undefined) {
+                    clearInterval(handle);
+                    }
 
             runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
 
@@ -752,7 +752,7 @@ if (eventsData[d].time.extra>0) {
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-                if (handle) {
+                if (typeof handle !== undefined) {
                     clearInterval(handle);
                     }
             $('.venue').remove();
