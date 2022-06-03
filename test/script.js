@@ -12,7 +12,7 @@ const isoStr = new Date().toISOString().slice(0,10);
 
 //Pull API Data for UTC
 var run = async () => {
-    const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=2022-06-02`, {
+    const res = await fetch(`https://v3.football.api-sports.io/fixtures?date=2022-02-06`, {
         headers: {
             'X-RapidAPI-Host': "v3.football.api-sports.io",
 			"X-RapidAPI-Key": "e54f3d3972ca8251c1259694b49948de"
