@@ -771,7 +771,7 @@ if (eventsData[d].time.extra>0) {
             setInterval(function() { 
                 console.log('reloaad')
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
-            }, 5000);
+            }, 60000);
 
          } }) 
 
@@ -806,7 +806,7 @@ if (eventsData[d].time.extra>0) {
                 setInterval(function() { 
                     console.log('reloaad')
                     runStats(fixtureId.innerHTML);
-                }, 5000);
+                }, 60000);
         }}) 
 
             let lineupButton=document.createElement('button')
