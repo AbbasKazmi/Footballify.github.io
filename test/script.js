@@ -799,7 +799,7 @@ if (eventsData[d].time.extra>0) {
             $('.homeEvent').remove();
             $('.awayEvent').remove();
             runStats(fixtureId.innerHTML)
-            while (statsButton.classList.contains("clicked")) {
+            if (statsButton.classList.contains("clicked")) {
                 console.log('hi')
             setInterval(function(){ 
             $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
