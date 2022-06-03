@@ -600,6 +600,7 @@ border-bottom: 1px groove;
   display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 11px;
     margin-top: 7px;
 }
 
