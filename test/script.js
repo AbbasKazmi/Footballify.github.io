@@ -801,7 +801,11 @@ if (eventsData[d].time.extra>0) {
             $('.awayEvent').remove();
 
             runStats(fixtureId.innerHTML);
-        }) 
+            while (statsButton.classList.contains('clicked')===true) {
+                setInterval(function() { 
+                    runStats(fixtureId.innerHTML);
+                }, 5000);
+        }}) 
 
             let lineupButton=document.createElement('button')
             lineupButton.className='lineupButton';
