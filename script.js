@@ -259,21 +259,15 @@ var run = async () => {
     console.log(statsData)
 
     $('statsC').remove();
-    $('.fixtureInfo').remove();
-    $('.homeStats').remove();
-    $('.awayStats').remove();
-    $('.statName').remove();
+
+    let statsC = document.createElement('div')
+        statsC.className='statsC';
 
     let statText = document.createElement('div')
         statText.className = 'fixtureInfo'
         statText.innerHTML = 'Statistics'
         document.querySelector('.sideScoreDiv').appendChild(statText)
         $(statText).hide().fadeIn(500);
-        
-    let statsC = document.createElement('div')
-        statsC.className='statsC';
-
-    var x = setInterval(function() {
 
     for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
@@ -311,11 +305,6 @@ var run = async () => {
         document.querySelector('.sideScoreDiv').appendChild(statsC)
 
         }
-        
-    }, 1000)
-
-
-    
 };
 
 var runEvents = async (idParameter, home) => {
@@ -606,7 +595,7 @@ if (eventsData[d].time.extra>0) {
             gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
 
         } else {}
-        
+
         parent.addEventListener("click", function(){
                 $('.navbarMini').remove()
                 $('.rightDiv').remove();      
