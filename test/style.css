@@ -486,10 +486,12 @@ border-bottom: 1px groove;
 
 .lineupC>.lineupParentHome {
   width: 50%;
+  border-bottom: 1px solid #ccc;
 }
 
 .lineupC>.lineupParentAway {
   width: 50%;
+  border-bottom: 1px solid #ccc;
 }
 
 .statsC {
