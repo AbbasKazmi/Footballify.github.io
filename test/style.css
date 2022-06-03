@@ -637,3 +637,8 @@ float: left;
     margin-right: 5px;
     float: right;
   }
+
+  .webname {
+    color: white;
+    text-decoration: none;
+  }
