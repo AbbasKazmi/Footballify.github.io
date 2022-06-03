@@ -282,13 +282,13 @@ var run = async () => {
 
         
         statsC.appendChild(homeStats)
-        // $(homeStats).hide().fadeIn(500);
+        $(homeStats).hide().fadeIn(500);
        
         let statName = document.createElement('div')
         statName.classList = "statName"
         statName.innerHTML=statsData[0].statistics[k].type
         statsC.appendChild(statName)
-        // $(statName).hide().fadeIn(500);
+        $(statName).hide().fadeIn(500);
 
         let awayStats = document.createElement('div')
         awayStats.classList = "awayStats"
@@ -300,7 +300,7 @@ var run = async () => {
         }
         
         statsC.appendChild(awayStats)
-        // $(awayStats).hide().fadeIn(500);
+        $(awayStats).hide().fadeIn(500);
 
         document.querySelector('.sideScoreDiv').appendChild(statsC)
 
@@ -733,7 +733,7 @@ if (eventsData[d].time.extra>0) {
                         clearInterval(handle)
                         console.log('ended')
                     })    
-                 }, 100);
+                 }, 10000);
                 } else {
                     console.log('???')
                 }
