@@ -611,7 +611,9 @@ border-bottom: 1px groove;
 
 .pen {
   margin-left: 4px;
-  margin-right: 6px;}
+  margin-right: 6px;
+float: left;
+}
 
   .og {
     min-width: 16px;
@@ -627,6 +629,7 @@ border-bottom: 1px groove;
   .penMiss {
     margin-left: 3.5px;
     margin-right: 5px;
+    float: left;
   }
 
   .penMissFloat {
