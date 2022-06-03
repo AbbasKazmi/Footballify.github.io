@@ -766,7 +766,8 @@ if (eventsData[d].time.extra>0) {
             $('.awayEvent').remove();
 
             
-                runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
+            setInterval(runEvents(fixtureId.innerHTML, homeTeamName.innerHTML), 60000)
+            
              
 
             }) 
