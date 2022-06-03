@@ -319,6 +319,12 @@ let eventsC = document.createElement('div')
         eventsC.className='eventsC';
 let homeTm=home
 
+let eventsText = document.createElement('div')
+eventsText.className = 'fixtureInfo'
+eventsText.innerHTML = 'Events'
+document.querySelector('.sideScoreDiv').appendChild(eventsText)
+$(eventsText).hide().fadeIn(500);
+
 for (let d=eventsData.length-1; d>=0; d--) {
                 
     let eventOccured = document.createElement('div')
