@@ -604,3 +604,5 @@ border-bottom: 1px groove;
     flex-direction: column;
     margin-top: 7px;
 }
+
+.penFloat {float: right;}
