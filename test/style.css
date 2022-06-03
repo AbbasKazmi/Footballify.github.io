@@ -606,6 +606,11 @@ border-bottom: 1px groove;
 .penFloat {
   float: right;
   margin-left: 4px;
+  margin-right: 6px;
+}
+
+.pen {
+  margin-left: 4px;
   margin-right: 6px;}
 
   .og {
@@ -617,4 +622,15 @@ border-bottom: 1px groove;
     margin-right: 6px;
     width: 23px;
     height: 21px;
+  }
+
+  .penMiss {
+    margin-left: 3.5px;
+    margin-right: 5px;
+  }
+
+  .penMissFloat {
+    margin-left: 3.5px;
+    margin-right: 5px;
+    float: right;
   }
