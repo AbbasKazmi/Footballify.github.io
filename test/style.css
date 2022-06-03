@@ -529,7 +529,7 @@ border-bottom: 1px groove;
 .light {
   color: #999999;
   font-family: 'Azeret Mono', monospace;
-  word-spacing: -9px;
+  word-spacing: -3px;
   display: inline-block;
   font-size: 14px;
   font-weight: 200;
