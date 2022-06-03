@@ -376,7 +376,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
         
             } else if (eventsData[d].detail=="Yellow Card") {
                 if (eventsData[d].comments) {
-                eventOccured.innerHTML= `<h1 class='light'>${eventsData[d].player.comments} </h1>` + eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="cardFloat" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>`
+                eventOccured.innerHTML= `<h1 class='light'>${eventsData[d].comments} </h1>` + eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="cardFloat" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>`
                 } else {
                 eventOccured.innerHTML= eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="cardFloat" width="16" height="14" viewBox="0 0 6 8" fill="#ffa500" style="margin-top: 3.3px;"><title>Yellow card</title><rect x="0" y="0" width="7" height="8" rx="1" ry="1"></rect></svg>`
                 }
