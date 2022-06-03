@@ -609,3 +609,12 @@ border-bottom: 1px groove;
   float: right;
   margin-left: 4px;
   margin-right: 6px;}
+
+  .og {
+    min-width: 16px;
+    display: inline-block;
+    fill: #db6767;
+    vertical-align: middle;
+    margin-left: 3px;
+    margin-right: 6px;
+  }
