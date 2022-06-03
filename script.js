@@ -251,7 +251,7 @@ var run = async () => {
     var runStats = async (idParameter) => {
         const intStat = setInterval(function() {
 
-        const stats = await fetch(`https://v3.football.api-sports.io/fixtures/statistics?fixture=${idParameter}`, {
+        const stats =  fetch(`https://v3.football.api-sports.io/fixtures/statistics?fixture=${idParameter}`, {
     headers: {
         'X-RapidAPI-Host': 'v3.football.api-sports.io',
         'X-RapidAPI-Key': 'e54f3d3972ca8251c1259694b49948de'
@@ -306,7 +306,7 @@ var run = async () => {
 
         document.querySelector('.sideScoreDiv').appendChild(statsC)
 
-        }}, 60000);
+        }}, 10000);
 };
 
 var runEvents = async (idParameter, home) => {
