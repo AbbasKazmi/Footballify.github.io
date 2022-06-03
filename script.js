@@ -678,6 +678,7 @@ if (eventsData[d].time.extra>0) {
             navbarMini.appendChild(eventsButton)
             eventsButton.addEventListener("click", function(){ 
                 eventsButton.classList.add("clicked")
+                eventsButton.disabled=true
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
@@ -696,6 +697,7 @@ if (eventsData[d].time.extra>0) {
             navbarMini.appendChild(statsButton);
             statsButton.addEventListener("click", function(){ 
                 statsButton.classList.add("clicked")
+                statsButton.disabled=true
                 infoButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
@@ -710,6 +712,7 @@ if (eventsData[d].time.extra>0) {
 
             let lineupButton=document.createElement('button')
             lineupButton.className='lineupButton';
+            lineupButton.disabled=true
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
