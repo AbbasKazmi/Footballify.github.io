@@ -513,88 +513,18 @@ if (eventsData[d].time.extra>0) {
                                                                awayTeamScore.classList.add('loser')
         }
 
-        if (String(filtered[i][x].fixture.status.short) === 'NS') {
-            homeTeamScore.innerHTML = 0
-            homeTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0
-            awayTeamScore.classList.add('hide')
-
-        } else if (String(filtered[i][x].fixture.status.short) === 'CANC') {
-            homeTeamScore.classList.add('hide')
-            homeTeamScore.innerHTML = 0
-            awayTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0
-            gameStatus.innerHTML = 'NA'
-        } else if (String(filtered[i][x].fixture.status.short) === 'HT') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            gameStatus.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'PEN') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'PST') {
-            homeTeamScore.classList.add('hide')
-            homeTeamScore.innerHTML = 0
-            awayTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0
-        } else if (String(filtered[i][x].fixture.status.short) === 'TBD') {
-            homeTeamScore.classList.add('hide')
-            homeTeamScore.innerHTML = 0//filtered[i][x].goals.home
-            awayTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0//filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'FT') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'AET') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'INT') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            gameStatus.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) == '1H') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-            gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
-        } else if (String(filtered[i][x].fixture.status.short) == 'ET') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-            gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
-        } else if (String(filtered[i][x].fixture.status.short) == '2H') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-            gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
-
-        } else {}
+        if (String(filtered[i][x].fixture.status.short) === 'NS') {homeTeamScore.innerHTML = 0;homeTeamScore.classList.add('hide');awayTeamScore.innerHTML = 0;awayTeamScore.classList.add('hide');
+        } else if (String(filtered[i][x].fixture.status.short) === 'CANC') {homeTeamScore.classList.add('hide');homeTeamScore.innerHTML = 0;awayTeamScore.classList.add('hide');awayTeamScore.innerHTML = 0;gameStatus.innerHTML = 'NA';
+        } else if (String(filtered[i][x].fixture.status.short) === 'HT') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');gameStatus.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) === 'PEN') {homeTeamScore.classList.remove('hide');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) === 'PST') {homeTeamScore.classList.add('hide');homeTeamScore.innerHTML = 0;awayTeamScore.classList.add('hide');awayTeamScore.innerHTML = 0;
+        } else if (String(filtered[i][x].fixture.status.short) === 'TBD') {homeTeamScore.classList.add('hide');homeTeamScore.innerHTML = 0;awayTeamScore.classList.add('hide');awayTeamScore.innerHTML = 0;
+        } else if (String(filtered[i][x].fixture.status.short) === 'FT') {homeTeamScore.classList.remove('hide');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) === 'AET') {homeTeamScore.classList.remove('hide');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) === 'INT') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');gameStatus.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) == '1H') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";
+        } else if (String(filtered[i][x].fixture.status.short) == 'ET') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";
+        } else if (String(filtered[i][x].fixture.status.short) == '2H') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";} else {}
 
         parent.addEventListener("click", function(){
                 $('.navbarMini').remove()
@@ -908,38 +838,14 @@ if (eventsData[d].time.extra>0) {
             navbarMini.appendChild(infoButton)
 
 
-            document.querySelector('.sideScoreDiv').appendChild(navbarMini)
-           
-
-        })
-
-        
-
-        document.querySelector('.parentContainer').appendChild(parent);
-
-
-    }
-  }     
-
-};
+document.querySelector('.sideScoreDiv').appendChild(navbarMini)});document.querySelector('.parentContainer').appendChild(parent);}}};
 
 
 //Run Page
 run();
-
 //Refresh Data
-const interval = setInterval(function() {
-    run();
-  }, 60000);
-
+const interval = setInterval(function() {run();}, 60000);
 //Page Load Delay
-$( document ).ready(function() {
-    console.log('page loaded')
-    setTimeout(function () {
-        document.querySelector(".hideThis").style.visibility = "visible"
-        jQuery(function(){
-            jQuery('.parentDiv:first').click();
-         });
-    }, 1000);
-});
+$( document ).ready(function() { console.log('page loaded'); setTimeout(function () { document.querySelector(".hideThis").style.visibility = "visible"; jQuery(function(){ jQuery('.parentDiv:first').click();
+});}, 1000);});
 
