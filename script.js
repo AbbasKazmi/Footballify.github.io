@@ -249,6 +249,8 @@ var run = async () => {
     }
 
     var runStats = async (idParameter) => {
+        const intStat = setInterval(function() {
+
         const stats = await fetch(`https://v3.football.api-sports.io/fixtures/statistics?fixture=${idParameter}`, {
     headers: {
         'X-RapidAPI-Host': 'v3.football.api-sports.io',
@@ -304,7 +306,7 @@ var run = async () => {
 
         document.querySelector('.sideScoreDiv').appendChild(statsC)
 
-        }
+        }}, 60000);
 };
 
 var runEvents = async (idParameter, home) => {
@@ -682,29 +684,10 @@ if (eventsData[d].time.extra>0) {
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-    
-                
-            $('.venue').remove();
-            $('.city').remove();
-            $('.referee').remove();
-            $('.lineupC').remove();
-            $('.lineupParentHome').remove();
-            $('.lineupParentAway').remove();
-            $('.startEleven').remove();
-            $('.fixtureInfo').remove();
-            $('.statsC').remove();
-            $('.homeStats').remove();
-            $('.awayStats').remove();
-            $('.statName').remove();
-            $('.eventsC').remove();
-            $('.homeEvent').remove();
-            $('.awayEvent').remove();
-
-            // clearInterval(int)
-            // let int = setInterval(function(){ 
+            
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
-            // }, 10000);
+            
             
              
 
@@ -719,11 +702,11 @@ if (eventsData[d].time.extra>0) {
                 infoButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-            // var handle = setInterval(function(){             
-                // clearInterval(handle)
+            
+            
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                     runStats(fixtureId.innerHTML)            
-                // }, 10000);
+                
             
             })
 
