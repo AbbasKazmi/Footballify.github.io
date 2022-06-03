@@ -765,15 +765,12 @@ if (eventsData[d].time.extra>0) {
             $('.homeEvent').remove();
             $('.awayEvent').remove();
 
-            runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
-
-            while (eventsButton.classList.contains('clicked')==true) {
+            
             setInterval(function() { 
-                console.log('reloaad')
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
             }, 60000);
 
-         } }) 
+            }) 
 
             let statsButton=document.createElement('button')
             statsButton.className='statsButton';
@@ -802,12 +799,7 @@ if (eventsData[d].time.extra>0) {
             $('.awayEvent').remove();
 
             runStats(fixtureId.innerHTML);
-            while (statsButton.classList.contains('clicked')==true) {
-                setInterval(function() { 
-                    console.log('reloaad')
-                    runStats(fixtureId.innerHTML);
-                }, 60000);
-        }}) 
+        }) 
 
             let lineupButton=document.createElement('button')
             lineupButton.className='lineupButton';
