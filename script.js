@@ -679,6 +679,9 @@ if (eventsData[d].time.extra>0) {
             eventsButton.addEventListener("click", function(){ 
                 eventsButton.classList.add("clicked")
                 eventsButton.disabled=true
+                lineupButton.disabled=false;
+                statsButton.disabled=false;
+                infoButton.disabled=false;
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
@@ -698,6 +701,9 @@ if (eventsData[d].time.extra>0) {
             statsButton.addEventListener("click", function(){ 
                 statsButton.classList.add("clicked")
                 statsButton.disabled=true
+                lineupButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=false;
                 infoButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
@@ -712,10 +718,13 @@ if (eventsData[d].time.extra>0) {
 
             let lineupButton=document.createElement('button')
             lineupButton.className='lineupButton';
-            lineupButton.disabled=true
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
+                lineupButton.disabled=true;
+                statsButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=false;
             
             $('.venue').remove();
             $('.city').remove();
@@ -755,6 +764,11 @@ if (eventsData[d].time.extra>0) {
                 statsButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
+
+                lineupButton.disabled=false;
+                statsButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=true;
 
             $('.venue').remove();
             $('.city').remove();
