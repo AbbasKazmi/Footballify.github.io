@@ -260,6 +260,9 @@ var run = async () => {
 
     $('statsC').remove();
     $('.fixtureInfo').remove();
+    $('.homeStats').remove();
+    $('.awayStats').remove();
+    $('.statName').remove();
 
     let statText = document.createElement('div')
         statText.className = 'fixtureInfo'
