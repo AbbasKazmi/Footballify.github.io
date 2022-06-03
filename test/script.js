@@ -331,7 +331,7 @@ for (let d=eventsData.length-1; d>=0; d--) {
     eventOccured.classList = "lineupParentHome"
     console.log(eventsData[d].time.extra)
 
-if (eventsData[d].time.extra) {
+if (eventsData[d].time.extra>0) {
     if (homeTm==eventsData[d].team.name) {
         console.log('homew')
         eventOccured.classList = "homeEvent"
