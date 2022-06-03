@@ -259,8 +259,8 @@ var run = async () => {
     console.log(statsData)
 
     $('statsC').remove();
-
-    let statsC = document.createElement('div')
+    var x = setInterval(function() {
+        let statsC = document.createElement('div')
         statsC.className='statsC';
 
     let statText = document.createElement('div')
@@ -305,6 +305,11 @@ var run = async () => {
         document.querySelector('.sideScoreDiv').appendChild(statsC)
 
         }
+        
+    }, 60000)
+
+
+    
 };
 
 var runEvents = async (idParameter, home) => {
@@ -595,7 +600,7 @@ if (eventsData[d].time.extra>0) {
             gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
 
         } else {}
-
+        
         parent.addEventListener("click", function(){
                 $('.navbarMini').remove()
                 $('.rightDiv').remove();      
