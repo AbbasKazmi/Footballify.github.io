@@ -260,22 +260,17 @@ var run = async () => {
 
     $('statsC').remove();
     $('.fixtureInfo').remove();
+
     let statText = document.createElement('div')
         statText.className = 'fixtureInfo'
         statText.innerHTML = 'Statistics'
         document.querySelector('.sideScoreDiv').appendChild(statText)
         $(statText).hide().fadeIn(500);
-
-        let statName = document.createElement('div')
-
-        let awayStats = document.createElement('div')
-
-
-    var x = setInterval(function() {
-        let statsC = document.createElement('div')
+        
+    let statsC = document.createElement('div')
         statsC.className='statsC';
 
-    
+    var x = setInterval(function() {
 
     for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
@@ -292,11 +287,13 @@ var run = async () => {
         statsC.appendChild(homeStats)
         $(homeStats).hide().fadeIn(500);
        
+        let statName = document.createElement('div')
         statName.classList = "statName"
         statName.innerHTML=statsData[0].statistics[k].type
         statsC.appendChild(statName)
         $(statName).hide().fadeIn(500);
 
+        let awayStats = document.createElement('div')
         awayStats.classList = "awayStats"
         awayStats.innerHTML=statsData[1].statistics[k].value
         if (statsData[1].statistics[k].value) {
