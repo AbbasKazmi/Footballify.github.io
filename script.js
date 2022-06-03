@@ -261,7 +261,8 @@ var run = async () => {
 
     $('statsC').remove();
 
-    let statsC = document.createElement('div')
+    for (let k=0; k<=statsData[0].statistics.length-1; k++) {
+        let statsC = document.createElement('div')
         statsC.className='statsC';
 
     let statText = document.createElement('div')
@@ -269,8 +270,6 @@ var run = async () => {
         statText.innerHTML = 'Statistics'
         document.querySelector('.sideScoreDiv').appendChild(statText)
         $(statText).hide().fadeIn(500);
-
-    for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
         let homeStats = document.createElement('div')
         homeStats.classList = "homeStats"
@@ -704,7 +703,7 @@ if (eventsData[d].time.extra>0) {
             
             
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
-                    runStats(fixtureId.innerHTML)            
+                runStats(fixtureId.innerHTML)            
                 
             
             })
