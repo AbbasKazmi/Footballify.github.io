@@ -317,6 +317,7 @@ console.log(eventsData)
 
 let eventsC = document.createElement('div')
         eventsC.className='eventsC';
+
 let homeTm=home
 
 let eventsText = document.createElement('div')
@@ -766,7 +767,12 @@ if (eventsData[d].time.extra>0) {
 
             runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
 
-            }) 
+            while (eventsButton.classList.contains('clicked')===true) {
+            setInterval(function() { 
+                runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
+            }, 5000);
+
+         } }) 
 
             let statsButton=document.createElement('button')
             statsButton.className='statsButton';
