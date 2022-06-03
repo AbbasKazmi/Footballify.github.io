@@ -556,8 +556,6 @@ border-bottom: 1px groove;
 .awayEvent{
   text-align: right;
   border-bottom: 1px solid #afa6a6;
-  font-family: 'Azeret Mono', monospace;
-  word-spacing: -9px;
   line-height: 20px;
 
 
@@ -565,8 +563,7 @@ border-bottom: 1px groove;
 
 .homeEvent {
   border-bottom: 1px solid #afa6a6;
-  font-family: 'Azeret Mono', monospace;
-  word-spacing: -9px;
+
   line-height: 20px;
 
 }
