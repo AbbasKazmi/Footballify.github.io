@@ -765,8 +765,9 @@ if (eventsData[d].time.extra>0) {
             $('.homeEvent').remove();
             $('.awayEvent').remove();
 
-            
-            setInterval(runEvents(fixtureId.innerHTML, homeTeamName.innerHTML), 60000)
+            setInterval(function(){ 
+                runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
+            }, 10000);
             
              
 
@@ -798,8 +799,9 @@ if (eventsData[d].time.extra>0) {
             $('.homeEvent').remove();
             $('.awayEvent').remove();
 
-            
-            setInterval(runStats(fixtureId.innerHTML), 60000)
+            setInterval(function(){ 
+                runStats(fixtureId.innerHTML)
+            }, 10000);
 
             
         }) 
