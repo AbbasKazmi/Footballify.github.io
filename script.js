@@ -686,8 +686,6 @@ if (eventsData[d].time.extra>0) {
                 if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD" || gameStatus.innerHTML=="NA" || gameStatus.innerHTML=="PST") {
                 timer.innerHTML="-";
                 } else if (distance < 0) {
-
-                    setInterval(function() {
                     let homeTeamScoreRightDiv = document.createElement("div")
                     homeTeamScoreRightDiv.className = 'fixtureScoreRight'
                     homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
@@ -695,7 +693,7 @@ if (eventsData[d].time.extra>0) {
                     let awayTeamScoreRightDiv = document.createElement("div")
                     awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
                     awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
-                      }, 60000);
+                      
                     
 
                     if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
