@@ -265,9 +265,10 @@ var run = async () => {
     statText.innerHTML = 'Statistics'
     document.querySelector('.sideScoreDiv').appendChild(statText)
     $(statText).hide().fadeIn(500);
-    for (let k=0; k<=statsData[0].statistics.length-1; k++) {
-        let statsC = document.createElement('div')
+
+    let statsC = document.createElement('div')
         statsC.className='statsC';
+    for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
         let homeStats = document.createElement('div')
         homeStats.classList = "homeStats"
