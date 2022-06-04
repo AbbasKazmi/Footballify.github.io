@@ -547,9 +547,6 @@ if (eventsData[d].time.extra>0) {
         // let clock = filtered[i][x].fixture.status.elapsed 
         parent.addEventListener("click", function(){
 
-            try {clearInterval(intStat)}
-            catch{}
-
                 $('.navbarMini').remove()
                 $('.rightDiv').remove();      
                 $('.rightDivScores').remove();
@@ -741,8 +738,12 @@ if (eventsData[d].time.extra>0) {
                 
                 const intStat = setInterval(function() {
                     if (statsButton.classList.contains('clicked')){
-                        console.log(homeTeamName.innerHTML + 'has stats been clicked g')
+                        console.log(homeTeamName.innerHTML + ' has stats been clicked g')
+                    } else {
+                        console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
+                        clearInterval(intStat)
                     }
+
                 }, 10000);
                 
             
