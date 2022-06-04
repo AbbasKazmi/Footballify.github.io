@@ -162,7 +162,7 @@ border-bottom: 1px groove;
 .status{
   float: left;
   margin-left: 10px;
-  margin-top: 12px;
+  margin-top: 2px;
   border-right: 1px solid #cbcbcb;
   padding-right: 8px;
 }
@@ -643,4 +643,10 @@ float: left;
   .webname {
     color: white;
     text-decoration: none;
+  }
+
+  .timeDiv {
+    float: left;
+    border-right: 1px solid #cbcbcb;
+    line-height: 15px;
   }
