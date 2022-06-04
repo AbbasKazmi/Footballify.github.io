@@ -72,10 +72,13 @@ var run = async () => {
 
         let gameTime = document.createElement("div")
         let gameTimeVar = String(filtered[i][x].fixture.date).slice(11,16)
-        console.log(gameTimeVar)
         gameTime.className = 'gameTime'
         gameTime.innerHTML = gameTimeVar
         timeDiv.appendChild(gameTime)
+
+        let bar = document.createElement('div')
+        bar.className='bar'
+        timeDiv.appendChild(bar)
 
         parent.appendChild(timeDiv)
 
