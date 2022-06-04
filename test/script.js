@@ -737,7 +737,7 @@ if (eventsData[d].time.extra>0) {
                 runStats(fixtureId.innerHTML)
                 
                 const intStat = setInterval(function() {
-                    if (statsButton.classList.contains('clicked')){
+                    if (statsButton.classList.contains('clickedxxxx')){
                         console.log(homeTeamName.innerHTML + ' has stats been clicked g')
                     } else {
                         console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
