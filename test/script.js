@@ -268,13 +268,13 @@ var run = async () => {
 
     $('statsC').remove();
     let statText = document.createElement('div')
-    statText.className = 'fixtureInfo' + homeTeamName
+    statText.className = 'fixtureInfo'
     statText.innerHTML = 'Statistics'
     document.querySelector('.sideScoreDiv').appendChild(statText)
     $(statText).hide().fadeIn(500);
 
     let statsC = document.createElement('div')
-        statsC.className='statsC';
+        statsC.className='statsC'+homeTeamName.innerHTML;
     for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
         let homeStats = document.createElement('div')
