@@ -268,7 +268,7 @@ var run = async () => {
 
     $('statsC').remove();
     let statText = document.createElement('div')
-    statText.className = 'fixtureInfo'
+    statText.className = 'fixtureInfo' + homeTeamName
     statText.innerHTML = 'Statistics'
     document.querySelector('.sideScoreDiv').appendChild(statText)
     $(statText).hide().fadeIn(500);
