@@ -270,6 +270,10 @@ border-bottom: 1px groove;
   
 }
 
+.innerText>strong{
+  margin-top: 24px;
+}
+
 .newsel {
   height: 136px;
   background-color: white;
