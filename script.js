@@ -108,13 +108,6 @@ var run = async () => {
         homeTeamScore.className = 'score1'
         parent.appendChild(homeTeamScore)
 
-        let gameTime = document.createElement("div")
-        let gameTimeVar = String(filtered[i][x].fixture.date).slice(11,16)
-        console.log(gameTimeVar)
-        gameTime.className = 'gameTime'
-        gameTime.innerHTML = gameTimeVar
-        parent.appendChild(gameTime)
-
         //Away Container
         let child2 = document.createElement("div")
         child2.className = 'childDiv'
@@ -128,7 +121,13 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-
+        
+        let gameTime = document.createElement("div")
+        let gameTimeVar = String(filtered[i][x].fixture.date).slice(11,16)
+        console.log(gameTimeVar)
+        gameTime.className = 'gameTime'
+        gameTime.innerHTML = gameTimeVar
+        parent.appendChild(gameTime)
         parent.appendChild(awayTeamScore)
         //Push all Data to DOM
 
