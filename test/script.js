@@ -545,7 +545,304 @@ if (eventsData[d].time.extra>0) {
         } else if (String(filtered[i][x].fixture.status.short) == '2H') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";} else {}
         
         // let clock = filtered[i][x].fixture.status.elapsed 
+        parent.addEventListener("click", function(){
+
+                $('.navbarMini').remove()
+                $('.rightDiv').remove();      
+                $('.rightDivScores').remove();
+                $('.venue').remove();
+                $('.city').remove();
+                $('.referee').remove();
+                $('.lineupC').remove();
+                $('.lineupParentHome').remove();
+                $('.lineupParentAway').remove();
+                $('.startEleven').remove();
+                $('.fixtureInfo').remove();
+                $('.eventsC').remove();
+                $('.homeEvent').remove();
+                $('.awayEvent').remove();
+          
+
+            runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
+
+
+
+           
+
+            let teamNames = document.createElement("div")
+            teamNames.className = 'rightDiv'
+
+            let fixtureId2 = document.createElement("div")
+            fixtureId2.className = 'fixtureId2'                                                         //
+            fixtureId2.innerHTML = fixtureId.innerHTML;
+
+            let homeTeamNameRightDiv = document.createElement("div")
+            homeTeamNameRightDiv.className = 'fixturel'
+            homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + "-" 
+            teamNames.appendChild(homeTeamNameRightDiv)
+
+            let awayTeamNameRightDiv = document.createElement("div")
+            awayTeamNameRightDiv.className = 'fixturer'
+            awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
+            teamNames.appendChild(awayTeamNameRightDiv)
+
+            let sideScore = document.createElement("div")
+            sideScore.className = 'rightDivScores'
+
+            let homeTeamLogoRightDiv = document.createElement("img")
+            homeTeamLogoRightDiv.className = 'logo1'
+            homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
+            sideScore.appendChild(homeTeamLogoRightDiv)
+
+            let timer = document.createElement("div")
+            timer.className = 'timer'
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+  
+            // Find the distance between now and the count down date
+            var distance = Number(String(timerOrigin.innerHTML)+"000") - now;
+  
+            // Time calculations for days, hours, minutes and seconds
+
+            //Days are not displayed, only used to help calculate hours
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (days * 24);
+            if (String(hours).length == 1) {
+                hours= "0" + hours;
+            }
+
+
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            if (String(minutes).length == 1) {
+                minutes= "0" + minutes;
+            }
+
+
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (String(seconds).length == 1) {
+                seconds = "0" + seconds;
+            }
+                
+            // Display the time
+            if (Number(seconds)>=0){
+            timer.innerHTML = hours + ":" + minutes + ":" + seconds;
+            } else {
+                if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD" || gameStatus.innerHTML=="NA" || gameStatus.innerHTML=="PST") {
+                timer.innerHTML="-";
+                } else if (distance < 0) {
+                    let homeTeamScoreRightDiv = document.createElement("div")
+                    homeTeamScoreRightDiv.className = 'fixtureScoreRight'
+                    homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
         
+                    let awayTeamScoreRightDiv = document.createElement("div")
+                    awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
+                    awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
+                    
+                    // let gameTicker = document.createElement('div')
+                    // gameTicker.className="gameTicker"
+                    
+
+                    if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
+                        timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
+                        timer.classList.remove('live') 
+                    } else {
+                        timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
+                        timer.classList.add('live')
+                  }
+                }
+            }
+  
+            // If the count down is finished, Display score
+        
+        }, .005);
+            sideScore.appendChild(timer)
+
+            let awayTeamLogoRightDiv = document.createElement("img")
+            awayTeamLogoRightDiv.className = 'logo1'
+            awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
+            sideScore.appendChild(awayTeamLogoRightDiv)
+
+            
+
+            console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
+
+
+            document.querySelector('.sideScoreDiv').appendChild(teamNames)
+            document.querySelector('.sideScoreDiv').appendChild(sideScore)
+
+            
+            $('.venue').remove();
+            $('.city').remove();
+            $('.referee').remove();
+            $('.lineupC').remove();
+            $('.lineupParentHome').remove();
+            $('.lineupParentAway').remove();
+            $('.startEleven').remove();
+            $('.fixtureInfo').remove();
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
+
+
+
+            let navbarMini = document.createElement('nav')
+            navbarMini.className='navbarMini';
+
+            let eventsButton = document.createElement('button')
+            eventsButton.className = 'eventsButton'
+            eventsButton.innerHTML = "Events"
+            navbarMini.appendChild(eventsButton)
+            eventsButton.addEventListener("click", function(){ 
+                eventsButton.classList.add("clicked")
+                eventsButton.disabled=true
+                lineupButton.disabled=false;
+                statsButton.disabled=false;
+                infoButton.disabled=false;
+                statsButton.classList.remove("clicked")
+                infoButton.classList.remove("clicked")
+                lineupButton.classList.remove("clicked")
+            
+                $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
+                runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
+            
+            
+             
+
+            }) 
+
+            let statsButton=document.createElement('button')
+            statsButton.className='statsButton';
+            statsButton.innerHTML='Statistics'
+            navbarMini.appendChild(statsButton);
+            statsButton.addEventListener("click", function(){ 
+                statsButton.classList.add("clicked")
+                statsButton.disabled=true
+                lineupButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=false;
+                infoButton.classList.remove("clicked")
+                eventsButton.classList.remove("clicked")
+                lineupButton.classList.remove("clicked")
+            
+            
+                $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
+                runStats(fixtureId.innerHTML)            
+                
+            
+            })
+
+
+            let lineupButton=document.createElement('button')
+            lineupButton.className='lineupButton';
+            lineupButton.innerHTML="Lineups"
+            navbarMini.appendChild(lineupButton)
+            lineupButton.addEventListener("click", function(){ 
+                lineupButton.disabled=true;
+                statsButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=false;
+            
+            $('.venue').remove();
+            $('.city').remove();
+            $('.referee').remove();
+            $('.lineupC').remove();
+            $('.lineupParentHome').remove();
+            $('.lineupParentAway').remove();
+            $('.startEleven').remove();
+            $('.fixtureInfo').remove();
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
+            $('.eventsC').remove();
+            $('.homeEvent').remove();
+            $('.awayEvent').remove();
+
+
+
+                lineupButton.classList.add("clicked")
+                infoButton.classList.remove("clicked")
+                eventsButton.classList.remove("clicked")
+                statsButton.classList.remove("clicked")
+
+                
+
+                    runLineups(fixtureId.innerHTML);
+    });
+
+
+
+            let infoButton=document.createElement('button')
+            infoButton.classList='infoButton'
+            infoButton.innerHTML='Info  '
+            infoButton.addEventListener("click", function(){ 
+                infoButton.classList.add("clicked")
+                statsButton.classList.remove("clicked")
+                eventsButton.classList.remove("clicked")
+                lineupButton.classList.remove("clicked")
+
+                lineupButton.disabled=false;
+                statsButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=true;
+
+            $('.venue').remove();
+            $('.city').remove();
+            $('.referee').remove();
+            $('.lineupC').remove();
+            $('.lineupParentHome').remove();
+            $('.lineupParentAway').remove();
+            $('.startEleven').remove();
+            $('.fixtureInfo').remove();
+            $('.statsC').remove();
+            $('.homeStats').remove();
+            $('.awayStats').remove();
+            $('.statName').remove();
+            $('.eventsC').remove();
+            $('.homeEvent').remove();
+            $('.awayEvent').remove();
+
+
+                let infoText = document.createElement('div')
+                infoText.className = 'fixtureInfo'
+                infoText.innerHTML = 'Information'
+                document.querySelector('.sideScoreDiv').appendChild(infoText)
+                $(infoText).hide().fadeIn(1000);
+
+                let venueOnClick=document.createElement('Div')
+                venueOnClick.classList='venue'
+                venueOnClick.innerHTML=`Venue: ${venue.innerHTML}`
+                document.querySelector('.sideScoreDiv').appendChild(venueOnClick)
+                $(venueOnClick).hide().fadeIn(1000);
+
+                
+                let refereeOnClick=document.createElement('Div')
+                refereeOnClick.classList='referee'
+                refereeOnClick.innerHTML=`Referee: ${referee.innerHTML}`
+                document.querySelector('.sideScoreDiv').appendChild(refereeOnClick)
+                $(refereeOnClick).hide().fadeIn(1000);
+
+                
+                let cityOnClick=document.createElement('Div')
+                cityOnClick.classList='city'
+                cityOnClick.innerHTML=`Location: ${city.innerHTML}, ${country.innerHTML}`
+                document.querySelector('.sideScoreDiv').appendChild(cityOnClick)
+                $(cityOnClick).hide().fadeIn(1000);
+
+            }) 
+            
+            navbarMini.appendChild(infoButton)
+
+
+document.querySelector('.sideScoreDiv').appendChild(navbarMini)
+});
 
 document.querySelector('.parentContainer').appendChild(parent);}}};
 
@@ -555,304 +852,9 @@ run();
 //Refresh Data
 const interval = setInterval(function() {
     run();
-    parent.addEventListener("click", function(){
-
-        $('.navbarMini').remove()
-        $('.rightDiv').remove();      
-        $('.rightDivScores').remove();
-        $('.venue').remove();
-        $('.city').remove();
-        $('.referee').remove();
-        $('.lineupC').remove();
-        $('.lineupParentHome').remove();
-        $('.lineupParentAway').remove();
-        $('.startEleven').remove();
-        $('.fixtureInfo').remove();
-        $('.eventsC').remove();
-        $('.homeEvent').remove();
-        $('.awayEvent').remove();
-  
-
-    runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
-
-
-
-   
-
-    let teamNames = document.createElement("div")
-    teamNames.className = 'rightDiv'
-
-    let fixtureId2 = document.createElement("div")
-    fixtureId2.className = 'fixtureId2'                                                         //
-    fixtureId2.innerHTML = fixtureId.innerHTML;
-
-    let homeTeamNameRightDiv = document.createElement("div")
-    homeTeamNameRightDiv.className = 'fixturel'
-    homeTeamNameRightDiv.innerHTML = homeTeamName.innerHTML + "-" 
-    teamNames.appendChild(homeTeamNameRightDiv)
-
-    let awayTeamNameRightDiv = document.createElement("div")
-    awayTeamNameRightDiv.className = 'fixturer'
-    awayTeamNameRightDiv.innerHTML = awayTeamName.innerHTML
-    teamNames.appendChild(awayTeamNameRightDiv)
-
-    let sideScore = document.createElement("div")
-    sideScore.className = 'rightDivScores'
-
-    let homeTeamLogoRightDiv = document.createElement("img")
-    homeTeamLogoRightDiv.className = 'logo1'
-    homeTeamLogoRightDiv.setAttribute("src", homeTeamLogo.getAttribute("src"))
-    sideScore.appendChild(homeTeamLogoRightDiv)
-
-    let timer = document.createElement("div")
-    timer.className = 'timer'
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = Number(String(timerOrigin.innerHTML)+"000") - now;
-
-    // Time calculations for days, hours, minutes and seconds
-
-    //Days are not displayed, only used to help calculate hours
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (days * 24);
-    if (String(hours).length == 1) {
-        hours= "0" + hours;
+    if (eventsButton.classList.contains('clicked')) {
+        console.log('event button should refresh')
     }
-
-
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    if (String(minutes).length == 1) {
-        minutes= "0" + minutes;
-    }
-
-
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    if (String(seconds).length == 1) {
-        seconds = "0" + seconds;
-    }
-        
-    // Display the time
-    if (Number(seconds)>=0){
-    timer.innerHTML = hours + ":" + minutes + ":" + seconds;
-    } else {
-        if (gameStatus.innerHTML=="NS" || gameStatus.innerHTML=="TBD" || gameStatus.innerHTML=="NA" || gameStatus.innerHTML=="PST") {
-        timer.innerHTML="-";
-        } else if (distance < 0) {
-            let homeTeamScoreRightDiv = document.createElement("div")
-            homeTeamScoreRightDiv.className = 'fixtureScoreRight'
-            homeTeamScoreRightDiv.innerHTML = homeTeamScore.innerHTML + "-" 
-
-            let awayTeamScoreRightDiv = document.createElement("div")
-            awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
-            awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
-            
-            // let gameTicker = document.createElement('div')
-            // gameTicker.className="gameTicker"
-            
-
-            if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
-                timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
-                timer.classList.remove('live') 
-            } else {
-                timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
-                timer.classList.add('live')
-          }
-        }
-    }
-
-    // If the count down is finished, Display score
-
-}, .005);
-    sideScore.appendChild(timer)
-
-    let awayTeamLogoRightDiv = document.createElement("img")
-    awayTeamLogoRightDiv.className = 'logo1'
-    awayTeamLogoRightDiv.setAttribute("src", awayTeamLogo.getAttribute("src"))
-    sideScore.appendChild(awayTeamLogoRightDiv)
-
-    
-
-    console.log(`${awayTeamName.innerHTML} Has Been Clicked`)
-
-
-    document.querySelector('.sideScoreDiv').appendChild(teamNames)
-    document.querySelector('.sideScoreDiv').appendChild(sideScore)
-
-    
-    $('.venue').remove();
-    $('.city').remove();
-    $('.referee').remove();
-    $('.lineupC').remove();
-    $('.lineupParentHome').remove();
-    $('.lineupParentAway').remove();
-    $('.startEleven').remove();
-    $('.fixtureInfo').remove();
-    $('.statsC').remove();
-    $('.homeStats').remove();
-    $('.awayStats').remove();
-    $('.statName').remove();
-
-
-
-    let navbarMini = document.createElement('nav')
-    navbarMini.className='navbarMini';
-
-    let eventsButton = document.createElement('button')
-    eventsButton.className = 'eventsButton'
-    eventsButton.innerHTML = "Events"
-    navbarMini.appendChild(eventsButton)
-    eventsButton.addEventListener("click", function(){ 
-        eventsButton.classList.add("clicked")
-        eventsButton.disabled=true
-        lineupButton.disabled=false;
-        statsButton.disabled=false;
-        infoButton.disabled=false;
-        statsButton.classList.remove("clicked")
-        infoButton.classList.remove("clicked")
-        lineupButton.classList.remove("clicked")
-    
-        $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
-        runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
-    
-    
-     
-
-    }) 
-
-    let statsButton=document.createElement('button')
-    statsButton.className='statsButton';
-    statsButton.innerHTML='Statistics'
-    navbarMini.appendChild(statsButton);
-    statsButton.addEventListener("click", function(){ 
-        statsButton.classList.add("clicked")
-        statsButton.disabled=true
-        lineupButton.disabled=false;
-        eventsButton.disabled=false;
-        infoButton.disabled=false;
-        infoButton.classList.remove("clicked")
-        eventsButton.classList.remove("clicked")
-        lineupButton.classList.remove("clicked")
-    
-    
-        $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
-        runStats(fixtureId.innerHTML)            
-        
-    
-    })
-
-
-    let lineupButton=document.createElement('button')
-    lineupButton.className='lineupButton';
-    lineupButton.innerHTML="Lineups"
-    navbarMini.appendChild(lineupButton)
-    lineupButton.addEventListener("click", function(){ 
-        lineupButton.disabled=true;
-        statsButton.disabled=false;
-        eventsButton.disabled=false;
-        infoButton.disabled=false;
-    
-    $('.venue').remove();
-    $('.city').remove();
-    $('.referee').remove();
-    $('.lineupC').remove();
-    $('.lineupParentHome').remove();
-    $('.lineupParentAway').remove();
-    $('.startEleven').remove();
-    $('.fixtureInfo').remove();
-    $('.statsC').remove();
-    $('.homeStats').remove();
-    $('.awayStats').remove();
-    $('.statName').remove();
-    $('.eventsC').remove();
-    $('.homeEvent').remove();
-    $('.awayEvent').remove();
-
-
-
-        lineupButton.classList.add("clicked")
-        infoButton.classList.remove("clicked")
-        eventsButton.classList.remove("clicked")
-        statsButton.classList.remove("clicked")
-
-        
-
-            runLineups(fixtureId.innerHTML);
-});
-
-
-
-    let infoButton=document.createElement('button')
-    infoButton.classList='infoButton'
-    infoButton.innerHTML='Info  '
-    infoButton.addEventListener("click", function(){ 
-        infoButton.classList.add("clicked")
-        statsButton.classList.remove("clicked")
-        eventsButton.classList.remove("clicked")
-        lineupButton.classList.remove("clicked")
-
-        lineupButton.disabled=false;
-        statsButton.disabled=false;
-        eventsButton.disabled=false;
-        infoButton.disabled=true;
-
-    $('.venue').remove();
-    $('.city').remove();
-    $('.referee').remove();
-    $('.lineupC').remove();
-    $('.lineupParentHome').remove();
-    $('.lineupParentAway').remove();
-    $('.startEleven').remove();
-    $('.fixtureInfo').remove();
-    $('.statsC').remove();
-    $('.homeStats').remove();
-    $('.awayStats').remove();
-    $('.statName').remove();
-    $('.eventsC').remove();
-    $('.homeEvent').remove();
-    $('.awayEvent').remove();
-
-
-        let infoText = document.createElement('div')
-        infoText.className = 'fixtureInfo'
-        infoText.innerHTML = 'Information'
-        document.querySelector('.sideScoreDiv').appendChild(infoText)
-        $(infoText).hide().fadeIn(1000);
-
-        let venueOnClick=document.createElement('Div')
-        venueOnClick.classList='venue'
-        venueOnClick.innerHTML=`Venue: ${venue.innerHTML}`
-        document.querySelector('.sideScoreDiv').appendChild(venueOnClick)
-        $(venueOnClick).hide().fadeIn(1000);
-
-        
-        let refereeOnClick=document.createElement('Div')
-        refereeOnClick.classList='referee'
-        refereeOnClick.innerHTML=`Referee: ${referee.innerHTML}`
-        document.querySelector('.sideScoreDiv').appendChild(refereeOnClick)
-        $(refereeOnClick).hide().fadeIn(1000);
-
-        
-        let cityOnClick=document.createElement('Div')
-        cityOnClick.classList='city'
-        cityOnClick.innerHTML=`Location: ${city.innerHTML}, ${country.innerHTML}`
-        document.querySelector('.sideScoreDiv').appendChild(cityOnClick)
-        $(cityOnClick).hide().fadeIn(1000);
-
-    }) 
-    
-    navbarMini.appendChild(infoButton)
-
-
-document.querySelector('.sideScoreDiv').appendChild(navbarMini)
-});
 }, 60000);
 //Page Load Delay
 $( document ).ready(function() { console.log('page loaded'); setTimeout(function () { document.querySelector(".hideThis").style.visibility = "visible"; jQuery(function(){ jQuery('.parentDiv:first').click();
