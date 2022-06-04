@@ -184,10 +184,6 @@ border-bottom: 1px groove;
   margin-left: 10px;
 }
 
-.tempClass{
-  
-}
-
 
 .score2 {
   margin-left: 419px; 
@@ -255,6 +251,7 @@ border-bottom: 1px groove;
   border-radius: 6px;
   margin-bottom: 8px;
   height: 120px;
+  object-fit: cover;
 }
 
 

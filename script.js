@@ -541,12 +541,7 @@ if (eventsData[d].time.extra>0) {
                 $('.eventsC').remove();
                 $('.homeEvent').remove();
                 $('.awayEvent').remove();
-                
-            this.classList.add('tempClass')
-
-            if (this.classList.contains('tempClass')){
-                console.log(homeTeamName.innerHTML +' has the special class')
-            }
+          
 
             runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
 
@@ -824,7 +819,10 @@ if (eventsData[d].time.extra>0) {
             navbarMini.appendChild(infoButton)
 
 
-document.querySelector('.sideScoreDiv').appendChild(navbarMini)});document.querySelector('.parentContainer').appendChild(parent);}}};
+document.querySelector('.sideScoreDiv').appendChild(navbarMini)
+});
+
+document.querySelector('.parentContainer').appendChild(parent);}}};
 
 
 //Run Page
