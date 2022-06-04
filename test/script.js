@@ -738,7 +738,7 @@ if (eventsData[d].time.extra>0) {
                 
                 const intStat = setInterval(function() {
                     if (statsButton.classList.contains('clicked')){
-                        console.log(homeTeamName + 'has been clicked g')
+                        console.log(homeTeamName.innerHTML + 'has stats been clicked g')
                     }
                 }, 10000);
                 
