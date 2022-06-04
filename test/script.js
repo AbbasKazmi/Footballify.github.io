@@ -708,6 +708,9 @@ if (eventsData[d].time.extra>0) {
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
+
+                try {clearInterval(intStat)}
+                catch{}
             
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
@@ -737,7 +740,7 @@ if (eventsData[d].time.extra>0) {
                 runStats(fixtureId.innerHTML)
                 
                 const intStat = setInterval(function() {
-                    if (statsButton.classList.contains('clickedxxxx')){
+                    if (statsButton.classList.contains('clicked')){
                         console.log(homeTeamName.innerHTML + ' has stats been clicked g')
                     } else {
                         console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
