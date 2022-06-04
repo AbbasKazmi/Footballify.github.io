@@ -561,6 +561,10 @@ if (eventsData[d].time.extra>0) {
                 $('.eventsC').remove();
                 $('.homeEvent').remove();
                 $('.awayEvent').remove();
+                try{
+                    parent.classList.remove('activeDiv')
+                    this.classList.add('activeDiv')}
+                catch{}
                 try {clearInterval(intStat)}
                 catch{}
                 try {clearInterval(intEvent)}
