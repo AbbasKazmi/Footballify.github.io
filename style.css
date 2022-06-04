@@ -670,9 +670,11 @@ float: left;
   .var {
     margin: 0px 4.5px;
     float: left;
+    fill: #0f6dd0;
   }
 
   .varRight {
     margin: 0px 4.5px;
     float: right;
+    fill: #0f6dd0;
   }
