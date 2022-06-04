@@ -851,7 +851,12 @@ document.querySelector('.parentContainer').appendChild(parent);}}};
 //Run Page
 run();
 //Refresh Data
-const interval = setInterval(function() {run();}, 60000);
+const interval = setInterval(function() {
+    run();
+    if (eventsButton.classList.contains('clicked')) {
+        console.log('event button should refresh')
+    }
+}, 60000);
 //Page Load Delay
 $( document ).ready(function() { console.log('page loaded'); setTimeout(function () { document.querySelector(".hideThis").style.visibility = "visible"; jQuery(function(){ jQuery('.parentDiv:first').click();
 });}, 1000);});
