@@ -67,7 +67,7 @@ var run = async () => {
        
         let gameTime = document.createElement("div")
         gameTime.className = 'gameTime'
-        gameTime.innerHTML = filtered[i][x].fixture.status.date.slice(12,17)
+        gameTime.innerHTML = String(filtered[i][x].fixture.status.date).slice(12,17)
         parent.appendChild(gameTime)
 
         //Home Name
