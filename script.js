@@ -64,11 +64,11 @@ var run = async () => {
         gameStatus.className = 'status'
         gameStatus.innerHTML = filtered[i][x].fixture.status.short
         parent.appendChild(gameStatus)
-        //StartTime
-        // let gameTime = document.createElement("div")
-        // gameTime.className = 'gameTime'
-        // gameTime.innerHTML = filtered[i][x].fixture.status.short
-        // parent.appendChild(gameTime)
+       
+        let gameTime = document.createElement("div")
+        gameTime.className = 'gameTime'
+        gameTime.innerHTML = filtered[i][x].fixture.status.date.slice(12,17)
+        parent.appendChild(gameTime)
 
         //Home Name
         let homeTeamName = document.createElement("div")
