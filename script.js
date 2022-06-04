@@ -642,7 +642,10 @@ if (eventsData[d].time.extra>0) {
                     let awayTeamScoreRightDiv = document.createElement("div")
                     awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
                     awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
-                      
+                    
+                    let gameTicker = document.createElement('div')
+                    gameTicker.className="gameTicker"
+                    gameTicker.innerHTML=distance
                     
 
                     if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
