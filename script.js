@@ -59,11 +59,26 @@ var run = async () => {
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
 
+
+        let timeDiv = document.createElement("div")
+        timeDiv.className = 'timeDiv'
+
+        parent.appendChild(timeDiv)
         //Game Status
         let gameStatus = document.createElement("div")
         gameStatus.className = 'status'
         gameStatus.innerHTML = filtered[i][x].fixture.status.short
         timeDiv.appendChild(gameStatus)
+
+        let gameTime = document.createElement("div")
+        let gameTimeVar = String(filtered[i][x].fixture.date).slice(11,16)
+        console.log(gameTimeVar)
+        gameTime.className = 'gameTime'
+        gameTime.innerHTML = gameTimeVar
+        timeDiv.appendChild(gameTime)
+
+        parent.appendChild(timeDiv)
+
 
         //Home Name
         let homeTeamName = document.createElement("div")
@@ -122,18 +137,6 @@ var run = async () => {
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
         parent.appendChild(awayTeamScore)
-
-        let gameTime = document.createElement("div")
-        let gameTimeVar = String(filtered[i][x].fixture.date).slice(11,16)
-        console.log(gameTimeVar)
-        gameTime.className = 'gameTime'
-        gameTime.innerHTML = gameTimeVar
-        timeDiv.appendChild(gameTime)
-
-        let timeDiv = document.createElement("div")
-        timeDiv.className = 'timeDiv'
-
-        parent.appendChild(timeDiv)
         
         //Push all Data to DOM
 
