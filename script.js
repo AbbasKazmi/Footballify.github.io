@@ -645,7 +645,7 @@ if (eventsData[d].time.extra>0) {
                     
                     let gameTicker = document.createElement('div')
                     gameTicker.className="gameTicker"
-                    gameTicker.innerHTML=distance
+                    console.log(distance)
                     
 
                     if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
