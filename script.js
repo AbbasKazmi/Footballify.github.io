@@ -64,13 +64,6 @@ var run = async () => {
         gameStatus.className = 'status'
         gameStatus.innerHTML = filtered[i][x].fixture.status.short
         parent.appendChild(gameStatus)
-       
-        let gameTime = document.createElement("div")
-        let gameTimeVar = String(filtered[i][x].fixture.date).slice(12,17)
-        console.log(gameTimeVar)
-        gameTime.className = 'gameTime'
-        gameTime.innerHTML = gameTimeVar
-        parent.appendChild(gameTime)
 
         //Home Name
         let homeTeamName = document.createElement("div")
@@ -113,9 +106,14 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        
-        
         parent.appendChild(homeTeamScore)
+
+        let gameTime = document.createElement("div")
+        let gameTimeVar = String(filtered[i][x].fixture.date).slice(11,16)
+        console.log(gameTimeVar)
+        gameTime.className = 'gameTime'
+        gameTime.innerHTML = gameTimeVar
+        parent.appendChild(gameTime)
 
         //Away Container
         let child2 = document.createElement("div")
