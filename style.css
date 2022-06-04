@@ -261,8 +261,13 @@ border-bottom: 1px groove;
 
 .innerText{
   text-align: center;
-  padding-right: 14px;  
-  font-size: 15px;
+    padding-right: 5px;
+    font-size: 15px;
+    display: flex;
+    
+    flex-direction: column;
+    line-height: 20px;
+  
 }
 
 .newsel {
