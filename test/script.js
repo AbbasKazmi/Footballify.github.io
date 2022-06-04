@@ -274,7 +274,7 @@ var run = async () => {
     $(statText).hide().fadeIn(500);
 
     let statsC = document.createElement('div')
-        statsC.className='statsC'+homeTeamName.innerHTML;
+        statsC.className=`statsC ${homeTeamName.innerHTML}`
     for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
         let homeStats = document.createElement('div')
