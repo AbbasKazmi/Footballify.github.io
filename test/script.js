@@ -544,15 +544,11 @@ if (eventsData[d].time.extra>0) {
         } else if (String(filtered[i][x].fixture.status.short) == 'ET') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";
         } else if (String(filtered[i][x].fixture.status.short) == '2H') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";} else {}
         
+        let toggler = false;
         // let clock = filtered[i][x].fixture.status.elapsed 
         parent.addEventListener("click", function(){
-            try {clearInterval(intStat)
-                statsButton.classList.remove("clicked")
-                infoButton.classList.remove("clicked")
-                lineupButton.classList.remove("clicked")
-                events.classList.remove("clicked")
-                clearInterval(intEvent)}
-            catch{}
+            toggle=false
+            
                 $('.navbarMini').remove()
                 $('.rightDiv').remove();      
                 $('.rightDivScores').remove();
@@ -709,6 +705,7 @@ if (eventsData[d].time.extra>0) {
             eventsButton.innerHTML = "Events"
             navbarMini.appendChild(eventsButton)
             eventsButton.addEventListener("click", function(){ 
+                toggle=true;
                 eventsButton.classList.add("clicked")
                 eventsButton.disabled=true
                 lineupButton.disabled=false;
@@ -726,11 +723,14 @@ if (eventsData[d].time.extra>0) {
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
 
+                if (toggle==true){
                 const intEvent = setInterval(function() {
                     if (eventsButton.classList.contains('clicked')){
                         $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                         runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
                         console.log(homeTeamName.innerHTML + ' has events been clicked g')
+                        console.log('stats' + toggle)
+
                     } else {
                         console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
                         clearInterval(intEvent)
@@ -741,13 +741,16 @@ if (eventsData[d].time.extra>0) {
             
              
 
-            }) 
+                }else{
+                    clearInterval(intEvent)
+                }}) 
 
             let statsButton=document.createElement('button')
             statsButton.className='statsButton';
             statsButton.innerHTML='Statistics'
             navbarMini.appendChild(statsButton);
             statsButton.addEventListener("click", function(){ 
+                toggle=true;
                 statsButton.classList.add("clicked")
                 statsButton.disabled=true
                 lineupButton.disabled=false;
@@ -766,11 +769,13 @@ if (eventsData[d].time.extra>0) {
                 
                 runStats(fixtureId.innerHTML)
                 
+                if (toggle==true){
                 const intStat = setInterval(function() {
                     if (statsButton.classList.contains('clicked')){
                         $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                         runStats(fixtureId.innerHTML)
                         console.log(homeTeamName.innerHTML + ' has stats been clicked g')
+                        console.log('stats' + toggle)
                     } else {
                         console.log(homeTeamName.innerHTML + ' has stats been not clicked anymore')
                         clearInterval(intStat)
@@ -779,7 +784,9 @@ if (eventsData[d].time.extra>0) {
                 }, 10000);
                 
             
-            })
+            }else{
+                clearInterval(intStat)
+            }})
 
 
             let lineupButton=document.createElement('button')
