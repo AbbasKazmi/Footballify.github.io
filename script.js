@@ -121,14 +121,15 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-        
+        parent.appendChild(awayTeamScore)
+
         let gameTime = document.createElement("div")
         let gameTimeVar = String(filtered[i][x].fixture.date).slice(11,16)
         console.log(gameTimeVar)
         gameTime.className = 'gameTime'
         gameTime.innerHTML = gameTimeVar
         parent.appendChild(gameTime)
-        parent.appendChild(awayTeamScore)
+        
         //Push all Data to DOM
 
         var runLineups = async (idParameter) => {
