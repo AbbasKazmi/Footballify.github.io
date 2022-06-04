@@ -644,9 +644,8 @@ if (eventsData[d].time.extra>0) {
                     awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
                     awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
                     
-                    let gameTicker = document.createElement('div')
-                    gameTicker.className="gameTicker"
-                    console.log(filtered[i][x].fixture.status.elapsed)
+                    // let gameTicker = document.createElement('div')
+                    // gameTicker.className="gameTicker"
                     
 
                     if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
