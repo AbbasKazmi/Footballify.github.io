@@ -59,11 +59,25 @@ var run = async () => {
         let child1 = document.createElement("div")
         child1.className = 'childDiv'
 
+
+        let timeDiv = document.createElement("div")
+        timeDiv.className = 'timeDiv'
+
+        parent.appendChild(timeDiv)
         //Game Status
         let gameStatus = document.createElement("div")
         gameStatus.className = 'status'
         gameStatus.innerHTML = filtered[i][x].fixture.status.short
-        parent.appendChild(gameStatus)
+        timeDiv.appendChild(gameStatus)
+
+        let gameTime = document.createElement("div")
+        let gameTimeVar = String(filtered[i][x].fixture.date).slice(11,16)
+        gameTime.className = 'gameTime'
+        gameTime.innerHTML = gameTimeVar
+        timeDiv.appendChild(gameTime)
+
+        parent.appendChild(timeDiv)
+
 
         //Home Name
         let homeTeamName = document.createElement("div")
@@ -106,8 +120,6 @@ var run = async () => {
         //Home Score
         let homeTeamScore = document.createElement("div")
         homeTeamScore.className = 'score1'
-        
-        
         parent.appendChild(homeTeamScore)
 
         //Away Container
@@ -123,8 +135,8 @@ var run = async () => {
         //Away Score
         let awayTeamScore = document.createElement("div")
         awayTeamScore.className = 'score2'
-
         parent.appendChild(awayTeamScore)
+        
         //Push all Data to DOM
 
         var runLineups = async (idParameter) => {
@@ -244,6 +256,7 @@ var run = async () => {
     }
 
     var runStats = async (idParameter) => {
+        
         const stats = await fetch(`https://v3.football.api-sports.io/fixtures/statistics?fixture=${idParameter}`, {
     headers: {
         'X-RapidAPI-Host': 'v3.football.api-sports.io',
@@ -254,16 +267,14 @@ var run = async () => {
     console.log(statsData)
 
     $('statsC').remove();
+    let statText = document.createElement('div')
+    statText.className = 'fixtureInfo'
+    statText.innerHTML = 'Statistics'
+    document.querySelector('.sideScoreDiv').appendChild(statText)
+    $(statText).hide().fadeIn(500);
 
     let statsC = document.createElement('div')
         statsC.className='statsC';
-
-    let statText = document.createElement('div')
-        statText.className = 'fixtureInfo'
-        statText.innerHTML = 'Statistics'
-        document.querySelector('.sideScoreDiv').appendChild(statText)
-        $(statText).hide().fadeIn(500);
-
     for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
         let homeStats = document.createElement('div')
@@ -276,14 +287,12 @@ var run = async () => {
         }
 
         
-        document.querySelector('.sideScoreDiv').appendChild(homeStats)
         statsC.appendChild(homeStats)
         $(homeStats).hide().fadeIn(500);
        
         let statName = document.createElement('div')
         statName.classList = "statName"
         statName.innerHTML=statsData[0].statistics[k].type
-        document.querySelector('.sideScoreDiv').appendChild(statName)
         statsC.appendChild(statName)
         $(statName).hide().fadeIn(500);
 
@@ -296,7 +305,6 @@ var run = async () => {
             awayStats.innerHTML=0
         }
         
-        document.querySelector('.sideScoreDiv').appendChild(awayStats)
         statsC.appendChild(awayStats)
         $(awayStats).hide().fadeIn(500);
 
@@ -344,6 +352,9 @@ if (eventsData[d].time.extra>0) {
         } else if (eventsData[d].detail=="Penalty") {
             eventOccured.innerHTML=`<svg class="pen" width="20" height="20" viewBox="0 0 1024 1024" fill="#52b030" style="min-width: 16px; display: inline-block;"><title>Penalty</title><path d="M328.96 488.928c-100.928 100.96-100.928 265.216 0 366.176s265.216 100.96 366.080 0c100.928-100.96 100.928-265.216 0-366.176-100.896-100.864-265.152-100.864-366.080 0zM653.856 813.728c-62.976 63.008-149.28 75.136-224.576 36.48l16.32-39.232-63.68-63.776-39.392 16.32c-38.592-75.328-26.4-170.176 36.608-233.184 63.008-62.944 149.248-75.168 224.576-36.544l-16.128 38.784 63.744 63.808 38.944-16.192c38.784 75.296 26.72 170.4-36.416 233.536zM526.144 686.144l-21.664 100.16 84.416 32.608 70.048-69.984-33.6-85.408zM369.504 594.528l34.784 82.88 95.712-17.376 17.664-95.36-83.104-35.136zM116.352 162.912v349.088h93.12v-256h605.056v256h93.12v-349.088z"></path></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name 
     
+        } else if (eventsData[d].type=="Var") {
+            eventOccured.innerHTML=`<svg class="var" width="18" height="18" viewBox="0 0 32 32"><title>VAR decision</title><path d="M32,4.5H0v20.4h9v2.6h14v-2.6h9V4.5z M30.3,23.1H1.7V6.3h28.5V23.1z"></path><path d="M7.4,17.1l2.3-7.5h2.3l-3.5,10H6.3l-3.5-10h2.3L7.4,17.1z"></path><path d="M17.4,17.5h-3.6l-0.7,2.1H11l3.7-10h1.9l3.7,10h-2.2L17.4,17.5z M14.4,15.9h2.5l-1.3-3.7 L14.4,15.9z"></path><path d="M24.7,15.9H23v3.6H21v-10h3.7c1.2,0,2.1,0.3,2.7,0.8s1,1.3,1,2.2c0,0.7-0.1,1.2-0.4,1.7 c-0.3,0.5-0.7,0.8-1.3,1.1l2.2,4.1v0.1h-2.2L24.7,15.9z M23,14.3h1.7c0.5,0,0.9-0.1,1.2-0.4s0.4-0.6,0.4-1.1c0-0.5-0.1-0.8-0.4-1.1 c-0.3-0.3-0.7-0.4-1.2-0.4H23V14.3z"></path></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name + `<h1 class='light'>${eventsData[d].detail} </h1>`
+    
         } else if (eventsData[d].detail=="Missed Penalty") {
             eventOccured.innerHTML=`<svg class="penMiss" width="20" height="20" viewBox="0 0 1024 1024" fill="red" style="min-width: 16px; display: inline-block;"><title>Missed Penalty</title><path d="M328.96 488.928c-100.928 100.96-100.928 265.216 0 366.176s265.216 100.96 366.080 0c100.928-100.96 100.928-265.216 0-366.176-100.896-100.864-265.152-100.864-366.080 0zM653.856 813.728c-62.976 63.008-149.28 75.136-224.576 36.48l16.32-39.232-63.68-63.776-39.392 16.32c-38.592-75.328-26.4-170.176 36.608-233.184 63.008-62.944 149.248-75.168 224.576-36.544l-16.128 38.784 63.744 63.808 38.944-16.192c38.784 75.296 26.72 170.4-36.416 233.536zM526.144 686.144l-21.664 100.16 84.416 32.608 70.048-69.984-33.6-85.408zM369.504 594.528l34.784 82.88 95.712-17.376 17.664-95.36-83.104-35.136zM116.352 162.912v349.088h93.12v-256h605.056v256h93.12v-349.088z"></path></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name 
     
@@ -381,6 +392,9 @@ if (eventsData[d].time.extra>0) {
             } else if (eventsData[d].detail=="Penalty") {
                 eventOccured.innerHTML=  eventsData[d].player.name + " " + Number(eventsData[d].time.elapsed+eventsData[d].time.extra) + "'" + `<svg class="penFloat" width="20" height="20" viewBox="0 0 1024 1024" fill="#52b030" style="min-width: 16px; display: inline-block;"><title>Penalty</title><path d="M328.96 488.928c-100.928 100.96-100.928 265.216 0 366.176s265.216 100.96 366.080 0c100.928-100.96 100.928-265.216 0-366.176-100.896-100.864-265.152-100.864-366.080 0zM653.856 813.728c-62.976 63.008-149.28 75.136-224.576 36.48l16.32-39.232-63.68-63.776-39.392 16.32c-38.592-75.328-26.4-170.176 36.608-233.184 63.008-62.944 149.248-75.168 224.576-36.544l-16.128 38.784 63.744 63.808 38.944-16.192c38.784 75.296 26.72 170.4-36.416 233.536zM526.144 686.144l-21.664 100.16 84.416 32.608 70.048-69.984-33.6-85.408zM369.504 594.528l34.784 82.88 95.712-17.376 17.664-95.36-83.104-35.136zM116.352 162.912v349.088h93.12v-256h605.056v256h93.12v-349.088z"></path></svg>`
         
+            } else if (eventsData[d].type=="Var") {
+                eventOccured.innerHTML=  `<h1 class='light'>${eventsData[d].detail} </h1>`+ eventsData[d].player.name + " " + Number(eventsData[d].time.elapsed+eventsData[d].time.extra) + "'" + `<svg class="varRight" width="18" height="18" viewBox="0 0 32 32"><title>VAR decision</title><path d="M32,4.5H0v20.4h9v2.6h14v-2.6h9V4.5z M30.3,23.1H1.7V6.3h28.5V23.1z"></path><path d="M7.4,17.1l2.3-7.5h2.3l-3.5,10H6.3l-3.5-10h2.3L7.4,17.1z"></path><path d="M17.4,17.5h-3.6l-0.7,2.1H11l3.7-10h1.9l3.7,10h-2.2L17.4,17.5z M14.4,15.9h2.5l-1.3-3.7 L14.4,15.9z"></path><path d="M24.7,15.9H23v3.6H21v-10h3.7c1.2,0,2.1,0.3,2.7,0.8s1,1.3,1,2.2c0,0.7-0.1,1.2-0.4,1.7 c-0.3,0.5-0.7,0.8-1.3,1.1l2.2,4.1v0.1h-2.2L24.7,15.9z M23,14.3h1.7c0.5,0,0.9-0.1,1.2-0.4s0.4-0.6,0.4-1.1c0-0.5-0.1-0.8-0.4-1.1 c-0.3-0.3-0.7-0.4-1.2-0.4H23V14.3z"></path></svg>`
+        
             } else if (eventsData[d].detail=="Missed Penalty") {
                 eventOccured.innerHTML=  eventsData[d].player.name + " " + Number(eventsData[d].time.elapsed+eventsData[d].time.extra) + "'" + `<svg class="penMissFloat" width="20" height="20" viewBox="0 0 1024 1024" fill="red" style="min-width: 16px; display: inline-block;"><title>Missed Penalty</title><path d="M328.96 488.928c-100.928 100.96-100.928 265.216 0 366.176s265.216 100.96 366.080 0c100.928-100.96 100.928-265.216 0-366.176-100.896-100.864-265.152-100.864-366.080 0zM653.856 813.728c-62.976 63.008-149.28 75.136-224.576 36.48l16.32-39.232-63.68-63.776-39.392 16.32c-38.592-75.328-26.4-170.176 36.608-233.184 63.008-62.944 149.248-75.168 224.576-36.544l-16.128 38.784 63.744 63.808 38.944-16.192c38.784 75.296 26.72 170.4-36.416 233.536zM526.144 686.144l-21.664 100.16 84.416 32.608 70.048-69.984-33.6-85.408zM369.504 594.528l34.784 82.88 95.712-17.376 17.664-95.36-83.104-35.136zM116.352 162.912v349.088h93.12v-256h605.056v256h93.12v-349.088z"></path></svg>`
         
@@ -416,6 +430,9 @@ if (eventsData[d].time.extra>0) {
             }
         } else if (eventsData[d].detail=="Penalty") {
             eventOccured.innerHTML=`<svg class="pen" width="20" height="20" viewBox="0 0 1024 1024" fill="#52b030" style="min-width: 16px; display: inline-block;"><title>Penalty</title><path d="M328.96 488.928c-100.928 100.96-100.928 265.216 0 366.176s265.216 100.96 366.080 0c100.928-100.96 100.928-265.216 0-366.176-100.896-100.864-265.152-100.864-366.080 0zM653.856 813.728c-62.976 63.008-149.28 75.136-224.576 36.48l16.32-39.232-63.68-63.776-39.392 16.32c-38.592-75.328-26.4-170.176 36.608-233.184 63.008-62.944 149.248-75.168 224.576-36.544l-16.128 38.784 63.744 63.808 38.944-16.192c38.784 75.296 26.72 170.4-36.416 233.536zM526.144 686.144l-21.664 100.16 84.416 32.608 70.048-69.984-33.6-85.408zM369.504 594.528l34.784 82.88 95.712-17.376 17.664-95.36-83.104-35.136zM116.352 162.912v349.088h93.12v-256h605.056v256h93.12v-349.088z"></path></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name 
+    
+        } else if (eventsData[d].type=="Var") {
+            eventOccured.innerHTML=`<svg class="var" width="18" height="18" viewBox="0 0 32 32"><title>VAR decision</title><path d="M32,4.5H0v20.4h9v2.6h14v-2.6h9V4.5z M30.3,23.1H1.7V6.3h28.5V23.1z"></path><path d="M7.4,17.1l2.3-7.5h2.3l-3.5,10H6.3l-3.5-10h2.3L7.4,17.1z"></path><path d="M17.4,17.5h-3.6l-0.7,2.1H11l3.7-10h1.9l3.7,10h-2.2L17.4,17.5z M14.4,15.9h2.5l-1.3-3.7 L14.4,15.9z"></path><path d="M24.7,15.9H23v3.6H21v-10h3.7c1.2,0,2.1,0.3,2.7,0.8s1,1.3,1,2.2c0,0.7-0.1,1.2-0.4,1.7 c-0.3,0.5-0.7,0.8-1.3,1.1l2.2,4.1v0.1h-2.2L24.7,15.9z M23,14.3h1.7c0.5,0,0.9-0.1,1.2-0.4s0.4-0.6,0.4-1.1c0-0.5-0.1-0.8-0.4-1.1 c-0.3-0.3-0.7-0.4-1.2-0.4H23V14.3z"></path></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name + `<h1 class='light'>${eventsData[d].detail} </h1>`
     
         } else if (eventsData[d].detail=="Missed Penalty") {
             eventOccured.innerHTML=`<svg class="penMiss" width="20" height="20" viewBox="0 0 1024 1024" fill="red" style="min-width: 16px; display: inline-block;"><title>Missed Penalty</title><path d="M328.96 488.928c-100.928 100.96-100.928 265.216 0 366.176s265.216 100.96 366.080 0c100.928-100.96 100.928-265.216 0-366.176-100.896-100.864-265.152-100.864-366.080 0zM653.856 813.728c-62.976 63.008-149.28 75.136-224.576 36.48l16.32-39.232-63.68-63.776-39.392 16.32c-38.592-75.328-26.4-170.176 36.608-233.184 63.008-62.944 149.248-75.168 224.576-36.544l-16.128 38.784 63.744 63.808 38.944-16.192c38.784 75.296 26.72 170.4-36.416 233.536zM526.144 686.144l-21.664 100.16 84.416 32.608 70.048-69.984-33.6-85.408zM369.504 594.528l34.784 82.88 95.712-17.376 17.664-95.36-83.104-35.136zM116.352 162.912v349.088h93.12v-256h605.056v256h93.12v-349.088z"></path></svg>` + eventsData[d].time.elapsed + "'  " + eventsData[d].player.name 
@@ -453,6 +470,9 @@ if (eventsData[d].time.extra>0) {
                 }
             } else if (eventsData[d].detail=="Penalty") {
                 eventOccured.innerHTML=  eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="penFloat" width="20" height="20" viewBox="0 0 1024 1024" fill="#52b030" style="min-width: 16px; display: inline-block;"><title>Penalty</title><path d="M328.96 488.928c-100.928 100.96-100.928 265.216 0 366.176s265.216 100.96 366.080 0c100.928-100.96 100.928-265.216 0-366.176-100.896-100.864-265.152-100.864-366.080 0zM653.856 813.728c-62.976 63.008-149.28 75.136-224.576 36.48l16.32-39.232-63.68-63.776-39.392 16.32c-38.592-75.328-26.4-170.176 36.608-233.184 63.008-62.944 149.248-75.168 224.576-36.544l-16.128 38.784 63.744 63.808 38.944-16.192c38.784 75.296 26.72 170.4-36.416 233.536zM526.144 686.144l-21.664 100.16 84.416 32.608 70.048-69.984-33.6-85.408zM369.504 594.528l34.784 82.88 95.712-17.376 17.664-95.36-83.104-35.136zM116.352 162.912v349.088h93.12v-256h605.056v256h93.12v-349.088z"></path></svg>`
+        
+            } else if (eventsData[d].type=="Var") {
+                eventOccured.innerHTML= `<h1 class='light'>${eventsData[d].detail} </h1>`+ eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="varRight" width="18" height="18" viewBox="0 0 32 32"><title>VAR decision</title><path d="M32,4.5H0v20.4h9v2.6h14v-2.6h9V4.5z M30.3,23.1H1.7V6.3h28.5V23.1z"></path><path d="M7.4,17.1l2.3-7.5h2.3l-3.5,10H6.3l-3.5-10h2.3L7.4,17.1z"></path><path d="M17.4,17.5h-3.6l-0.7,2.1H11l3.7-10h1.9l3.7,10h-2.2L17.4,17.5z M14.4,15.9h2.5l-1.3-3.7 L14.4,15.9z"></path><path d="M24.7,15.9H23v3.6H21v-10h3.7c1.2,0,2.1,0.3,2.7,0.8s1,1.3,1,2.2c0,0.7-0.1,1.2-0.4,1.7 c-0.3,0.5-0.7,0.8-1.3,1.1l2.2,4.1v0.1h-2.2L24.7,15.9z M23,14.3h1.7c0.5,0,0.9-0.1,1.2-0.4s0.4-0.6,0.4-1.1c0-0.5-0.1-0.8-0.4-1.1 c-0.3-0.3-0.7-0.4-1.2-0.4H23V14.3z"></path></svg>`
         
             } else if (eventsData[d].detail=="Missed Penalty") {
                 eventOccured.innerHTML=  eventsData[d].player.name + " " + eventsData[d].time.elapsed + "'" + `<svg class="penMissFloat" width="20" height="20" viewBox="0 0 1024 1024" fill="red" style="min-width: 16px; display: inline-block;"><title>Missed Penalty</title><path d="M328.96 488.928c-100.928 100.96-100.928 265.216 0 366.176s265.216 100.96 366.080 0c100.928-100.96 100.928-265.216 0-366.176-100.896-100.864-265.152-100.864-366.080 0zM653.856 813.728c-62.976 63.008-149.28 75.136-224.576 36.48l16.32-39.232-63.68-63.776-39.392 16.32c-38.592-75.328-26.4-170.176 36.608-233.184 63.008-62.944 149.248-75.168 224.576-36.544l-16.128 38.784 63.744 63.808 38.944-16.192c38.784 75.296 26.72 170.4-36.416 233.536zM526.144 686.144l-21.664 100.16 84.416 32.608 70.048-69.984-33.6-85.408zM369.504 594.528l34.784 82.88 95.712-17.376 17.664-95.36-83.104-35.136zM116.352 162.912v349.088h93.12v-256h605.056v256h93.12v-349.088z"></path></svg>`
@@ -511,90 +531,22 @@ if (eventsData[d].time.extra>0) {
                                                                awayTeamScore.classList.add('loser')
         }
 
-        if (String(filtered[i][x].fixture.status.short) === 'NS') {
-            homeTeamScore.innerHTML = 0
-            homeTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0
-            awayTeamScore.classList.add('hide')
-
-        } else if (String(filtered[i][x].fixture.status.short) === 'CANC') {
-            homeTeamScore.classList.add('hide')
-            homeTeamScore.innerHTML = 0
-            awayTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0
-            gameStatus.innerHTML = 'NA'
-        } else if (String(filtered[i][x].fixture.status.short) === 'HT') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            gameStatus.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'PEN') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'PST') {
-            homeTeamScore.classList.add('hide')
-            homeTeamScore.innerHTML = 0
-            awayTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0
-        } else if (String(filtered[i][x].fixture.status.short) === 'TBD') {
-            homeTeamScore.classList.add('hide')
-            homeTeamScore.innerHTML = 0//filtered[i][x].goals.home
-            awayTeamScore.classList.add('hide')
-            awayTeamScore.innerHTML = 0//filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'FT') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'AET') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) === 'INT') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            gameStatus.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-        } else if (String(filtered[i][x].fixture.status.short) == '1H') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-            gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
-        } else if (String(filtered[i][x].fixture.status.short) == 'ET') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-            gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
-        } else if (String(filtered[i][x].fixture.status.short) == '2H') {
-            homeTeamScore.classList.remove('hide')
-            homeTeamScore.classList.add('live')
-            homeTeamScore.innerHTML = filtered[i][x].goals.home
-            awayTeamScore.classList.remove('hide')
-            awayTeamScore.classList.add('live')
-            awayTeamScore.innerHTML = filtered[i][x].goals.away
-            gameStatus.classList.add('live')
-            gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′"
-
-        } else {}
-
+        if (String(filtered[i][x].fixture.status.short) === 'NS') {homeTeamScore.innerHTML = 0;homeTeamScore.classList.add('hide');awayTeamScore.innerHTML = 0;awayTeamScore.classList.add('hide');
+        } else if (String(filtered[i][x].fixture.status.short) === 'CANC') {homeTeamScore.classList.add('hide');homeTeamScore.innerHTML = 0;awayTeamScore.classList.add('hide');awayTeamScore.innerHTML = 0;gameStatus.innerHTML = 'NA';
+        } else if (String(filtered[i][x].fixture.status.short) === 'HT') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');gameStatus.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) === 'PEN') {homeTeamScore.classList.remove('hide');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) === 'PST') {homeTeamScore.classList.add('hide');homeTeamScore.innerHTML = 0;awayTeamScore.classList.add('hide');awayTeamScore.innerHTML = 0;
+        } else if (String(filtered[i][x].fixture.status.short) === 'TBD') {homeTeamScore.classList.add('hide');homeTeamScore.innerHTML = 0;awayTeamScore.classList.add('hide');awayTeamScore.innerHTML = 0;
+        } else if (String(filtered[i][x].fixture.status.short) === 'FT') {homeTeamScore.classList.remove('hide');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) === 'AET') {homeTeamScore.classList.remove('hide');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) === 'INT') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');gameStatus.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;
+        } else if (String(filtered[i][x].fixture.status.short) == '1H') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";
+        } else if (String(filtered[i][x].fixture.status.short) == 'ET') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";
+        } else if (String(filtered[i][x].fixture.status.short) == '2H') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";} else {}
+        
+        // let clock = filtered[i][x].fixture.status.elapsed 
         parent.addEventListener("click", function(){
+
                 $('.navbarMini').remove()
                 $('.rightDiv').remove();      
                 $('.rightDivScores').remove();
@@ -609,7 +561,7 @@ if (eventsData[d].time.extra>0) {
                 $('.eventsC').remove();
                 $('.homeEvent').remove();
                 $('.awayEvent').remove();
-                
+          
 
             runEvents(fixtureId.innerHTML, homeTeamName.innerHTML);
 
@@ -691,6 +643,11 @@ if (eventsData[d].time.extra>0) {
                     let awayTeamScoreRightDiv = document.createElement("div")
                     awayTeamScoreRightDiv.className = 'fixtureScoreLeft'
                     awayTeamScoreRightDiv.innerHTML = awayTeamScore.innerHTML
+                    
+                    let gameTicker = document.createElement('div')
+                    gameTicker.className="gameTicker"
+                    console.log(filtered[i][x].fixture.status.elapsed)
+                    
 
                     if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
                         timer.innerHTML= homeTeamScoreRightDiv.innerHTML + awayTeamScoreRightDiv.innerHTML;   
@@ -745,32 +702,17 @@ if (eventsData[d].time.extra>0) {
             navbarMini.appendChild(eventsButton)
             eventsButton.addEventListener("click", function(){ 
                 eventsButton.classList.add("clicked")
+                eventsButton.disabled=true
+                lineupButton.disabled=false;
+                statsButton.disabled=false;
+                infoButton.disabled=false;
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-    
-                
-            $('.venue').remove();
-            $('.city').remove();
-            $('.referee').remove();
-            $('.lineupC').remove();
-            $('.lineupParentHome').remove();
-            $('.lineupParentAway').remove();
-            $('.startEleven').remove();
-            $('.fixtureInfo').remove();
-            $('.statsC').remove();
-            $('.homeStats').remove();
-            $('.awayStats').remove();
-            $('.statName').remove();
-            $('.eventsC').remove();
-            $('.homeEvent').remove();
-            $('.awayEvent').remove();
-
-            // clearInterval(int)
-            // let int = setInterval(function(){ 
+            
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
-            // }, 10000);
+            
             
              
 
@@ -782,31 +724,18 @@ if (eventsData[d].time.extra>0) {
             navbarMini.appendChild(statsButton);
             statsButton.addEventListener("click", function(){ 
                 statsButton.classList.add("clicked")
+                statsButton.disabled=true
+                lineupButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=false;
                 infoButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-
-            $('.venue').remove();
-            $('.city').remove();
-            $('.referee').remove();
-            $('.lineupC').remove();
-            $('.lineupParentHome').remove();
-            $('.lineupParentAway').remove();
-            $('.startEleven').remove();     
-            $('.fixtureInfo').remove();
-            $('.statsC').remove();
-            $('.homeStats').remove();
-            $('.awayStats').remove();
-            $('.statName').remove();
-            $('.eventsC').remove();
-            $('.homeEvent').remove();
-            $('.awayEvent').remove();            
             
-            // var handle = setInterval(function(){             
-                // clearInterval(handle)
+            
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
-                    runStats(fixtureId.innerHTML)            
-                // }, 10000);
+                runStats(fixtureId.innerHTML)            
+                
             
             })
 
@@ -816,6 +745,10 @@ if (eventsData[d].time.extra>0) {
             lineupButton.innerHTML="Lineups"
             navbarMini.appendChild(lineupButton)
             lineupButton.addEventListener("click", function(){ 
+                lineupButton.disabled=true;
+                statsButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=false;
             
             $('.venue').remove();
             $('.city').remove();
@@ -855,6 +788,11 @@ if (eventsData[d].time.extra>0) {
                 statsButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
+
+                lineupButton.disabled=false;
+                statsButton.disabled=false;
+                eventsButton.disabled=false;
+                infoButton.disabled=true;
 
             $('.venue').remove();
             $('.city').remove();
@@ -904,38 +842,17 @@ if (eventsData[d].time.extra>0) {
             navbarMini.appendChild(infoButton)
 
 
-            document.querySelector('.sideScoreDiv').appendChild(navbarMini)
-           
+document.querySelector('.sideScoreDiv').appendChild(navbarMini)
+});
 
-        })
-
-        
-
-        document.querySelector('.parentContainer').appendChild(parent);
-
-
-    }
-  }     
-
-};
+document.querySelector('.parentContainer').appendChild(parent);}}};
 
 
 //Run Page
 run();
-
 //Refresh Data
-const interval = setInterval(function() {
-    run();
-  }, 60000);
-
+const interval = setInterval(function() {run();}, 60000);
 //Page Load Delay
-$( document ).ready(function() {
-    console.log('page loaded')
-    setTimeout(function () {
-        document.querySelector(".hideThis").style.visibility = "visible"
-        jQuery(function(){
-            jQuery('.parentDiv:first').click();
-         });
-    }, 1000);
-});
+$( document ).ready(function() { console.log('page loaded'); setTimeout(function () { document.querySelector(".hideThis").style.visibility = "visible"; jQuery(function(){ jQuery('.parentDiv:first').click();
+});}, 1000);});
 

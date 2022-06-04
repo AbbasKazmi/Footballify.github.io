@@ -544,7 +544,7 @@ if (eventsData[d].time.extra>0) {
         } else if (String(filtered[i][x].fixture.status.short) == 'ET') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";
         } else if (String(filtered[i][x].fixture.status.short) == '2H') {homeTeamScore.classList.remove('hide');homeTeamScore.classList.add('live');homeTeamScore.innerHTML = filtered[i][x].goals.home;awayTeamScore.classList.remove('hide');awayTeamScore.classList.add('live');awayTeamScore.innerHTML = filtered[i][x].goals.away;gameStatus.classList.add('live');gameStatus.innerHTML = filtered[i][x].fixture.status.elapsed + "′";} else {}
         
-        let clock = filtered[i][x].fixture.status.elapsed 
+        // let clock = filtered[i][x].fixture.status.elapsed 
         parent.addEventListener("click", function(){
 
                 $('.navbarMini').remove()
@@ -646,7 +646,7 @@ if (eventsData[d].time.extra>0) {
                     
                     let gameTicker = document.createElement('div')
                     gameTicker.className="gameTicker"
-                    console.log(clock)
+                    console.log(filtered[i][x].fixture.status.elapsed)
                     
 
                     if (gameStatus.innerHTML=="FT" || gameStatus.innerHTML=="AWD") {
