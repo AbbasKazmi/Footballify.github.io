@@ -271,7 +271,7 @@ var run = async () => {
     statText.className = 'fixtureInfo'
     statText.innerHTML = 'Statistics'
     document.querySelector('.sideScoreDiv').appendChild(statText)
-    $(statText).hide().fadeIn(500);
+    // $(statText).hide().fadeIn(500);
 
     let statsC = document.createElement('div')
         statsC.className='statsC';
@@ -288,13 +288,13 @@ var run = async () => {
 
         
         statsC.appendChild(homeStats)
-        $(homeStats).hide().fadeIn(500);
+        // $(homeStats).hide().fadeIn(500);
        
         let statName = document.createElement('div')
         statName.classList = "statName"
         statName.innerHTML=statsData[0].statistics[k].type
         statsC.appendChild(statName)
-        $(statName).hide().fadeIn(500);
+        // $(statName).hide().fadeIn(500);
 
         let awayStats = document.createElement('div')
         awayStats.classList = "awayStats"
@@ -306,7 +306,7 @@ var run = async () => {
         }
         
         statsC.appendChild(awayStats)
-        $(awayStats).hide().fadeIn(500);
+        // $(awayStats).hide().fadeIn(500);
 
         document.querySelector('.sideScoreDiv').appendChild(statsC)
 
@@ -332,7 +332,7 @@ let eventsText = document.createElement('div')
 eventsText.className = 'fixtureInfo'
 eventsText.innerHTML = 'Events'
 document.querySelector('.sideScoreDiv').appendChild(eventsText)
-$(eventsText).hide().fadeIn(500);
+// $(eventsText).hide().fadeIn(500);
 
 for (let d=eventsData.length-1; d>=0; d--) {
                 
@@ -499,7 +499,7 @@ if (eventsData[d].time.extra>0) {
         }
     }
     eventsC.appendChild(eventOccured)
-    $(eventOccured).hide().fadeIn(500);
+    // $(eventOccured).hide().fadeIn(500);
     }
     document.querySelector('.sideScoreDiv').appendChild(eventsC)
 }
