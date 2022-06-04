@@ -274,7 +274,7 @@ var run = async () => {
     $(statText).hide().fadeIn(500);
 
     let statsC = document.createElement('div')
-        statsC.className=`statsC ${homeTeamName.innerHTML}`
+        statsC.className='statsC';
     for (let k=0; k<=statsData[0].statistics.length-1; k++) {
                 
         let homeStats = document.createElement('div')
@@ -546,6 +546,9 @@ if (eventsData[d].time.extra>0) {
         
         // let clock = filtered[i][x].fixture.status.elapsed 
         parent.addEventListener("click", function(){
+
+            try {clearInterval(intStat)}
+            catch{}
 
                 $('.navbarMini').remove()
                 $('.rightDiv').remove();      
