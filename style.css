@@ -666,3 +666,13 @@ float: left;
     font-size: 12px;
     color: #5f5f5f;
   }
+
+  .var {
+    margin: 0px 4.5px;
+    float: left;
+  }
+
+  .varRight {
+    margin: 0px 4.5px;
+    float: right;
+  }
