@@ -163,7 +163,6 @@ border-bottom: 1px groove;
   float: left;
   margin-left: 10px;
   margin-top: 2px;
-  border-right: 1px solid #cbcbcb;
   padding-right: 8px;
 }
 .team1 {
@@ -649,4 +648,11 @@ float: left;
     float: left;
     border-right: 1px solid #cbcbcb;
     line-height: 15px;
+    margin-left: 8px;
+    margin-top: 7px;
+    padding-right: 10px;
+  }
+
+  .gameTime {
+    font-size: 12px;
   }
