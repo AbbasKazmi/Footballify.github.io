@@ -76,10 +76,6 @@ var run = async () => {
         gameTime.innerHTML = gameTimeVar
         timeDiv.appendChild(gameTime)
 
-        let bar = document.createElement('div')
-        bar.className='bar'
-        timeDiv.appendChild(bar)
-
         parent.appendChild(timeDiv)
 
 
