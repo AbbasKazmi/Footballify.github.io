@@ -546,7 +546,13 @@ if (eventsData[d].time.extra>0) {
         
         // let clock = filtered[i][x].fixture.status.elapsed 
         parent.addEventListener("click", function(){
-
+            try {clearInterval(intStat)
+                statsButton.classList.remove("clicked")
+                infoButton.classList.remove("clicked")
+                lineupButton.classList.remove("clicked")
+                events.classList.remove("clicked")
+                clearInterval(intEvent)}
+            catch{}
                 $('.navbarMini').remove()
                 $('.rightDiv').remove();      
                 $('.rightDivScores').remove();
@@ -562,10 +568,6 @@ if (eventsData[d].time.extra>0) {
                 $('.homeEvent').remove();
                 $('.awayEvent').remove();
 
-                try {clearInterval(intStat)}
-                catch{}
-                try {clearInterval(intEvent)}
-                catch{}
             
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
           
