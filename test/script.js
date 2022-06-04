@@ -733,7 +733,14 @@ if (eventsData[d].time.extra>0) {
             
             
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
-                runStats(fixtureId.innerHTML)            
+                
+                runStats(fixtureId.innerHTML)
+                
+                const intStat = setInterval(function() {
+                    if (statsButton.classList.contains('clicked')){
+                        console.log(homeTeamName + 'has been clicked g')
+                    }
+                }, 10000);
                 
             
             })
@@ -852,9 +859,6 @@ run();
 //Refresh Data
 const interval = setInterval(function() {
     run();
-    if (eventsButton.classList.contains('clicked')) {
-        console.log('event button should refresh')
-    }
 }, 60000);
 //Page Load Delay
 $( document ).ready(function() { console.log('page loaded'); setTimeout(function () { document.querySelector(".hideThis").style.visibility = "visible"; jQuery(function(){ jQuery('.parentDiv:first').click();
