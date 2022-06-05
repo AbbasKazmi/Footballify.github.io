@@ -168,3 +168,7 @@ a, .games, .games:hover, .games:focus, .games:active {
   font-size: 30px;
   color: #49f56e;
 }
+
+a:hover {
+  color: #39aa52;
+}
