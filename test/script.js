@@ -264,7 +264,6 @@ var run = async () => {
     },
     })
     const statsData = (await stats.json())?.response;
-    console.log(statsData)
 
     $('statsC').remove();
     let statText = document.createElement('div')
@@ -771,7 +770,7 @@ if (eventsData[d].time.extra>0) {
                         // if (eventsButton.classList.contains('clicked')){
                             $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                         runStats(fixtureId.innerHTML)
-                        console.log(homeTeamName.innerHTML + ' has stats been clicked g')
+                        console.log('loading data for' + homeTeamName.innerHTML)
                         // }
                         //  else {
                         //     console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
