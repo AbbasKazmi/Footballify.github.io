@@ -165,11 +165,7 @@ input[type="checkbox"]{
 }
 
 .games, .games:hover, .games:focus, .games:active {
-  text-decoration: none;
-  color: black;
-}
 
-.streamlist>h1 {
   font-size: 30px;
   color: #49b4f5;
   text-decoration: none;
