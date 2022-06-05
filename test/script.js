@@ -713,33 +713,16 @@ if (eventsData[d].time.extra>0) {
                 statsButton.classList.remove("clicked")
                 infoButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-
-                try {clearInterval(intStat)}
-                catch{}
-                try {clearInterval(intEvent)}
-                catch{}
             
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
 
-        if (int==null) {
-                int = setInterval(function() {
+
                     // if (eventsButton.classList.contains('clicked')){
                         $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                         runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
                         console.log('loading event data for ' + homeTeamName.innerHTML)
-                    // }
-                    //  else {
-                    //     console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
-                    //     clearInterval(intEvent)
-                    //     }
-
-                }, 10000);
-             
-        } else {
-            clearInterval(int)
-            int=null
-        }
+ 
     }) 
 
             let statsButton=document.createElement('button')
@@ -755,34 +738,17 @@ if (eventsData[d].time.extra>0) {
                 infoButton.classList.remove("clicked")
                 eventsButton.classList.remove("clicked")
                 lineupButton.classList.remove("clicked")
-
-                try {clearInterval(intStat)}
-                catch{}
-                try {clearInterval(intEvent)}
-                catch{}
             
                 $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                 
                 runStats(fixtureId.innerHTML)
             
-                if (int==null) {
-                    int = setInterval(function() {
-                        // if (eventsButton.classList.contains('clicked')){
+        
                             $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                         runStats(fixtureId.innerHTML)
                         console.log('loading stats data for ' + homeTeamName.innerHTML) 
-                        // }
-                        //  else {
-                        //     console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
-                        //     clearInterval(intEvent)
-                        //     }
     
-                    }, 10000);
-                 
-            } else {
-                clearInterval(int)
-                int=null
-            }
+         
             })
 
 
