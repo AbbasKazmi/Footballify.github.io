@@ -165,7 +165,6 @@ input[type="checkbox"]{
 }
 
 .games, .games:hover, .games:focus, .games:active {
-
   font-size: 30px;
   color: #49b4f5;
   text-decoration: none;
