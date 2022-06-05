@@ -164,8 +164,7 @@ input[type="checkbox"]{
   transition: all 0.3s ease;
 }
 
-.games, .games:hover, .games:focus, .games:active {
+a, .games, .games:hover, .games:focus, .games:active {
   font-size: 30px;
-  color: #49b4f5;
-  text-decoration: none;
+  color: #49f56e;
 }
