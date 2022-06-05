@@ -727,7 +727,7 @@ if (eventsData[d].time.extra>0) {
                     // if (eventsButton.classList.contains('clicked')){
                         $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                         runEvents(fixtureId.innerHTML, homeTeamName.innerHTML)
-                        console.log(homeTeamName.innerHTML + ' has events been clicked g')
+                        console.log('loading event data for' + homeTeamName.innerHTML)
                     // }
                     //  else {
                     //     console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
@@ -770,7 +770,7 @@ if (eventsData[d].time.extra>0) {
                         // if (eventsButton.classList.contains('clicked')){
                             $('.venue').remove();$('.city').remove();$('.referee').remove();$('.lineupC').remove();$('.lineupParentHome').remove();$('.lineupParentAway').remove();$('.startEleven').remove();     $('.fixtureInfo').remove();$('.statsC').remove();$('.homeStats').remove();$('.awayStats').remove();$('.statName').remove();$('.eventsC').remove();$('.homeEvent').remove();$('.awayEvent').remove();
                         runStats(fixtureId.innerHTML)
-                        console.log('loading data for' + homeTeamName.innerHTML)
+                        console.log('loading stats data for' + homeTeamName.innerHTML)
                         // }
                         //  else {
                         //     console.log(homeTeamName.innerHTML + ' has been not clicked anymore')
