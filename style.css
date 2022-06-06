@@ -150,7 +150,8 @@ border-bottom: 1px groove;
   margin-top: 7px;
   float: left;
   margin-right: 2px;
-  border: 2px solid black;
+
+  border: 2px solid #61b300; 
   border-radius: 6px;
   margin-bottom: 8px;
   height: 120px;
