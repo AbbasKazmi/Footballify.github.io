@@ -174,11 +174,4 @@ a:hover {
   color: #39aa52;
 }
 
-.safety{
- font-size: 22px;
-}
-
-.safetyText{
-  font-size: 15px;
-  font-weight: 300;
-}
+.safety{font-size: 22px;}.safetyText{font-size: 15px;font-weight: 300;}
